@@ -1,0 +1,367 @@
+%\ihead{\headmark}
+\chapter{ECG Feature Extraction}
+
+
+\section{Introduction}
+QRS complex detection is the basis for processing ECG signal. Regardless of what application is required, the accurate detection of QRS complex is a pre-requisite for feature extraction. In order to detect the QRS complex accurately, it is necessary to detect the R-peak position correctly. Once the QRS complex is identified, further examination of the signal can be performed such as heart rate, arrhythmias, classification of ECG signal, ST segment etc. Moreover, P and T waves can be identified correctly.
+
+The "QRS Complex" is the combination of Q, R and S waves and it represents the contraction of the ventricles. It plays a significant role in the detection of cardiac arrhythmias.
+
+Many methods have already been proposed for the detection of QRS complex. These methods fall into 3 categories \cite{5639905}.
+
+\begin{enumerate}
+	\item Filter Method
+	\item Artificial Intelligence Method
+	\item Wavelet transform Method
+\end{enumerate}
+
+\subsection{Filter Method}
+The filter method use bandpass filter to filter the ECG signal \cite{4122029}\cite{554762}. In this method, QRS complex is intensify by suppressing the P and T wave. This method is generally very quick and take less time to implement. But the major drawback of this method is that the frequency band of QRS complex and of noise overlapping, affect its performance.
+
+\subsection{Artificial Intelligence Method}
+The detection of QRS complex using this method is fast, accurate and more robust. But in reality, it is very time consuming and difficult to implement \cite{126604}\cite{PIETKA1991139}\cite{58593}. Therefore, this method is not very popular and not widely used as compared to the other methods.
+
+\subsection{Wavelet Transform Method}
+Wavelet transform method becomes very popular in detecting the QRS complex. It is based on time-frequency analysis. It is very efficient and takes less to implement. Many people have already used wavelet transform for detecting the QRS complex. Yazhu Qiu \cite{PMID:17228741} used Mexican-hat wavelet to detect ECG signal. In the proposed method, although the processing was fast, but it sometimes didn't detect the onset and offset of QRS complex accurately. Nevertheless, it is considered as simple, faster and easier to implement comparatively.
+
+\section{Wavelet Transform}
+Transformation is applied to signal in order to get further information about the signal which is not easily available in the raw signal. Most of the time, signals are generally represented in time domain, but in many cases, the important information is hidden in the frequency domain of the signal. Fourier transform is a tool which allows to view the frequency components of the signal. But the major drawback of this transformation is that, a signal can not be viewed in both time and frequency domain at once. Thus, it makes hard to distinguish which frequency components exist at any instance of time. Therefore, a tool was required which helps to view signal in both domain.
+
+ Wavelet transform is a very useful tool for analyzing the signal simultaneously in both time and frequency domain \cite{addison2017illustrated}. It uses a little wavelike functions known as \textbf{\textit{wavelets}}. Wavelets are used to transform a signal into another representation where signal information can be viewed in a more useful form and this process is known as \textit{wavelet transform}.
+
+Generally there are two operations involved with wavelet. Either they can be stretched or squeezed or can be translated to other locations on the signal and if the wavelet matches the shape of the signal at specific location or scale, it produces a large transform value. And similarly, if the signal and the wavelet do not correlate, it produces a low transformed value. There is a single function called "mother wavelet" which is stretched or translated to produce a family of basis functions known as "daughter wavelets". It is defined as:
+
+\begin{equation} \label{eqn_mother_wavelet}
+{\Psi_{a,b}(t) = \frac{1}{\sqrt{|a|}}\Psi \bigg(\frac{t-b}{a}\bigg),\quad a, b \in \mathbb{R}, a \neq 0}
+\end{equation}
+
+where \textit{a} is the scaling parameter which measures the degree of scale, and \textit{b} is the translation parameter which measures the time location of the wavelet. If |\textit{a}| < 1, then it mainly corresponds to higher frequencies. And on the other hand, if |\textit{a}| > 1, it corresponds to lower frequencies. It is important to note here that the variation in time and frequency scale of wavelet is supervised by the Heisenberg uncertainty principle. At large scale, the time domain is not very clear, whereas, frequency domain is much finer. As the scale decreases, the frequency domain becomes worse, whereas, time domain becomes finer.
+
+The wavelet transform is defined as:
+
+\begin{equation} \label{eqn_wavelet_transform}
+{X_{W}(a, b) = \frac{1}{\sqrt{|a|}} \int_{-\infty}^\infty h*\bigg(\frac{t-b}{a}\bigg)x(t) \mathrm{d}x}
+\end{equation}
+
+
+\subsection{Continuous Wavelet Transform}
+\subsection{Discrete Wavelet Transform}
+
+In this thesis, Biorthogonal Spline wavelet is used for detecting the ECG signal. This approach is based on the modulus maxima of zero point to detect the singular point. 
+
+
+For multi-resolution decomposition of signals, a dyadic DWT (discrete wavelet transform) is used where all bandpass filters have different frequency resolution. This is done by first using low-pass and high-pass filters to split the signal into low and high frequency components.
+\section{Biorthogonal Wavelet Transform}
+
+
+\section{Biorthogonal Spline Wavelet Filter Construction}
+ Let say, ${H_{0}(z)}$ and ${H_{1}(z)}$ are low-pass filters in the analysis filter bank (decomposition) and ${G_{0}(z)}$, ${G_{1}(z)}$ are high-pass filters in the synthesis filter bank (reconstruction), as can be seen in the figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2  respectively, producing the final output signal $Y[n]$. It is worth to note here that $Y[n]$ is the reconstructed signal. 
+ 
+ 
+ 
+ %\begin{figure}[h] for figure at the place, where we put the picture.
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=160mm]{images/2_channel_filter_bank}
+ 	\caption{Two-channel filter bank}
+ 	\label{fig:2_channel_filter_bank}
+ \end{figure}
+ 
+ 
+ 
+ The idea is to determine $H_0$, $H_1$, $G_0$ and $G_1$ such that, $Y[n]$ is just a delayed version of input signal $X[n]$. This is called as perfect reconstruction filter bank. A perfect reconstruction filter bank is also known as ``biorthogonal`` and the associated filters as biorthogonal filters. 
+
+After passing the input signal from the channel 1, it will produce:
+
+\begin{equation} \label{eqn_wavelet_transform}
+{Y_{0}(z) = \frac{1}{2}G_{0}(z)[H_{0}(z)X(z) + H_{0}(-z)X(-z)]}
+\end{equation}
+
+Similarly, for the 2nd channel, it will produce:
+
+
+\begin{equation} \label{eqn_wavelet_transform}
+{Y_{1}(z) = \frac{1}{2}G_{1}(z)[H_{1}(z)X(z) + H_{1}(-z)X(-z)]}
+\end{equation}
+
+Adding the output of these 2 channels will produce the final output.
+
+
+
+\begin{equation} \label{eq1}
+	\begin{split}
+Y(z)  &= Y_{0}(z) + Y_{1}(z) \\
+ &= \frac{1}{2}G_{0}(z)[H_{0}(z)X(z) + H_{0}(-z)X(-z)] + \frac{1}{2}G_{1}(z)[H_{1}(z)X(z) + H_{1}(-z)X(-z)]
+	\end{split}
+\end{equation}
+
+
+Arranging $Y(z)$ in such a way so that, one part should depends on $X(z)$ and the other part on $X(-z)$. We get,
+
+\begin{equation} \label{eqn_wavelet_transform}
+{Y(z) = \frac{1}{2}[G_{0}(z)H_{0}(z) + G_{1}(z)H_{1}(z)]X(z) + \frac{1}{2}[G_{0}(z)H_{0}(-z) + G_{1}(z)H_{1}(-z)]X(-z)}
+\end{equation}
+
+The important thing to note here is that, $X(-z)$ is the aliasing part, and $X(z)$ is the distortion part.
+
+%In order to satisfy the condition, $Y(n) = X(n-k)$ ($Y(z) = X(z)z^{-k}$) i.e., %the output signal $Y(z)$ to be some sort of delayed version of input signal, we %need to satisfy 2 conditions:
+
+\subsection{Design of Biorthogonal Spline Wavelet Filter}
+
+The perfect reconstruction for filter bank can be achieved if the following two conditions are satisfied.
+
+ \begin{enumerate}
+	\item No aliasing: 
+	\begin{equation} 
+	{G_{0}(z)H_{0}(-z) + G_{1}(z)H_{1}(-z)]X(-z) = 0}
+	\end{equation}
+	\item No distortion:
+	\begin{equation} 
+	{G_{0}(z)H_{0}(z) + G_{1}(z)H_{1}(z) = mz^{-k}}
+	\end{equation}
+\end{enumerate}
+
+
+where $m$ is constant and $k$ is a time delay.
+
+In order to satisfy condition 1 i.e., to get rid of aliasing, one can do:
+
+\begin{align}
+\label{eqn:antialiasing_cdn}
+\begin{split}
+	G_0(z) &=  H_1(-z), \\ 
+	G_1(z) &=  -H_0(-z)
+\end{split}
+\end{align}
+
+
+So now, we only need to find two filters values instead of four. Lets assume that,
+
+\begin{equation}\label{eqn:p0} 
+{P_0(z)=G_{0}(z)H_{0}(z)}
+\end{equation}
+
+From equation \ref{eqn:antialiasing_cdn} and \ref{eqn:p0}, we can deduce:
+
+\begin{equation} 
+{G_{1}(z)H_{1}(z) = -H_{0}(-z)G_{0}(-z) = -P_0(-z)}
+\end{equation}
+
+After getting these values, the condition 2 (no distortion) can be re-written as:
+
+\begin{equation}\label{eqn:updated_no_distortion} 
+{P_0(z) - P_0(-z) =  mz^{-k}}
+\end{equation}
+
+In the above equation, only one filter value is required i.e., $P_0(z)$ (also called half band filter). The perfect reconstruction conditions naturally implies that the both analysis and the synthesis filters are biorthogonal to each other, i.e., a biorthogonal filter bank makes sure that synthesis filter bank is the inverse of analysis filter bank.
+
+
+\subsection{Steps for Designing FIR Filter Bank}
+The steps for designing FIR filter bank can be summarized as:
+
+\begin{enumerate}
+	\item Design a low-pass filter for $P_0(z)$ which satisfy the equation \ref{eqn:updated_no_distortion}. One option is to use Daubechies function to find the value for $P_0(z)$: \\ 
+	\begin{equation}\label{eqn:updated_no_distortion} 
+	{P_0(z) = (1 + z^{-1})^{2p}Q(z)}
+	\end{equation} \\
+	where $p$ can be any integer and $Q(z)$ be a polynomial of degree $(2p-2)$.
+	\item Factorize $P_0(z)$ to get the values for $G_0(z)$ and $H_0(z)$.
+	\item Find the filter coefficients for high-pass filters using the equations \ref{eqn:antialiasing_cdn}. 
+\end{enumerate}
+
+
+Lets assume that, $P=2$ and and $Q(z)$ be a quadratic polynomial $(a + bz^{-1} + cz^{-2})$. Substituting these values in equation \ref{eqn:updated_no_distortion} will produce a polynomial of degree $z$:
+
+\begin{equation} 
+{P_0(z) = (1 + z^{-1})^4(a + bz^{-1} + cz^{-2})}
+\end{equation}
+
+Substituting $a = c = - \frac{1}{16}, b= 4$, we get:
+
+\begin{equation} 
+{P_0(z) = \frac{(1 + z^{-1})^4(-1 + 4z^{-1} + z^{-2})}{16}}
+\end{equation}
+
+Factorizing $P_0(z)$ to get $H_0(z)$ and $G_0(z)$. Lets say we get:
+
+\begin{equation} \label{eq1}
+\begin{split}
+H_0(z) & = \frac{(1 + z^{-1})^3}{4} \\
+& = \frac{(1 + 3z^{-1} + 3z^{-2} + z^{-3})}{4}
+\end{split}
+\end{equation}
+
+
+and
+
+
+\begin{equation} \label{eq1}
+\begin{split}
+G_0(z) & = \frac{(1 + z^{-1})(-1 + 4z^{-1} + z^{-2})}{4} \\
+& = \frac{(-1 + 3z^{-1} + 3z^{-2} - z^{-3})}{4}
+\end{split}
+\end{equation}
+
+
+Then by equation \ref{eqn:updated_no_distortion}, we have:
+
+
+\begin{equation} \label{eq1}
+\begin{split}
+H_1(z) = G_0(-z) \\
+& = \frac{(-1 - 3z^{-1} + 3z^{-2} + z^{-3})}{4}
+\end{split}
+\end{equation}
+
+and
+
+\begin{equation} \label{eq1}
+\begin{split}
+G_1(z) = -H_0(-z) \\
+& = \frac{(-1 + 3z^{-1} _ 3z^{-2} + z^{-3})}{4}
+\end{split}
+\end{equation}
+
+Therefore, the filter coefficients are:
+
+\begin{equation}
+\label{eqn:filters}
+\begin{aligned}
+		h_0(0) & =  \quad \frac{1}{4}    & \quad &\quad  h_0(1) &= \quad \frac{3}{4} \\
+		h_0(2) & =  \quad \frac{3}{4}    & \quad &\quad   h_0(3) &= \quad \frac{1}{4} \\[1ex]
+		h_1(0) & =  \quad \frac{- 1}{4}  & \quad &\quad   h_1(1) &= \quad \frac{-3}{4} \\
+		h_1(2) & =  \quad \frac{3}{4}    & \quad &\quad   h_1(3) &= \quad \frac{1}{4} \\[1ex]
+		g_0(0) & =  \quad \frac{-1}{4}   & \quad &\quad   g_0(1) &= \quad \frac{3}{4} \\
+		g_0(2) & =  \quad \frac{3}{4}    & \quad &\quad   g_0(3) &= \quad \frac{-1}{4} \\[1ex]
+		g_1(0) & =  \quad \frac{-1}{4}   & \quad &\quad   g_1(1) &= \quad \frac{3}{4} \\
+		g_1(2) & =  \quad \frac{-3}{4}   & \quad &\quad   g_1(3) &= \quad \frac{1}{4}
+\end{aligned}
+\end{equation}
+
+
+
+
+\section{Mallat's Algorithm}
+The binary wavelet transform or dyadic wavelet transform of a signal $f(n)$ can be calculated by using Mallat algorithm \cite{119727} as follows:
+
+\begin{equation} 
+{ s_{2^j}f(n) = \sum h_ks_{2^{j-1}}f(n - 2^{j-1}k),   }
+\end{equation}
+
+\begin{equation} 
+{ w_{2^j}f(n) = \sum g_ks_{2^{j-1}}f(n - 2^{j-1}k).   }
+\end{equation}
+
+where, $s_{2^0}f(n)$ is the original signal to be processed. In our case, it is ECG signal. $w_{2^j}f(n)$ is the wavelet coefficient i.e., the dyadic wavelet transform of the signal and $s_{2^j}f(n)$ is the approximation coefficient for the scale j. $h_k$ and $g_k$ are the coefficients of low-pass filter and high-pass filter respectively which are defined in the equation \ref{eqn:filters}. The signal is decomposed into several frequency bands at certain scale j and then the frequency bands which have noises, are set to zero. And by using the synthesis filters, the de-noised signal can be reconstructed.
+
+
+
+%\section{Singular Point Detection of QRS Complex Based on Wavelet Transform}
+\section{Using Wavelet Transform to Identify Singular Point of QRS Complex}
+
+\subsection{Feature Extraction Using Wavelets}
+Most of the time, the important information of signal resides on the irregularities and singularities of the signal and wavelets can be used to extract those information. When the filter bank and wavelets are chosen appropriately, the wavelets are able to capture the irregularities and singularities of the signal. Mathematically, the local singularity of a signal is measured using Lipschitz exponent, the inflection points of signal $f(n)$ appear as extrema at $\frac{df(t)}{dt}$ and as zero crossing points at $\frac{d^2f(t)}{dt}$. Therefore, Mallat has suggested to use a wavelets which is the first derivative of a scaling function.
+
+\subsection{Lipschitz Exponent}
+The functions which are infinitely differentiable are described as smooth or with no singularity \cite{xing2013unifying}. If at some point, the function has non continuous derivative, then the point is known as singular point. The Lipschitz exponent is a good application to measure the singularity of the point.
+
+\subsection{Relationship between Lipschitz Exponent and Modulus Maximum}
+Mallat has shown in his paper \cite{119727} that, all signals and noise in their may be completely represented by their singularities and singularities are generally referred in terms of Lipschitz exponents. If a signal is $n$ times differentiable at time $t_0$, then its nth derivative is singular and it will be described as Lipschitz $\alpha$ where $\alpha > n$. If a signal is continuously differentiable at time $t_0$, then it is non-singular and has Lipschitz exponent 1.
+
+Signals can have negative Lipschitz exponent as well. For example, many signals have singularities with positive Lipschitz exponents whereas, noise has negative Lipschitz exponent. Therefore, having this mind, it makes it possible to separate a signal from noise if the singularities of noise can be detected and separated.
+
+Generally, it is known that the singularity of a signal is directly proportional to the Lipschitz exponent. Therefore, as the transform scale increases, the wavelet transform modulus maxima will also get increases (Lipschitz exponent > 0) and similarly it will decreases when Lipschitz exponent < 0. It can be seen that R wave in the original ECG signal appears as a pair of positive and negative extreme in the waveform which resulted after the decomposition of wavelet transform.
+
+
+ 
+\renewcommand{\arraystretch}{2}
+\begin{table}
+	\caption{Wavelet Transform ECG Signal Frequency Range} \label{tab:sometab}
+	
+	\begin{center}
+		\begin{tabular}{ | l | r | }
+			\hline
+			Transform Scale & Frequency Range (Hz) \\ \hline
+			${2^1}$  & 90.0{\raise.17ex\hbox{$\scriptstyle\sim$}}180.0 \\ \hline
+			${2^2}$  & 29.92{\raise.17ex\hbox{$\scriptstyle\sim$}}84.24  \\ \hline
+			${2^3}$  & 1.52{\raise.17ex\hbox{$\scriptstyle\sim$}}38.88  \\ \hline
+			${2^4}$  & 5.76{\raise.17ex\hbox{$\scriptstyle\sim$}}19.44  \\ 
+			\hline
+		\end{tabular}
+	\end{center}
+	
+\end{table}
+
+
+\section{Dataset}
+
+The MIT-BIH Arrhythmia dataset is used for the implementation of the system. It contains 48 hours of recording of 47 subjects. Each record contains 2 signals, namely MLII and V, with a recording of 30 minutes duration. The sample rate for the recording is 360 samples per second per channel with 11 bit resolution over a 10mV range. Each record consists of 3 files:
+
+\begin{itemize}
+	\item Header file (.hea)
+	\item ECG signals (.dat)
+	\item Attribute file (.atr)
+\end{itemize}
+
+Header file contains information such as number of samples, sampling
+frequency, ECG signal format, number of ECG leads and their types, patient`s history and the detailed clinical information.
+
+.dat file contains the original signal values of both MLII and V5 leads. The signals from MLII lead are only considered for our analysis. Attribute file contains the annotation information of the ECG signal which was annotated by the doctors.
+
+This dataset has been used to extract the features of ECG signal and then the Neural Network will be trained by using these features. Example of the features include P-wave amplitude and duration, QRS complex duration, T-wave amplitude and duration, average, maximum, standard derivation of the corresponding waves etc. 
+
+
+There is a specific python package available, namely wfdb-python for reading the data from the MIT-BIH dataset. After downloading the dataset and setting up the package with the development environment, the data were analyzed. The ECG signals of one of the patient regarded as a record 100 can be seen below.
+
+
+It contains 2 signals, namely MLII and V5, which can be seen in
+
+the signals are in raw form and need to be processed because of the noise, baseline drift, etc. Since it is the analysis phase, therefore, not much time has been spent on the processing of ECG, instead focus was to read and manipulate the data. 
+After reading the signal data from the record, the process starts by finding the R-peaks (in MLII signal). A naïve based approach is used here for finding the R-peaks which will be improved in the later phase. The R-peaks can be seen in the picture below.
+
+
+
+
+\section{Preprocessing}
+The ECG signal is required to be processes before it is analyzed, as it contains several noises and artifacts. The most common noises are the baseline wander and 60Hz power interference. Baseline wander generally appears because of the subject respiration or the body movements. It has a frequency range of 0Hz to 0.5Hz. The power interference affects the signals because of the electrical appliances in the surrounding.
+
+Two different methods has been used to remove the noise and artifacts from the signal in the system implementation.
+ 
+ \begin{enumerate}
+ 	\item Wavelet Transform Method
+ 	\item Band-pass Filter Method
+ \end{enumerate}
+
+\subsection{Wavelet Transform Method}
+
+The wavelet transform is a very interesting technique for analyzing the signal in the time-frequency domain. It distributes the signal in such a way that the resulting block is well localized in both time and frequency. Decomposition of the signal into different frequency bands is obtained by passing the signal through high-pass and low-pass filter respectively, which results in 2 sets of coefficients namely, approximation coefficients and detail coefficients. The approximation coefficients contain the low-pass filter output and the detail coefficients contain the high-pass filter output. The next step split the approximation coefficients again into 2 parts using the same process and so on.
+
+The original signal contains the high-frequency noise and the baseline drift. The wavelet transform can be used to remove the corresponding noises and the baseline drift. The process starts by decomposing the original signal into 8 layers using wavelet type bior2.6, which results in the corresponding detail and approximation coefficients. Mostly, the layers 1 and 2 of the detail coefficients contain the high-frequency noise and the layer 8 of the approximation coefficients contain the baseline drift. Therefore, the layers 1 and 2 of the detail coefficients and layer 8 of the approximation coefficients are set to 0; which then results in the de-noised signal with no baseline drift. The resulting ECG signal can be seen in the Figure ~\ref{fig:wavelet_denoised}. 
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=12cm,keepaspectratio=true]{images/wavelet_denoised_1}
+	\caption{
+		The filtered ECG signal using wavelet.
+	}
+	\label{fig:wavelet_denoised}
+\end{figure}
+
+
+\subsection{Band-pass Filter Method}
+A band-pass filter is a type of filter which passes only frequencies in a certain range or spread without disturbing the input signal. The range of frequencies, let say, f1 and f2, are called the frequency passband.
+
+Band-pass filter can be used to reduce the baseline drift, motion artifacts and high-frequency noise from the ECG signal. A passband of 3 Hz to 45 Hz has been used. After passing the ECG signal through the band-pass filter, the resulting signal produced is the de-noised signal with no high-frequency and baseline drift. The de-noised signal can be seen in the Figure ~\ref{fig:bandpass_denoised}. 
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=12cm,keepaspectratio=true]{images/bandpass_denoised_1}
+	\caption{
+		The filtered ECG signal using bandpass filter.
+	}
+	\label{fig:bandpass_denoised}
+\end{figure}
+
+
+\section{QRS Detection}
+
