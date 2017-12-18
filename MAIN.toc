@@ -45,6 +45,6 @@
 \contentsline {section}{\numberline {3.7}Dataset}{21}{section.3.7}
 \contentsline {section}{\numberline {3.8}Preprocessing}{22}{section.3.8}
 \contentsline {subsection}{\numberline {3.8.1}Wavelet Transform Method}{23}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Band-pass Filter Method}{23}{subsection.3.8.2}
-\contentsline {section}{\numberline {3.9}QRS Detection}{23}{section.3.9}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{27}{chapter*.12}
+\contentsline {subsection}{\numberline {3.8.2}Band-pass Filter Method}{24}{subsection.3.8.2}
+\contentsline {section}{\numberline {3.9}QRS Detection}{25}{section.3.9}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{29}{chapter*.12}

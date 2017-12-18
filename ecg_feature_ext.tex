@@ -295,31 +295,30 @@ Generally, it is known that the singularity of a signal is directly proportional
 
 \section{Dataset}
 
-The MIT-BIH Arrhythmia dataset is used for the implementation of the system. It contains 48 hours of recording of 47 subjects. Each record contains 2 signals, namely MLII and V, with a recording of 30 minutes duration. The sample rate for the recording is 360 samples per second per channel with 11 bit resolution over a 10mV range. Each record consists of 3 files:
+The MIT-BIH Arrhythmia dataset is used for the implementation of the system. It contains 48 hours of recording of 47 subjects. Each record contains 2 signals, namely MLII and V5, with a recording of 30 minutes duration. The sample rate for the recording is 360 samples per second per channel with 11 bit resolution over a 10mV range. Each record consists of 3 files:
 
 \begin{itemize}
-	\item Header file (.hea)
-	\item ECG signals (.dat)
-	\item Attribute file (.atr)
+	\item Header file (.hea): It contains information such as number of samples, sampling frequency, ECG signal format, number of ECG leads and their types, patient`s history and the detailed clinical information.
+	
+	\item ECG signals (.dat): It contains the original signal values of both MLII and V5 leads. The signals from MLII lead are considered only for the analysis.
+	
+	\item Attribute file (.atr): It contains the annotation information of the ECG signal, annotated by the doctors.
 \end{itemize}
 
-Header file contains information such as number of samples, sampling
-frequency, ECG signal format, number of ECG leads and their types, patient`s history and the detailed clinical information.
-
-.dat file contains the original signal values of both MLII and V5 leads. The signals from MLII lead are only considered for our analysis. Attribute file contains the annotation information of the ECG signal which was annotated by the doctors.
-
-This dataset has been used to extract the features of ECG signal and then the Neural Network will be trained by using these features. Example of the features include P-wave amplitude and duration, QRS complex duration, T-wave amplitude and duration, average, maximum, standard derivation of the corresponding waves etc. 
+There is a specific python package available, wfdb-python for reading the data from the MIT-BIH dataset. The ECG signals of one of the patients can be seen in Figure ~\ref{fig:all_signals}. It contains 2 signals, namely, MLII and V5.
 
 
-There is a specific python package available, namely wfdb-python for reading the data from the MIT-BIH dataset. After downloading the dataset and setting up the package with the development environment, the data were analyzed. The ECG signals of one of the patient regarded as a record 100 can be seen below.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm,height=12cm,keepaspectratio=true]{images/all_signals}
+	\caption{
+		The ECG signals from MIT-BIH dataset.
+	}
+	\label{fig:all_signals}
+\end{figure}
 
 
-It contains 2 signals, namely MLII and V5, which can be seen in
-
-the signals are in raw form and need to be processed because of the noise, baseline drift, etc. Since it is the analysis phase, therefore, not much time has been spent on the processing of ECG, instead focus was to read and manipulate the data. 
-After reading the signal data from the record, the process starts by finding the R-peaks (in MLII signal). A naïve based approach is used here for finding the R-peaks which will be improved in the later phase. The R-peaks can be seen in the picture below.
-
-
+The signals are in a raw form and need to be processed before they can be used. Most of the time, the signals are also contaminated with noise, baseline drift, etc. and they are required to be cleaned to get the correct values. 
 
 
 \section{Preprocessing}
@@ -332,13 +331,7 @@ Two different methods has been used to remove the noise and artifacts from the s
  	\item Band-pass Filter Method
  \end{enumerate}
 
-\subsection{Wavelet Transform Method}
-
-The wavelet transform is a very interesting technique for analyzing the signal in the time-frequency domain. It distributes the signal in such a way that the resulting block is well localized in both time and frequency. Decomposition of the signal into different frequency bands is obtained by passing the signal through high-pass and low-pass filter respectively, which results in 2 sets of coefficients namely, approximation coefficients and detail coefficients. The approximation coefficients contain the low-pass filter output and the detail coefficients contain the high-pass filter output. The next step split the approximation coefficients again into 2 parts using the same process and so on.
-
-The original signal contains the high-frequency noise and the baseline drift. The wavelet transform can be used to remove the corresponding noises and the baseline drift. The process starts by decomposing the original signal into 8 layers using wavelet type bior2.6, which results in the corresponding detail and approximation coefficients. Mostly, the layers 1 and 2 of the detail coefficients contain the high-frequency noise and the layer 8 of the approximation coefficients contain the baseline drift. Therefore, the layers 1 and 2 of the detail coefficients and layer 8 of the approximation coefficients are set to 0; which then results in the de-noised signal with no baseline drift. The resulting ECG signal can be seen in the Figure ~\ref{fig:wavelet_denoised}. 
-
-\begin{figure}[htpb]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm,height=12cm,keepaspectratio=true]{images/wavelet_denoised_1}
 	\caption{
@@ -348,12 +341,21 @@ The original signal contains the high-frequency noise and the baseline drift. Th
 \end{figure}
 
 
+\subsection{Wavelet Transform Method}
+
+The wavelet transform is a very interesting technique for analyzing the signal in the time-frequency domain. It distributes the signal in such a way that the resulting block is well localized in both time and frequency. Decomposition of the signal into different frequency bands is obtained by passing the signal through high-pass and low-pass filter respectively, which results in 2 sets of coefficients namely, approximation coefficients and detail coefficients. The approximation coefficients contain the low-pass filter output and the detail coefficients contain the high-pass filter output. The next step split the approximation coefficients again into 2 parts using the same process and so on.
+
+The original signal contains the high-frequency noise and the baseline drift. The wavelet transform can be used to remove the corresponding noises and the baseline drift. The process starts by decomposing the original signal into 8 layers using wavelet type bior2.6, which results in the corresponding detail and approximation coefficients. Mostly, the layers 1 and 2 of the detail coefficients contain the high-frequency noise and the layer 8 of the approximation coefficients contain the baseline drift. Therefore, the layers 1 and 2 of the detail coefficients and layer 8 of the approximation coefficients are set to 0; which then results in the de-noised signal with no baseline drift. The resulting ECG signal can be seen in the Figure ~\ref{fig:wavelet_denoised}. 
+
+
+
+
 \subsection{Band-pass Filter Method}
 A band-pass filter is a type of filter which passes only frequencies in a certain range or spread without disturbing the input signal. The range of frequencies, let say, f1 and f2, are called the frequency passband.
 
 Band-pass filter can be used to reduce the baseline drift, motion artifacts and high-frequency noise from the ECG signal. A passband of 3 Hz to 45 Hz has been used. After passing the ECG signal through the band-pass filter, the resulting signal produced is the de-noised signal with no high-frequency and baseline drift. The de-noised signal can be seen in the Figure ~\ref{fig:bandpass_denoised}. 
 
-\begin{figure}[htpb]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm,height=12cm,keepaspectratio=true]{images/bandpass_denoised_1}
 	\caption{
@@ -364,4 +366,45 @@ Band-pass filter can be used to reduce the baseline drift, motion artifacts and 
 
 
 \section{QRS Detection}
+QRS detection is the basis for processing ECG signal. Regardless of what application is required, the accurate detection of QRS is a pre-requisite for feature extraction. A good wavelet base can help detect the features of ECG signal more appropriately with speed and accuracy. Therefore, Biorthogonal spline wavelet is used to detect QRS wave. Biorthogonal spline wavelet transform of ECG signal is calculated using the Mallat algorithm. Figure ~\ref{fig:detail_coefficients} shows the Biorthogonal spline wavelet transform of ECG signal at 4 different scales.
 
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/detail_coefficients}
+	\caption{
+		ECG signal and its decomposition at different scales.
+	}
+	\label{fig:detail_coefficients}
+\end{figure}
+
+Most of the QRS complex energy lies in the 3rd scale, therefore, we can use the maximal minimal method in the 3rd layer of the detail coefficient to find the R waves.  The process starts by taking the first derivative of the 3rd layer to find the maximum and minimum points and then the 2nd derivative to locate the actual maximum and minimum values. The resulting waves are shown in Figure ~\ref{fig:maximas_on_level_3}. As it can be seen that, there are other peaks available as well, therefore, to get the maximum and minimum pair only, a threshold needs to be set. And all the values that do not fulfill the threshold should be discarded. 
+For finding the threshold, the result of the 2nd derivative is divided into 4 parts and from each part, the maximum value is located. After getting the values, the average is calculated for these values and that average is then divided by 3. The resultant value is a new threshold. The pair can be seen in Figure ~\ref{fig:max_pair}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/maximas_on_level_3}
+	\caption{
+		Maximum and minimum values on scale 3.
+	}
+	\label{fig:maximas_on_level_3}
+\end{figure}
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=12cm,keepaspectratio=true]{images/max_pair}
+	\caption{
+		Maximum and minimum values pair for finding the R peaks.
+	}
+	\label{fig:max_pair}
+\end{figure}
+
+The value of R wave lies at the zero-crossing point (with a little delay) which is between the maximum and the minimum value pair. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point. The detected R-peaks can be seen in Figure ~\ref{fig:r_peaks}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/r_peaks}
+	\caption{
+		Detected R peaks.
+	}
+	\label{fig:r_peaks}
+\end{figure}
