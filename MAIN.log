@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.25)  12 DEC 2017 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.25)  22 DEC 2017 13:03
 entering extended mode
 **./MAIN.tex
 (MAIN.tex
@@ -2441,6 +2441,20 @@ File: images/r_peaks.png Graphic file (type png)
  <use images/r_peaks.png>
 Package pdftex.def Info: images/r_peaks.png used on input line 405.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
+
+<images/qrs.pdf, id=591, 597.23125pt x 845.1575pt>
+File: images/qrs.pdf Graphic file (type pdf)
+ <use images/qrs.pdf>
+Package pdftex.def Info: images/qrs.pdf used on input line 415.
+(pdftex.def)             Requested size: 482.56085pt x 682.88446pt.
+
+Overfull \hbox (23.33328pt too wide) in paragraph at lines 415--418
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 60.2945pt on input line 420.
+
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 154.
@@ -2450,20 +2464,16 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 154.
-[27 <./images/r_peaks.png>]
+ [27 <./images/r_peaks.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
- [28
-
-
-
-] (MAIN.bbl
+(babel)             in language  on input line 154.
+ [28 <./images/qrs.pdf>] (MAIN.bbl
 chapter without number
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
@@ -2499,6 +2509,9 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 95.
 [29
+
+
+
 
 
 ]
@@ -2541,10 +2554,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 31722 strings out of 493323
- 601347 string characters out of 3130015
+ 31730 strings out of 493323
+ 601487 string characters out of 3130015
  740950 words of memory out of 3000000
- 34490 multiletter control sequences out of 15000+200000
+ 34496 multiletter control sequences out of 15000+200000
  596077 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,18n,66p,10512b,684s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2577,9 +2590,9 @@ ers/medit/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C
 bols/msbm10.pfb><C:/Users/medit/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
 rw/helvetic/uhvb8a.pfb><C:/Users/medit/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/urw/helvetic/uhvr8a.pfb>
-Output written on MAIN.pdf (43 pages, 1680571 bytes).
+Output written on MAIN.pdf (43 pages, 1879018 bytes).
 PDF statistics:
- 752 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
- 489 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 757 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
+ 494 words of extra memory for PDF output out of 10000 (max. 10000000)
 
