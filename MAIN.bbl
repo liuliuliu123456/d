@@ -17,6 +17,14 @@
   --
 \newblock ISBN 9781482251333
 
+\bibitem[bil17]{bilagi}
+\textsc{bilagi}:
+\newblock \emph{arrhythmia}.
+\newblock
+  \url{http://bilagi.org/blog/2016/08/24/chapter-9-ventricular-conduction-abnormalities/}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 13-December-2017]
+
 \bibitem[Com17a]{wiki:aux_lines}
 \textsc{Commons}, Wikimedia:
 \newblock \emph{File:Brantigan 1963 1-53.png --- Wikimedia Commons{,} the free
@@ -44,6 +52,15 @@
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 8-November-2017]
 
+\bibitem[con17]{wiki:pvc}
+\textsc{contributors}, Wikipedia:
+\newblock \emph{Premature ventricular contraction --- Wikipedia{,} The Free
+  Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Premature_ventricular_contraction&oldid=810563186}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 23-December-2017]
+
 \bibitem[CSCB90]{58593}
 \textsc{Coast}, D.~A. ; \textsc{Stern}, R.~M. ; \textsc{Cano}, G.~G.  ;
   \textsc{Briller}, S.~A.:
@@ -66,6 +83,14 @@
 \newblock \url{http://www.mauvila.com/ECG/ecg_artifact.htm}.
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 12-November-2017]
+
+\bibitem[med17]{medicinenet}
+\textsc{medicinenet}:
+\newblock \emph{arrhythmia}.
+\newblock
+  \url{https://www.medicinenet.com/arrhythmia_irregular_heartbeat/article.htm}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 13-December-2017]
 
 \bibitem[MG13]{markovski2013ict}
 \textsc{Markovski}, S. ; \textsc{Gusev}, M.:
@@ -145,6 +170,14 @@
 \newblock \url{http://schoolbag.info/biology/mcat/32.html}.
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 12-November-2017]
+
+\bibitem[sum17]{sumdu}
+\textsc{sumdu}:
+\newblock \emph{arrhythmia}.
+\newblock
+  \url{https://elearning.sumdu.edu.ua/free_content/lectured:a3664646bdd2fb5e12ac4d9fc4d3dff83793be56/20150113065426//64025/index.html}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 13-December-2017]
 
 \bibitem[{The}]{TUON:six_leads}
 \textsc{{The University of Nottingham}}:
