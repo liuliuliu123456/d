@@ -1,8 +1,150 @@
 %\ihead{\headmark}
-\chapter{ECG Feature Extraction}
+\chapter{ECG Signal and Data Processing}
 
 
-\section{Introduction}
+\section{Devices}
+
+Wireless sensor devices and contact-less sensor devices are the current trends in the health informatics. The recent improvements in the sensor devices made it possible for the people to bring this idea
+into reality. When  medical sensor devices are combined with cloud computing, it can be thought of as a complete
+solution for a health care system which not only can be used
+in hospitals but also can be utilized out of the hospital when
+the doctor is unreachable regardless of the patients location.
+Doctors will still be able to monitor his patient condition and
+according to the patient situation they can instruct the device,
+that is, attached to the patient, to take appropriate actions.
+One example can be thought of as a person running somewhere and during that he/she feels some heart pain. Sensors assess the patient's condition and immediately send some notification to the doctor. After looking at the conditions, he sends back a response to the devices, which then acts according to the instruction such as, injects some medicine into the patient body. It can also be used to keep track of the patient location so, in the case of emergency, an ambulance can be instructed to go there.
+Many of the sensors can be installed in the patient's surrounding, whereas,
+several sensors can be wearable. These sensors can monitor
+body temperature, respiration, heart rate, blood pressure, ECG, EEG, etc.
+Along with sensors, it might be possible that there are several
+actuators attached to the patient body which is activated by
+certain events such as, the rise of sugar level in blood.
+
+Multiple contact-less sensor devices are used to implement a system for the thesis, which collect data of the user and process that in real-time. The following devices are used in the implementation:
+
+\subsection{Magnetic Impedance Sensor}
+
+The magnetic impedance (MI) sensor measures the small changes in electrical resistance of the chest or different regions of the body. It uses a special electrodes which emit very low voltage electric current into the body. As the voltage level is very low, therefore, it does not interfere with the heart's electrical system. The MI sensor measures the resistance to the flow of current as it passes through the body via blood, as blood is a good conductor.
+
+During systole, as the blood volume increases, impedance decreases. Similarly, during diastole, the blood volume decreases and the impedance increases.
+
+
+\begin{figure}%
+	\centering
+	
+	\subfigure[]{%
+		\label{fig:ex3-e}%
+		\includegraphics[height=2in]{images/ecg}}%
+	\hspace{8pt}%
+	\subfigure[][]{%
+		\label{fig:ex3-a}%
+		\includegraphics[height=2in]{images/mi}}%
+	\hspace{8pt}%
+	\subfigure[][]{%
+		\label{fig:ex3-b}%
+		\includegraphics[height=2in]{images/ppg}} \\
+	\subfigure[][]{%
+		\label{fig:ex3-c}%
+		\includegraphics[height=2in]{images/bcg}}%
+	\hspace{8pt}%
+	\subfigure[][]{%
+		\label{fig:ex3-d}%
+		\includegraphics[height=2in]{images/tc}}%
+	\caption[A set of four subfigures.]{A set of sensor devices:
+		\subref{fig:ex3-e} an ECG sensor;
+		\subref{fig:ex3-a} a MI sensor;
+		\subref{fig:ex3-b} a PPG sensor;
+		\subref{fig:ex3-c} a BCG sensor; and,
+		\subref{fig:ex3-d} a thermal camera.}%
+	\label{fig:ex3}%
+\end{figure}
+
+
+
+The MI sensor provides 42 bytes of data packet, which splits into the attributes shown in table \ref{tab:att_mi}. The byte identifier of the sensor can be seen in the table \ref{tab:bi_mi}.
+
+There is an exception in the data packet when it contains \textit{0x8101} or \textit{0x8102}. In this case, the size of the data packet may vary according to the no. of count of the corresponding bytes. Moreover, the data packet should be examined and if it contains the corresponding bytes, the data packet should be modified and the bytes \textit{0x8101} should be replaced with \textit{0x81} and \textit{0x8102} should be replaced with \textit{0x82}. This modification has been done in order to differentiate it with the header and data packet identifier as they have the same value.
+
+
+\renewcommand{\arraystretch}{2}
+\begin{table}
+	\caption{Attributes of MI s
+		ensor.} \label{tab:att_mi}
+	
+	\begin{center}
+		\begin{tabular}{ | l | r | }
+			\hline
+			\textbf{Attributes} & \textbf{Size (Bytes)} \\ \hline
+			MI\_RAW  & 4 \\ \hline
+			MI  & 4  \\ \hline
+			RED\_RAW  & 4  \\ \hline
+			ECG\_RAW  & 4  \\ \hline
+			IR\_RAW  & 4  \\ \hline
+			RED\_AVG  & 4  \\ \hline
+			ECG\_AVG  & 4  \\ \hline
+			IR\_AVG  & 4  \\ \hline
+			ACC\_X  & 2  \\ \hline
+			ACC\_Z  & 2  \\ \hline
+			ECG\_REF  & 2  \\ \hline
+			RESP\_REF  & 2  \\ \hline
+			BATTERY  & 2  \\ \hline
+		\end{tabular}
+	\end{center}
+	
+\end{table}
+
+
+\renewcommand{\arraystretch}{2}
+\begin{table}
+	\caption{Byte identifiers for the MI sensor.} \label{tab:bi_mi}
+	
+	\begin{center}
+		\begin{tabular}{ | l | r | }
+			\hline
+			\textbf{2-Byte Identifier} & \textbf{Description} \\ \hline
+			0x81  & Header \\ \hline
+			0x82  & Data Packet  \\ \hline
+		\end{tabular}
+	\end{center}
+	
+\end{table}
+
+\subsection{Photoplethysmogram Sensor}
+The Photoplethysmogram (PPG) sensor is used to measures the variations in blood flow in the body which each heart beat. A PPG sensor uses a light source to illuminate the blood and a photo-detector to measures the variations in the light intensity associated with changes in the blood volume. The decrease in light intensity indicates the increase in blood volume and increase in light intensity indicates the decrease in blood volume.
+
+The sensor provides the PPG signal with 4 different channels, a temperature, which is measured in Celsius and accelerometer coordinates. The size of the data changes according to the attributes which can be seen in the table \ref{tab:att_ppg}. The frequency of the data packets changes according to the attributes. The temperature value is sent every one second, whereas, the frequency rate of PPG channels is 100 samples per second. Similarly, for the accelerometer coordinates, the data rate is 50 samples per second.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+	\centering
+	\caption{Attributes of PPG Sensor.}
+	\label{tab:att_ppg}
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\textbf{2-Byte Identifier} & \textbf{Attributes} & \textbf{Size (Bytes)} & \textbf{Data} \\ \hline
+		\multirow{4}{*}{} 0x0050 & \multirow{4}{*}{} ppg (8 Bytes) & 2 & Channel 1 \\ \cline{3-4} 
+		&                   & 2 & Channel 2 \\ \cline{3-4} 
+		&                   & 2 & Channel 3 \\ \cline{3-4} 
+		&                   & 2 &  Channel 4 \\ \hline
+		 0x0054 & Temperature (2 Bytes) & 2 & Temperature \\ \hline
+		\multirow{3}{*}{} & \multirow{3}{*}{} & 2 & X Coordinate \\ \cline{3-4} 
+		 0x0041 & Accelerometer coordinates (6 Bytes) & 2 & Y Coordinate \\ \cline{3-4} 
+		&  & 2 & Z Coordinate \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\subsection{ECG Sensor}
+As described in section \ref{the_electrocardiogram}, the ECG signal is usually collected by placing electrodes directly on the body but it has several disadvantages as well, which is described in section \ref{electrodes_disadv}. Therefore, non-contact capacitive electrodes has been used to collect the ECG signals of the person. Unlike traditional electrodes, which rely on galvanic contact, the capacitive electrodes are insulated from skin using dielectric material, such as, air gap, clothes, etc. The ECG signal propagates via skin to the dielectric material and then to the electrodes through a capacitive coupling. The major drawback of this approach is that it is very sensitive to body motion.
+
+\subsection{Ballistocardiogram Sensor}
+The ballistocardiogram (BCG) sensor measures the ballistic forces associated with cardiac contraction and ejection of blood. These ballistic forces are mainly measures by the electro-mechanical film (EMFi) sensor which converts the mechanical energy into the electrical signal and vice versa. Most of the time, the EMFi sensing device is placed on a chair or bed, which measures the pressure associated with the cardiac activity.
+
+\subsection{Thermal Camera}
+A thermal camera is also used to measures the temperature of the person. A thermal seek camera is used for the implementation which captures the thermo temperature images, from which then the temperature is calculated.
+
+\section{ECG Signal Processing}
 QRS complex detection is the basis for processing ECG signal. Regardless of what application is required, the accurate detection of QRS complex is a pre-requisite for feature extraction. In order to detect the QRS complex accurately, it is necessary to detect the R-peak position correctly. Once the QRS complex is identified, further examination of the signal can be performed such as heart rate, arrhythmias, classification of ECG signal, ST segment etc. Moreover, P and T waves can be identified correctly.
 
 The "QRS Complex" is the combination of Q, R and S waves and it represents the contraction of the ventricles. It plays a significant role in the detection of cardiac arrhythmias.

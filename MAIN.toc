@@ -17,43 +17,46 @@
 \contentsline {subsection}{\numberline {1.3.5}ST Segment}{7}{subsection.1.3.5}
 \contentsline {subsection}{\numberline {1.3.6}QT Interval}{7}{subsection.1.3.6}
 \contentsline {section}{\numberline {1.4}Disadvantages of Attached Electrodes}{7}{section.1.4}
-\contentsline {section}{\numberline {1.5}Non-Contact ECG}{8}{section.1.5}
-\contentsline {section}{\numberline {1.6}Noise in ECG Signal}{8}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Power Line Interference}{8}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Baseline wander}{9}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Muscle Noise}{9}{subsection.1.6.3}
-\contentsline {section}{\numberline {1.7}Arrhythmias}{9}{section.1.7}
-\contentsline {subsection}{\numberline {1.7.1}Causes of an Arrhythmia}{10}{subsection.1.7.1}
-\contentsline {subsection}{\numberline {1.7.2}Types of Arrhythmias}{10}{subsection.1.7.2}
+\contentsline {section}{\numberline {1.5}Noise in ECG Signal}{8}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Power Line Interference}{8}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Baseline wander}{8}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Muscle Noise}{8}{subsection.1.5.3}
+\contentsline {section}{\numberline {1.6}Arrhythmias}{9}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Causes of an Arrhythmia}{9}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Types of Arrhythmias}{10}{subsection.1.6.2}
 \contentsline {subsubsection}{\nonumberline Premature Ventricular Contraction}{10}{section*.12}
 \contentsline {subsubsection}{\nonumberline Atrial Fibrillation}{10}{section*.13}
 \contentsline {subsubsection}{\nonumberline Atrial Flutter}{11}{section*.14}
 \contentsline {subsubsection}{\nonumberline Bradycardia}{11}{section*.15}
 \contentsline {subsubsection}{\nonumberline Tachycardia}{11}{section*.16}
-\contentsline {subsubsection}{\nonumberline Heart Block}{11}{section*.17}
+\contentsline {subsubsection}{\nonumberline Heart Block}{12}{section*.17}
 \contentsline {subsubsection}{\nonumberline Bundle Branch Block}{12}{section*.18}
-\contentsline {chapter}{\numberline {2}Devices}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}
-\contentsline {chapter}{\numberline {3}ECG Feature Extraction}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{15}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Filter Method}{15}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Artificial Intelligence Method}{15}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Wavelet Transform Method}{16}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Wavelet Transform}{16}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Continuous Wavelet Transform}{17}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Discrete Wavelet Transform}{17}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Biorthogonal Wavelet Transform}{17}{section.3.3}
-\contentsline {section}{\numberline {3.4}Biorthogonal Spline Wavelet Filter Construction}{17}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Design of Biorthogonal Spline Wavelet Filter}{19}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Steps for Designing FIR Filter Bank}{20}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Mallat's Algorithm}{21}{section.3.5}
-\contentsline {section}{\numberline {3.6}Using Wavelet Transform to Identify Singular Point of QRS Complex}{22}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Feature Extraction Using Wavelets}{22}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Lipschitz Exponent}{22}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Relationship between Lipschitz Exponent and Modulus Maximum}{22}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Dataset}{23}{section.3.7}
-\contentsline {section}{\numberline {3.8}Preprocessing}{24}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Wavelet Transform Method}{25}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Band-pass Filter Method}{26}{subsection.3.8.2}
-\contentsline {section}{\numberline {3.9}QRS Detection}{27}{section.3.9}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{31}{chapter*.19}
+\contentsline {chapter}{\numberline {2}ECG Signal and Data Processing}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Devices}{13}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Magnetic Impedance Sensor}{13}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Photoplethysmogram Sensor}{16}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}ECG Sensor}{16}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Ballistocardiogram Sensor}{16}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Thermal Camera}{17}{subsection.2.1.5}
+\contentsline {section}{\numberline {2.2}ECG Signal Processing}{17}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Filter Method}{18}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Artificial Intelligence Method}{18}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Wavelet Transform Method}{18}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Wavelet Transform}{19}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Continuous Wavelet Transform}{20}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Discrete Wavelet Transform}{20}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Biorthogonal Wavelet Transform}{20}{section.2.4}
+\contentsline {section}{\numberline {2.5}Biorthogonal Spline Wavelet Filter Construction}{20}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Design of Biorthogonal Spline Wavelet Filter}{21}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Steps for Designing FIR Filter Bank}{22}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Mallat's Algorithm}{24}{section.2.6}
+\contentsline {section}{\numberline {2.7}Using Wavelet Transform to Identify Singular Point of QRS Complex}{25}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Feature Extraction Using Wavelets}{25}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Lipschitz Exponent}{25}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Relationship between Lipschitz Exponent and Modulus Maximum}{25}{subsection.2.7.3}
+\contentsline {section}{\numberline {2.8}Dataset}{26}{section.2.8}
+\contentsline {section}{\numberline {2.9}Preprocessing}{27}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Wavelet Transform Method}{27}{subsection.2.9.1}
+\contentsline {subsection}{\numberline {2.9.2}Band-pass Filter Method}{29}{subsection.2.9.2}
+\contentsline {section}{\numberline {2.10}QRS Detection}{29}{section.2.10}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{35}{chapter*.19}
