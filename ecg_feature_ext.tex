@@ -447,7 +447,7 @@ The MIT-BIH Arrhythmia dataset is used for the implementation of the system. It 
 	\item Attribute file (.atr): It contains the annotation information of the ECG signal, annotated by the doctors.
 \end{itemize}
 
-There is a specific python package available, wfdb-python for reading the data from the MIT-BIH dataset. The ECG signals of one of the patients can be seen in Figure ~\ref{fig:all_signals}. It contains 2 signals, namely, MLII and V5.
+There is a specific python package available, wfdb-python for reading the data from the MIT-BIH dataset. The ECG signals of one of the patients can be seen in Figure \ref{fig:all_signals}. It contains 2 signals, namely, MLII and V5.
 
 
 \begin{figure}[h]
@@ -487,7 +487,7 @@ Two different methods has been used to remove the noise and artifacts from the s
 
 The wavelet transform is a very interesting technique for analyzing the signal in the time-frequency domain. It distributes the signal in such a way that the resulting block is well localized in both time and frequency. Decomposition of the signal into different frequency bands is obtained by passing the signal through high-pass and low-pass filter respectively, which results in 2 sets of coefficients namely, approximation coefficients and detail coefficients. The approximation coefficients contain the low-pass filter output and the detail coefficients contain the high-pass filter output. The next step split the approximation coefficients again into 2 parts using the same process and so on.
 
-The original signal contains the high-frequency noise and the baseline drift. The wavelet transform can be used to remove the corresponding noises and the baseline drift. The process starts by decomposing the original signal into 8 layers using wavelet type bior2.6, which results in the corresponding detail and approximation coefficients. Mostly, the layers 1 and 2 of the detail coefficients contain the high-frequency noise and the layer 8 of the approximation coefficients contain the baseline drift. Therefore, the layers 1 and 2 of the detail coefficients and layer 8 of the approximation coefficients are set to 0; which then results in the de-noised signal with no baseline drift. The resulting ECG signal can be seen in the Figure ~\ref{fig:wavelet_denoised}. 
+The original signal contains the high-frequency noise and the baseline drift. The wavelet transform can be used to remove the corresponding noises and the baseline drift. The process starts by decomposing the original signal into 8 layers using wavelet type bior2.6, which results in the corresponding detail and approximation coefficients. Mostly, the layers 1 and 2 of the detail coefficients contain the high-frequency noise and the layer 8 of the approximation coefficients contain the baseline drift. Therefore, the layers 1 and 2 of the detail coefficients and layer 8 of the approximation coefficients are set to 0; which then results in the de-noised signal with no baseline drift. The resulting ECG signal can be seen in the Figure \ref{fig:wavelet_denoised}. 
 
 
 
@@ -495,7 +495,7 @@ The original signal contains the high-frequency noise and the baseline drift. Th
 \subsection{Band-pass Filter Method}
 A band-pass filter is a type of filter which passes only frequencies in a certain range or spread without disturbing the input signal. The range of frequencies, let say, f1 and f2, are called the frequency passband.
 
-Band-pass filter can be used to reduce the baseline drift, motion artifacts and high-frequency noise from the ECG signal. A passband of 3 Hz to 45 Hz has been used. After passing the ECG signal through the band-pass filter, the resulting signal produced is the de-noised signal with no high-frequency and baseline drift. The de-noised signal can be seen in the Figure ~\ref{fig:bandpass_denoised}. 
+Band-pass filter can be used to reduce the baseline drift, motion artifacts and high-frequency noise from the ECG signal. A passband of 3 Hz to 45 Hz has been used. After passing the ECG signal through the band-pass filter, the resulting signal produced is the de-noised signal with no high-frequency and baseline drift. The de-noised signal can be seen in the Figure \ref{fig:bandpass_denoised}. 
 
 \begin{figure}[h]
 	\centering
@@ -507,8 +507,8 @@ Band-pass filter can be used to reduce the baseline drift, motion artifacts and 
 \end{figure}
 
 
-\section{QRS Detection}
-QRS detection is the basis for processing ECG signal. Regardless of what application is required, the accurate detection of QRS is a pre-requisite for feature extraction. A good wavelet base can help detect the features of ECG signal more appropriately with speed and accuracy. Therefore, Biorthogonal spline wavelet is used to detect QRS wave. Biorthogonal spline wavelet transform of ECG signal is calculated using the Mallat algorithm. Figure ~\ref{fig:detail_coefficients} shows the Biorthogonal spline wavelet transform of ECG signal at 4 different scales.
+\section{QRS Detection}\label{sec:ecg_det}
+QRS detection is the basis for processing the ECG signal. Regardless of what application is required, the accurate detection of QRS is a pre-requisite for feature extraction. A good wavelet base can help detect the features of ECG signal more appropriately with speed and accuracy. Therefore, Biorthogonal spline wavelet is used to detect QRS wave. Biorthogonal spline wavelet transform of ECG signal is calculated using the Mallat algorithm. Figure ~\ref{fig:detail_coefficients} shows the Biorthogonal spline wavelet transform of ECG signal at 4 different scales.
 
 \begin{figure}[htpb]
 	\centering
@@ -519,8 +519,8 @@ QRS detection is the basis for processing ECG signal. Regardless of what applica
 	\label{fig:detail_coefficients}
 \end{figure}
 
-Most of the QRS complex energy lies in the 3rd scale, therefore, we can use the maximal minimal method in the 3rd layer of the detail coefficient to find the R waves.  The process starts by taking the first derivative of the 3rd layer to find the maximum and minimum points and then the 2nd derivative to locate the actual maximum and minimum values. The resulting waves are shown in Figure ~\ref{fig:maximas_on_level_3}. As it can be seen that, there are other peaks available as well, therefore, to get the maximum and minimum pair only, a threshold needs to be set. And all the values that do not fulfill the threshold should be discarded. 
-For finding the threshold, the result of the 2nd derivative is divided into 4 parts and from each part, the maximum value is located. After getting the values, the average is calculated for these values and that average is then divided by 3. The resultant value is a new threshold. The pair can be seen in Figure ~\ref{fig:max_pair}.
+Most of the QRS complex energy lies in the 3rd scale, therefore, we can use the maximal minimal method in the 3rd layer of the detail coefficient to find the R waves.  The process starts by taking the first derivative of the 3rd layer to find the maximum and minimum points and then the 2nd derivative to locate the actual maximum and minimum values. The resulting waves are shown in Figure \ref{fig:maximas_on_level_3}. As it can be seen that, there are other peaks available as well, therefore, to get the maximum and minimum pair only, a threshold needs to be set. And all the values that do not fulfill the threshold should be discarded. 
+For finding the threshold, the result of the 2nd derivative is divided into 4 parts and from each part, the maximum value is located. After getting the values, the average is calculated for these values and that average is then divided by 3. The resultant value is a new threshold. The pair can be seen in Figure \ref{fig:max_pair}.
 
 \begin{figure}[htpb]
 	\centering
@@ -540,7 +540,7 @@ For finding the threshold, the result of the 2nd derivative is divided into 4 pa
 	\label{fig:max_pair}
 \end{figure}
 
-The value of R wave lies at the zero-crossing point (with a little delay) which is between the maximum and the minimum value pair. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point. The detected R-peaks can be seen in Figure ~\ref{fig:r_peaks}.
+The value of R wave lies at the zero-crossing point (with a little delay) which is between the maximum and the minimum value pair. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point. The detected R-peaks can be seen in Figure \ref{fig:r_peaks}. The flow chart for finding the R peaks is shown in Figure \ref{fig:r_peaks_flow_chart}.
 
 \begin{figure}[htpb]
 	\centering
@@ -554,10 +554,75 @@ The value of R wave lies at the zero-crossing point (with a little delay) which 
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=25cm,height=24cm,keepaspectratio=true]{images/qrs.pdf}
+	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/qrs.pdf}
 	\caption{
 		R peak flow chart.
 	}
 	\label{fig:r_peaks_flow_chart}
 \end{figure}
 
+
+
+After getting the R-peaks, Q and S peaks have to be detected. Q and S wave generally are of high frequency; therefore, their energies are mainly on the 1st scale. For finding the Q wave, the algorithm starts by looking on the left side of the R wave and finds the first non-zero value i.e. the Q wave. And because of the delay, the minimum value is searched in the window of 10 points to the detected Q wave. The same process is executed for the S wave, but in this case, the direction was on the right side of the R wave. The detected QRS complex can be seen in Figure \ref{fig:qrs_peaks}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/qrs}
+	\caption{
+		Detected Q, R and S peaks.
+	}
+	\label{fig:qrs_peaks}
+\end{figure}
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/pqrst}
+	\caption{
+		Detected P,Q,R,S and T waves.
+	}
+	\label{fig:pqrst}
+\end{figure}
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/q-and-s.pdf}
+	\caption{
+		Q and S peak flow chart.
+	}
+	\label{fig:qs}
+\end{figure}
+
+
+
+After detecting the QRS complex, P and T waves are required to be detected as they also have very important significance to identify the arrhythmia. P wave generally occurred before the QRS complex and T wave after the QRS complex, therefore, they can be detected based on QRS location.
+
+\section{P and T Wave Detection}
+Most of the P and T waves energy lies on the scale 4 and the QRS complex energy lies on the scale 3 of detail coefficient. If QRS complex (that was detected on scale 3) is used, it sometimes misses the P wave or identifies the wrong position. Therefore, it is first required to detect QRS complex on scale 4 and then find P and T waves. The same algorithm is used to detect the QRS complex on scale 4 that is used to detect on scale 3, as described in section \ref{sec:ecg_det}.
+
+After getting the QRS on scale 4, a window size of 100 is used for detecting the P wave. The starting point of the window is one sample less than from Q wave position and if the window size is added to this position, we get the beginning of the window. RR interval is also calculated between the 2 consecutive R peaks. 1/3 of the RR interval is used for detecting the P wave and 2/3 of the RR interval is used for detecting the T wave. Once the window is identified on the scale 4, the max and min values are identified in that window as P wave lies on the zero-crossing point of min and max pair. The average is taken to calculate the P wave position of scale 4. Once the P wave position is calculated, the P wave is identified relatively on the original signal. One point to note here is that the scale 4 data is shifted because of filtering, therefore, it is required to shift the detected position few samples back to get the appropriate value.
+
+The same approach is used for detecting the T wave, but instead of looking the window before the QRS complex, here the window is searched after the QRS complex for detecting the T wave.
+
+All detected waves can be seen in the figure \ref{fig:pqrst}. The flow chart for finding the P wave and T wave is shown in Figure \ref{fig:p_peaks_flow_chart} and \ref{fig:t_peaks_flow_chart} respectively.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/p_Wave.pdf}
+	\caption{
+		P wave flow chart.
+	}
+	\label{fig:p_peaks_flow_chart}
+\end{figure}
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/T_Wave.pdf}
+	\caption{
+		T wave flow chart.
+	}
+	\label{fig:t_peaks_flow_chart}
+\end{figure}

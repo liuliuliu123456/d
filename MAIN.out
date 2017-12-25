@@ -49,4 +49,6 @@
 \BOOKMARK [2][-]{subsection.2.9.1}{Wavelet Transform Method}{section.2.9}% 49
 \BOOKMARK [2][-]{subsection.2.9.2}{Band-pass Filter Method}{section.2.9}% 50
 \BOOKMARK [1][-]{section.2.10}{QRS Detection}{chapter.2}% 51
-\BOOKMARK [0][-]{chapter*.19}{Literaturverzeichnis}{}% 52
+\BOOKMARK [1][-]{section.2.11}{P and T Wave Detection}{chapter.2}% 52
+\BOOKMARK [0][-]{chapter.3}{Deep Learning}{}% 53
+\BOOKMARK [0][-]{chapter*.19}{Literaturverzeichnis}{}% 54

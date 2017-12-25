@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.1)  25 DEC 2017 00:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.1)  25 DEC 2017 20:28
 entering extended mode
 **./MAIN.tex
 (MAIN.tex
@@ -1415,7 +1415,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 111.
 \fheight=\skip101
 \fwidth=\skip102
 ) (MAIN.aux (titelseite.aux) (danksagung.aux) (erklaerung.aux) (abstract.aux)
-(symbolverzeichnis.aux) (einleitung.aux) (devices.aux) (ecg_feature_ext.aux
+(symbolverzeichnis.aux) (einleitung.aux) (ecg_feature_ext.aux
 
 LaTeX Warning: Label `eqn_wavelet_transform' multiply defined.
 
@@ -1440,7 +1440,7 @@ LaTeX Warning: Label `eq1' multiply defined.
 
 LaTeX Warning: Label `eq1' multiply defined.
 
-))
+) (deep_learning.aux))
 \openout1 = `MAIN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
@@ -1458,7 +1458,8 @@ LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 76.
- ("C:\Users\waqar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+
+("C:\Users\waqar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box92
@@ -2320,7 +2321,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 199.
 
-<images/2_channel_filter_bank.png, id=595, 881.2925pt x 251.94125pt>
+<images/2_channel_filter_bank.png, id=577, 881.2925pt x 251.94125pt>
 File: images/2_channel_filter_bank.png Graphic file (type png)
 
 <use images/2_channel_filter_bank.png>
@@ -2418,7 +2419,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 438.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 438.
- <images/all_signals.png, id=680, 987.2082pt x 459.6372pt>
+ <images/all_signals.png, id=646, 987.2082pt x 459.6372pt>
 File: images/all_signals.png Graphic file (type png)
 
 <use images/all_signals.png>
@@ -2441,7 +2442,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 466.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 466.
- <images/wavelet_denoised_1.png, id=688, 925.056pt x 643.9257pt>
+ <images/wavelet_denoised_1.png, id=653, 925.056pt x 643.9257pt>
 File: images/wavelet_denoised_1.png Graphic file (type png)
 
 <use images/wavelet_denoised_1.png>
@@ -2480,7 +2481,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 497.
  [28 <./images/wavelet_denoised_1.png>]
-<images/bandpass_denoised_1.png, id=708, 925.056pt x 643.9257pt>
+<images/bandpass_denoised_1.png, id=669, 925.056pt x 643.9257pt>
 File: images/bandpass_denoised_1.png Graphic file (type png)
 
 <use images/bandpass_denoised_1.png>
@@ -2492,7 +2493,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 510.
 
-<images/detail_coefficients.png, id=710, 925.056pt x 643.9257pt>
+<images/detail_coefficients.png, id=671, 925.056pt x 643.9257pt>
 File: images/detail_coefficients.png Graphic file (type png)
 
 <use images/detail_coefficients.png>
@@ -2508,38 +2509,136 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 520.
  [29 <./images/bandpass_denoised_1.png>]
-<images/maximas_on_level_3.png, id=722, 987.2082pt x 459.6372pt>
+<images/maximas_on_level_3.png, id=680, 987.2082pt x 459.6372pt>
 File: images/maximas_on_level_3.png Graphic file (type png)
 
 <use images/maximas_on_level_3.png>
 Package pdftex.def Info: images/maximas_on_level_3.png used on input line 527.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
 
-<images/max_pair.png, id=723, 987.2082pt x 459.6372pt>
+<images/max_pair.png, id=681, 987.2082pt x 459.6372pt>
 File: images/max_pair.png Graphic file (type png)
 
 <use images/max_pair.png>
 Package pdftex.def Info: images/max_pair.png used on input line 536.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
 
-<images/r_peaks.png, id=725, 987.2082pt x 459.6372pt>
+<images/r_peaks.png, id=684, 987.2082pt x 459.6372pt>
 File: images/r_peaks.png Graphic file (type png)
  <use images/r_peaks.png>
 Package pdftex.def Info: images/r_peaks.png used on input line 547.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
 
-<images/qrs.pdf, id=726, 597.23125pt x 845.1575pt>
+<images/qrs.pdf, id=685, 698.61pt x 1115.16624pt>
 File: images/qrs.pdf Graphic file (type pdf)
  <use images/qrs.pdf>
 Package pdftex.def Info: images/qrs.pdf used on input line 557.
-(pdftex.def)             Requested size: 482.56085pt x 682.88446pt.
+(pdftex.def)             Requested size: 392.14635pt x 625.96924pt.
 
-Overfull \hbox (23.33328pt too wide) in paragraph at lines 557--560
+
+LaTeX Warning: Float too large for page by 3.37927pt on input line 562.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 567.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 567.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 567.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 567.
+[30 <./images/detail_coefficients.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 567.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 567.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 567.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 567.
+ [31 <./images/maximas_on_level_3.png> <./images/max_pair.png>] <images/qrs.png
+, id=704, 987.2082pt x 459.6372pt>
+File: images/qrs.png Graphic file (type png)
+
+<use images/qrs.png>
+Package pdftex.def Info: images/qrs.png used on input line 570.
+(pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
+ <images/pqrst.png, id=705, 987.2082pt x 459.6372pt>
+File: images/pqrst.png Graphic file (type png)
+
+<use images/pqrst.png>
+Package pdftex.def Info: images/pqrst.png used on input line 580.
+(pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
+ <images/q-and-s.pdf, id=706, 728.7225pt x 986.68625pt>
+File: images/q-and-s.pdf Graphic file (type pdf)
+
+<use images/q-and-s.pdf>
+Package pdftex.def Info: images/q-and-s.pdf used on input line 591.
+(pdftex.def)             Requested size: 462.33334pt x 625.99681pt.
+
+Overfull \hbox (3.10577pt too wide) in paragraph at lines 591--594
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 60.2945pt on input line 562.
+LaTeX Warning: Float too large for page by 3.40685pt on input line 596.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 602.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 602.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 606.
+[32 <./images/r_peaks.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 606.
+ [33 <./images/qrs.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 606.
+ [34 <./images/qrs.png> <./images/pqrst.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 606.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 606.
+ [35 <./images/q-and-s.pdf>]
+<images/p_Wave.pdf, id=739, 768.8725pt x 1128.215pt>
+File: images/p_Wave.pdf Graphic file (type pdf)
+ <use images/p_Wave.pdf>
+Package pdftex.def Info: images/p_Wave.pdf used on input line 614.
+(pdftex.def)             Requested size: 426.5885pt x 625.96016pt.
+
+
+LaTeX Warning: Float too large for page by 3.3702pt on input line 619.
+
+<images/T_Wave.pdf, id=740, 768.8725pt x 1128.215pt>
+File: images/T_Wave.pdf Graphic file (type pdf)
+ <use images/T_Wave.pdf>
+Package pdftex.def Info: images/T_Wave.pdf used on input line 623.
+(pdftex.def)             Requested size: 426.5885pt x 625.96016pt.
+
+
+LaTeX Warning: Float too large for page by 3.3702pt on input line 628.
 
 )
 Package babel Info: Redefining ngerman shorthand "|
@@ -2550,7 +2649,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 147.
- [30 <./images/detail_coefficients.png>]
+ [36]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2559,7 +2658,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 147.
- [31 <./images/maximas_on_level_3.png> <./images/max_pair.png>]
+ [37 <./images/p_Wave.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2568,26 +2667,39 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 147.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 147.
- [32 <./images/r_peaks.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 147.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 147.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 147.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 147.
- [33 <./images/qrs.pdf>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 159.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 159.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 159.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 159.
+ [38 <./images/T_Wave.pdf>]
+\openout2 = `deep_learning.aux'.
 
-[34
+ (deep_learning.tex
+chapter 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 154.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 154.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 154.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 154.
+ [39
+
+
+
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 166.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 166.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 166.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 166.
+ [40
 
 
 
@@ -2633,7 +2745,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 94.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 94.
-[35
+[41
 
 
 ]
@@ -2650,7 +2762,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 167.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 167.
-[36]
+[42]
 Underfull \hbox (badness 1377) in paragraph at lines 168--173
 []\T1/lmr/m/sc/12 Schoolinfo\T1/lmr/m/n/12 :  \T1/lmr/m/it/12 Elec-tri-cal ac-t
 i-vi-ty of He-art\T1/lmr/m/n/12 .  [][]$\T1/lmtt/m/n/12 http : / / schoolbag . 
@@ -2672,217 +2784,68 @@ $\T1/lmtt/m/n/12 content / lectured : a3664646bdd2fb5e12ac4d9fc4d3dff83793be56
 
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 173.
+(babel)             in language  on input line 180.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 173.
- [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
+(babel)             in language  on input line 180.
+ [43]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
  (MAIN.aux (titelseite.aux) (danksagung.aux) (erklaerung.aux)
-(abstract.aux) (symbolverzeichnis.aux) (einleitung.aux) (ecg_feature_ext.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
+(abstract.aux) (symbolverzeichnis.aux) (einleitung.aux) (ecg_feature_ext.aux)
+(deep_learning.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 180.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 180.
+Package rerunfilecheck Info: File `MAIN.out' has not changed.
+(rerunfilecheck)             Checksum: B85DE4381151074D77B51CC956D489A1;3823.
 
-
-Package rerunfilecheck Warning: File `MAIN.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MAIN.out':
-(rerunfilecheck)             Before: CA37F8B3EC4529E4E16AA6EA43D23D14;3806
-(rerunfilecheck)             After:  39D93EA5D51176A39E95FF39079AA002;3702.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 31637 strings out of 493634
- 599357 string characters out of 3135239
- 731024 words of memory out of 3000000
- 34174 multiletter control sequences out of 15000+200000
+ 31645 strings out of 493634
+ 599610 string characters out of 3135239
+ 731331 words of memory out of 3000000
+ 34209 multiletter control sequences out of 15000+200000
  599067 words of font info for 67 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 69i,18n,66p,10511b,685s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{figure.3.9} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.8} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.7} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.6} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.5} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.4} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.3} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.3.5.20} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.3.5.13} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.3.5.10} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.3.5.9} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.2} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{table.3.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{subfigure.\\relax\0403.1.5} has been referenced but
- does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subfigure.\\relax\0403.1.4} has been referenced but
- does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subfigure.\\relax\0403.1.3} has been referenced but
- does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subfigure.\\relax\0403.1.2} has been referenced but
- does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subfigure.\\relax\0403.1.1} has been referenced but
- does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.3.2} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{table.3.1} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.10} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.9.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.9.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.9} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.7.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.7.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.7.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.7} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.5.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.5.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.3.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}
-{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}
-{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.
-enc}{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
-hit.enc}{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm
--mathex.enc}{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/f
-ontname/8r.enc}<C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmbx10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/lm/lmbx12.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/lm/lmbxi10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/lm/lmcsc10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/waqar/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Users/waqar/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Users/waqar/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/waqar/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/waqar/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/waqar/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/waqar/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/waqar/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/waqar/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/waqa
-r/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/
-waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Use
-rs/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/
-Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-<C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/urw/helvetic/uhvb8a.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/urw/helvetic/uhvr8a.pfb>
-Output written on MAIN.pdf (49 pages, 2241379 bytes).
+ 69i,18n,66p,10511b,689s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
+c}{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
+y.enc}{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
+athit.enc}{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
+lm-mathex.enc}{C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/fontname/8r.enc}<C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/lm/lmbx10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmbx12.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/lm/lmbxi10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/waqar/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Users/waqar/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Users/waqar/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/waqar/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/waqar/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/waqar/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/waqar/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/waqar/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/waqar/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/wa
+qar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/User
+s/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/U
+sers/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C
+:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pf
+b><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/urw/helvetic/uhvb8a.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on MAIN.pdf (55 pages, 2931524 bytes).
 PDF statistics:
- 943 PDF objects out of 1000 (max. 8388607)
- 256 named destinations out of 1000 (max. 500000)
- 590 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 942 PDF objects out of 1000 (max. 8388607)
+ 221 named destinations out of 1000 (max. 500000)
+ 615 words of extra memory for PDF output out of 10000 (max. 10000000)
 
