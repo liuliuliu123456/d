@@ -61,4 +61,8 @@
 \contentsline {section}{\numberline {2.10}QRS Detection}{29}{section.2.10}
 \contentsline {section}{\numberline {2.11}P and T Wave Detection}{32}{section.2.11}
 \contentsline {chapter}{\numberline {3}Deep Learning}{39}{chapter.3}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{41}{chapter*.19}
+\contentsline {subsection}{\numberline {3.0.1}Machine Learning}{39}{subsection.3.0.1}
+\contentsline {subsubsection}{\nonumberline Supervised Learning}{39}{section*.19}
+\contentsline {subsubsection}{\nonumberline Unsupervised Learning}{40}{section*.20}
+\contentsline {section}{\numberline {3.1}Artificial Neural Networks}{41}{section.3.1}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{43}{chapter*.21}
