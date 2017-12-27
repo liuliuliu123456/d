@@ -51,6 +51,10 @@
 \BOOKMARK [1][-]{section.2.10}{QRS Detection}{chapter.2}% 51
 \BOOKMARK [1][-]{section.2.11}{P and T Wave Detection}{chapter.2}% 52
 \BOOKMARK [0][-]{chapter.3}{Deep Learning}{}% 53
-\BOOKMARK [1][-]{subsection.3.0.1}{Machine Learning}{chapter.3}% 54
-\BOOKMARK [1][-]{section.3.1}{Artificial Neural Networks}{chapter.3}% 55
-\BOOKMARK [0][-]{chapter*.21}{Literaturverzeichnis}{}% 56
+\BOOKMARK [1][-]{section.3.1}{Machine Learning}{chapter.3}% 54
+\BOOKMARK [2][-]{subsection.3.1.1}{Supervised Learning}{section.3.1}% 55
+\BOOKMARK [2][-]{subsection.3.1.2}{Unsupervised Learning}{section.3.1}% 56
+\BOOKMARK [1][-]{section.3.2}{Artificial Neural Networks}{chapter.3}% 57
+\BOOKMARK [2][-]{subsection.3.2.1}{Artificial Neuron}{section.3.2}% 58
+\BOOKMARK [2][-]{subsection.3.2.2}{Activation Function}{section.3.2}% 59
+\BOOKMARK [0][-]{chapter*.22}{Literaturverzeichnis}{}% 60

@@ -52,7 +52,16 @@
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 8-November-2017]
 
-\bibitem[con17]{wiki:pvc}
+\bibitem[con17a]{wiki:ann}
+\textsc{contributors}, Wikipedia:
+\newblock \emph{Artificial neural network --- Wikipedia{,} The Free
+  Encyclopedia}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Artificial_neural_network&oldid=817006542}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 27-December-2017]
+
+\bibitem[con17b]{wiki:pvc}
 \textsc{contributors}, Wikipedia:
 \newblock \emph{Premature ventricular contraction --- Wikipedia{,} The Free
   Encyclopedia}.
@@ -183,6 +192,13 @@
 \textsc{{The University of Nottingham}}:
 \newblock \emph{Chest Leads}. --
 \newblock [Online; accessed 8-November-2017]
+
+\bibitem[ujj17]{ujjwalkarn}
+\textsc{ujjwalkarn}:
+\newblock \emph{A Quick Introduction to Neural Networks}.
+\newblock \url{https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 27-December-2017]
 
 \bibitem[XCWX13]{xing2013unifying}
 \textsc{Xing}, S. ; \textsc{Chen}, S. ; \textsc{Wei}, Z.  ; \textsc{Xia}, J.:

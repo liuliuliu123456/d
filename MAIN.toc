@@ -61,8 +61,13 @@
 \contentsline {section}{\numberline {2.10}QRS Detection}{29}{section.2.10}
 \contentsline {section}{\numberline {2.11}P and T Wave Detection}{32}{section.2.11}
 \contentsline {chapter}{\numberline {3}Deep Learning}{39}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Machine Learning}{39}{subsection.3.0.1}
-\contentsline {subsubsection}{\nonumberline Supervised Learning}{39}{section*.19}
-\contentsline {subsubsection}{\nonumberline Unsupervised Learning}{40}{section*.20}
-\contentsline {section}{\numberline {3.1}Artificial Neural Networks}{41}{section.3.1}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{43}{chapter*.21}
+\contentsline {section}{\numberline {3.1}Machine Learning}{39}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Supervised Learning}{39}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Unsupervised Learning}{40}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Artificial Neural Networks}{41}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Artificial Neuron}{41}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Activation Function}{42}{subsection.3.2.2}
+\contentsline {subsubsection}{\nonumberline Sigmoid}{42}{section*.19}
+\contentsline {subsubsection}{\nonumberline Tanh}{43}{section*.20}
+\contentsline {subsubsection}{\nonumberline ReLU}{43}{section*.21}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{45}{chapter*.22}

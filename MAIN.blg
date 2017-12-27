@@ -5,8 +5,8 @@ A level-1 auxiliary file: erklaerung.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: symbolverzeichnis.aux
 A level-1 auxiliary file: einleitung.aux
-A level-1 auxiliary file: devices.aux
 A level-1 auxiliary file: ecg_feature_ext.aux
+A level-1 auxiliary file: deep_learning.aux
 The style file: alphadin.bst
 Database file #1: literatur.bib
 I was expecting a `,' or a `}'---line 154 of file literatur.bib
