@@ -57,4 +57,8 @@
 \BOOKMARK [1][-]{section.3.2}{Artificial Neural Networks}{chapter.3}% 57
 \BOOKMARK [2][-]{subsection.3.2.1}{Artificial Neuron}{section.3.2}% 58
 \BOOKMARK [2][-]{subsection.3.2.2}{Activation Function}{section.3.2}% 59
-\BOOKMARK [0][-]{chapter*.22}{Literaturverzeichnis}{}% 60
+\BOOKMARK [2][-]{subsection.3.2.3}{Convolutional Neural Network}{section.3.2}% 60
+\BOOKMARK [2][-]{subsection.3.2.4}{Keras}{section.3.2}% 61
+\BOOKMARK [2][-]{subsection.3.2.5}{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{section.3.2}% 62
+\BOOKMARK [0][-]{chapter.4}{Visualization}{}% 63
+\BOOKMARK [0][-]{chapter*.26}{Literaturverzeichnis}{}% 64

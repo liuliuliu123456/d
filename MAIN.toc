@@ -70,4 +70,12 @@
 \contentsline {subsubsection}{\nonumberline Sigmoid}{42}{section*.19}
 \contentsline {subsubsection}{\nonumberline Tanh}{43}{section*.20}
 \contentsline {subsubsection}{\nonumberline ReLU}{43}{section*.21}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{45}{chapter*.22}
+\contentsline {subsection}{\numberline {3.2.3}Convolutional Neural Network}{43}{subsection.3.2.3}
+\contentsline {subsubsection}{\nonumberline Convolutional Layer}{43}{section*.22}
+\contentsline {subsubsection}{\nonumberline Pooling Layer}{44}{section*.23}
+\contentsline {subsubsection}{\nonumberline Fully Connected Layer}{44}{section*.24}
+\contentsline {subsection}{\numberline {3.2.4}Keras}{45}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{45}{subsection.3.2.5}
+\contentsline {subsubsection}{\nonumberline Layers Explanation}{47}{section*.25}
+\contentsline {chapter}{\numberline {4}Visualization}{49}{chapter.4}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{51}{chapter*.26}

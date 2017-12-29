@@ -122,3 +122,94 @@ $f(x) = max(0, x)$
 The graph of all the activation functions defined above can be seen in figure \ref{fig:funcs}.
 
 \subsection{Convolutional Neural Network}
+Convolutional neural network (CNN) is a class of deep neural network which uses multilayer perceptrons. It consists of an input layer, an output layer and multiple hidden layers. The hidden layers can be convolutional, pooling or fully connected layer.
+
+
+\subsubsection{Convolutional Layer}
+In CNN, the first layer is always the convolutional layer. This layer applies a convolutional operation to the input and passes the output to the next layer. A filter (or sometimes referred as a kernel) is used which slides over all the area of the input and extract the features from it. The region where the filter is being applied at any instant of time is called as a receptive field. As the filter slides or convolves over the input signal, it multiples the filter with the original signal values (which can also be referred as element-wise multiplication) which results in a single value. The important point to note here is that this single result is just from a single receptive field. Therefore, the same operation will be carried out on other receptive fields by sliding the filter over the different areas of the input signal. The filter can slide for any unit and this sliding unit is known as stride. Every unique area of the input signal will produce an output and the combined output together is called as feature map or an activation map.  If we assume that, the input size is 32x32, the filter size is 5x5 and the stride is 1 unit, then the size of the activation map will be 28x28. In a 2D array, the filter can be moved in both directions.
+
+\subsubsection{Pooling Layer}
+Pooling layer is used to downsampled the convolutional layer output. There are several pooling options, for example, average pooling, L2-norm pooling, etc., but max polling is the most popular. This layer basically takes a filter of size 2x2 with the same stride size. It then applies the filter to the part of input and output the maximum number in that region. The same process is applied to the different sub-region by sliding the filter all over the input. By convolving the filter around the input, it drastically reduces the spatial size of the input. The example can be seen in the figure \ref{fig:maxpool}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=12cm,height=10cm,keepaspectratio=true]{images/maxpool}
+	\caption{
+		Max pooling layer example.
+	}
+	\label{fig:maxpool}
+\end{figure}
+
+\subsubsection{Fully Connected Layer}
+In fully connected layer, the neurons of one layer are connected to all the neurons of the other second layer, as it can be seen in the figure 6. This layer can be seen in the regular neural network as well. The softmax function is applied to the output of the second layer to produce the probabilities for the classification of the input. 
+
+\subsection{Keras}
+
+Keras is an open source artificial neural network library written in python. It is very powerful and easy to use library to develop neural networks. It has a capability to run on top of TensorFlow, Microsoft Cognitive Toolkit (CNTK), or Theano, can run on both CPU and GPU. Before keras, it was really time consuming to develop network on TensorFlow or Theano and the aim to develop keras was to make it easy and fast to develop neural networks. Keras supports both convolutional neural networks and recurrent neural network, as well as combination of both.
+
+The model starts by defining the model as sequential using a \textit{Sequential()}, which is a linear stack of layers. Then the layers are added into the model using \textit{add()} method. Keras supports almost all kinds of layers. The input dimensions are need to specify when the layers are added into the model. Once the layers are added, the model is compiled by using the \textit{compile()} method, which additionally needs 3 arguments.
+
+\begin{itemize}
+	\item Optimizer: To optimize the neural network, for example, rse, adagrad, adam, etc.
+	\item Loss Function: This is the value that model tries to minimize to calculate the error, for example, categorical\_crossentropy, mse, etc.
+	\item Metrics: It can be any existing metric or a custom defined metric function. But for classification problems metrics=['accuracy'] is recommended.
+\end{itemize}
+
+Then the model is trained by using the \textit{fit()} method. This method lets the model to iterate over the data and find the most optimized neural network.
+
+This library has been used for training the CNN for the identification of Cardiac arrhythmias.
+
+\subsection{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}
+A 6-layer Convolutional Neural Network (CNN) has been trained for the identification of an arrhythmia in an ECG signal. The trained model can detect 3 different kinds of arrhythmia namely:
+
+\begin{enumerate}
+	\item Normal
+	\item Left bundle branch block (LBBB)
+	\item Right bundle branch block (RBBB)
+	\item Premature ventricular contraction (PVC)
+\end{enumerate}
+
+ with an accuracy of 99\%. Total 16,415 ECG signals were extracted from the MIT-BIH dataset, out of which 10998 (67\% of the total signals) were used for the training and the remaining 5417 (33\% of the total signals) were used for the testing of the model. The CNN layers can be seen in the figure \ref{fig:cnn_model}.
+
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=20cm,height=15cm,keepaspectratio=true]{images/cnn_model}
+	\caption{
+		A 6-layer Convolutional Neural Network model for the identification of cardiac arrhythmia.
+	}
+	\label{fig:cnn_model}
+\end{figure}
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=12cm,height=10cm,keepaspectratio=true]{images/model_def_var}
+	\caption{
+		Layers used in the model and number of parameters to be optimized.
+	}
+	\label{fig:model_def_var}
+\end{figure}
+
+\subsubsection{Layers Explanation}
+The 1st convolutional layer (Conv\_1D\_1) consists of 64 filters, whereas, the 2nd convolutional layer (Conv\_1D\_2) consists of 32 filters with a kernel of size 3. For both convolutional layers, Relu has been used as an activation function each followed by a MaxPooling layer. The batch size of 1000 was used for the training, along with the Adam algorithm to optimize the CNN. Since the model is trained for performing the classification of an ECG signal, therefore, categorical cross-entropy loss function was used for calculating the loss of training and validation. After performing the convolutions, the flattening and dense layer has been used followed by a softmax activation function to produce the final probabilities with 4 classes.
+
+
+The model was trained and tested for the several no. of iterations ranging from 10 to 100. The best model was found after the 20 iterations. After that, the model remained stable with the slight improvement in the training as well as in the validation accuracy. The training and validation accuracy can be seen in the figure \ref{fig:acc_val}.
+
+\begin{figure}%
+	\centering
+	
+	\subfigure[][]{%
+		\label{fig:ex3-c}%
+		\includegraphics[height=4in]{images/acc}}%
+	\hspace{8pt}%
+	\subfigure[][]{%
+		\label{fig:ex3-d}%
+		\includegraphics[height=4in]{images/val}}%
+	\caption[A set of four subfigures.]{
+		\subref{fig:ex3-c} Training and validation accuracy results; and,
+		\subref{fig:ex3-d} Training and validation loss of CNN model for 30 iterations.}%
+	\label{fig:acc_val}%
+\end{figure}
