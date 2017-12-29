@@ -81,6 +81,13 @@
 \newblock DOI 10.1109/10.58593. --
 \newblock ISSN 0018--9294
 
+\bibitem[Iye17]{quora:Sulakshana}
+\textsc{Iyer}, Sulakshana:
+\newblock \emph{Why is data visualization important}.
+\newblock \url{https://www.quora.com/Why-is-data-visualization-important}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 29-December-2017]
+
 \bibitem[LD]{limaye2016ecg}
 \textsc{Limaye}, Mr~H. ; \textsc{Deshmukh}, Mrs~V.:
 \newblock ECG Noise Sources and Various Noise Removal Techniques: A Survey.

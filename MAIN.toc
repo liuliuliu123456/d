@@ -78,4 +78,6 @@
 \contentsline {subsection}{\numberline {3.2.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{45}{subsection.3.2.5}
 \contentsline {subsubsection}{\nonumberline Layers Explanation}{47}{section*.25}
 \contentsline {chapter}{\numberline {4}Visualization}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}Grafana}{49}{section.4.1}
+\contentsline {section}{\numberline {4.2}InfluxDB}{50}{section.4.2}
 \contentsline {chapter}{\nonumberline Literaturverzeichnis}{51}{chapter*.26}

@@ -61,4 +61,6 @@
 \BOOKMARK [2][-]{subsection.3.2.4}{Keras}{section.3.2}% 61
 \BOOKMARK [2][-]{subsection.3.2.5}{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{section.3.2}% 62
 \BOOKMARK [0][-]{chapter.4}{Visualization}{}% 63
-\BOOKMARK [0][-]{chapter*.26}{Literaturverzeichnis}{}% 64
+\BOOKMARK [1][-]{section.4.1}{Grafana}{chapter.4}% 64
+\BOOKMARK [1][-]{section.4.2}{InfluxDB}{chapter.4}% 65
+\BOOKMARK [0][-]{chapter*.26}{Literaturverzeichnis}{}% 66

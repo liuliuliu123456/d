@@ -1,2 +1,51 @@
 %\ihead{\headmark}
 \chapter{Visualization}
+
+
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+
+\makeatother
+
+\begin{center}
+\begin{chapquote}{}
+	``A picture is worth a thousands words.''
+\end{chapquote}
+\end{center}
+
+Raw numbers to the users do not make sense and therefore, require necessary tools to display the result. Visualization allows us to see the broader aspects of complex data by showing the data in graphical formats. It really helps in capturing the user's attention and engage him through out the process. Complex data that could easily be ignored, can still be recognized and captured the attention of the user in a graphical reports \cite{quora:Sulakshana}.
+
+The visualization tool Grafana has been set up for displaying the real-time data received from the sensors. All devices send the data in real-time which first get stored in Influxdb and then Grafana tool loads the data from there and display it on the graph. 
+
+\section{Grafana}
+Grafana is an open source real-time visualization tool for analytics and monitoring. It is one of the best tools for time series analytics, therefore, it is used for visualizing the real-time graphs from sensor devices. It can be used for any kind of application analytics, for example, industrial sensors, home automation, hospitals, weather reports etc. It allows to connect to many data sources available and pull data from it to do the analytics or the visualization. The most commonly used data sources these days are:
+
+\begin{itemize}
+	\item Elasticsearch
+	\item InfluxDB
+	\item Graphite
+	\item Prometheus  
+\end{itemize}
+
+It allows us to connect to these data sources on just few click which makes it very convenient. Multiple dashboards can be created in grafana to view different dimensions of the data. It also provides multiple tools for creating graphs in different fashion and styles which can be added to dashboards.
+
+\section{InfluxDB}
+ Since the sensor data is always time critical, therefore, a time series database is required for storing the data. InfluxDB is one of the best time series database available, therefore, it has been chosen for storing the sensors data. 
+ 
+ It is very easy install and manage, and does not require other dependencies to run. It also provides an HTTP/HTPPS interface to read and write data from the database. The retention policy can be set on the database to manage space conveniently. The basic terms in InfluxDB are:
+ 
+ \begin{itemize}
+ 	\item Database name
+ 	\item Measurement (same as table name in traditional databases)
+ 	\item Tags (to filter data)
+ 	\item Fields (actual data values)
+ \end{itemize}
+ 
+ The fields are generally used in a key value pair, with a timestamp field. Only one point can be stored at any specific timestamp. The precision of a single field can be in s, ms, $\mu$s, ns. If the field does not contains a timestamp field, then InfluxDB will generate a timestamp automatically.
+ 
+ Another reason for choosing the influxDB is that, it is really easy to configure grafana for using influxDB as a data source.
