@@ -63,4 +63,9 @@
 \BOOKMARK [0][-]{chapter.4}{Visualization}{}% 63
 \BOOKMARK [1][-]{section.4.1}{Grafana}{chapter.4}% 64
 \BOOKMARK [1][-]{section.4.2}{InfluxDB}{chapter.4}% 65
-\BOOKMARK [0][-]{chapter*.26}{Literaturverzeichnis}{}% 66
+\BOOKMARK [1][-]{section.4.3}{Setting up Grafana with InfluxDB}{chapter.4}% 66
+\BOOKMARK [1][-]{section.4.4}{Lambda Architecture for Big Data Processing}{chapter.4}% 67
+\BOOKMARK [2][-]{subsection.4.4.1}{Batch Layer}{section.4.4}% 68
+\BOOKMARK [2][-]{subsection.4.4.2}{Speed Layer}{section.4.4}% 69
+\BOOKMARK [2][-]{subsection.4.4.3}{Serving Layer}{section.4.4}% 70
+\BOOKMARK [0][-]{chapter*.26}{Literaturverzeichnis}{}% 71

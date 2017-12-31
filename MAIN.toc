@@ -80,4 +80,9 @@
 \contentsline {chapter}{\numberline {4}Visualization}{49}{chapter.4}
 \contentsline {section}{\numberline {4.1}Grafana}{49}{section.4.1}
 \contentsline {section}{\numberline {4.2}InfluxDB}{50}{section.4.2}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{51}{chapter*.26}
+\contentsline {section}{\numberline {4.3}Setting up Grafana with InfluxDB}{50}{section.4.3}
+\contentsline {section}{\numberline {4.4}Lambda Architecture for Big Data Processing}{52}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Batch Layer}{53}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Speed Layer}{53}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Serving Layer}{54}{subsection.4.4.3}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{57}{chapter*.26}
