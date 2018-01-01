@@ -25,12 +25,35 @@
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 13-December-2017]
 
+\bibitem[Bis06]{bishop2006pattern}
+\textsc{Bishop}, C.M.:
+\newblock \emph{Pattern Recognition and Machine Learning}.
+\newblock Springer, 2006 (Information Science and Statistics).
+\newblock \url{https://books.google.de/books?id=kTNoQgAACAAJ}. --
+\newblock ISBN 9780387310732
+
+\bibitem[Bro17]{machinelearningmastery}
+\textsc{Brownlee}, Jason:
+\newblock \emph{Supervised and Unsupervised Machine Learning Algorithms}.
+\newblock
+  \url{https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 31-December-2017]
+
 \bibitem[BSK16]{UBDLAH}
 \textsc{B.~Sunil~Kumar}, P. Suman~R. J. Mohan~Kumar2~K. J. Mohan~Kumar2:
 \newblock Unified Big Data Lambda Architecture with Hadoop / Flume / Spark SQL,
   Streaming / Scala / Cassandra.
 \newblock  4 (2016), June. --
 \newblock ISSN 2320--9801
+
+\bibitem[cab17]{cablesandsensors}
+\textsc{cablesandsensors}:
+\newblock \emph{12-Lead ECG Placement Guide with Illustrations}.
+\newblock
+  \url{https://www.cablesandsensors.com/pages/12-lead-ecg-placement-guide-with-illustrations}.
+\newblock \,Version:\,2017. --
+\newblock [Online; accessed 31-December-2017]
 
 \bibitem[Com17a]{wiki:aux_lines}
 \textsc{Commons}, Wikimedia:
@@ -236,6 +259,13 @@
 \newblock \url{https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/}.
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 27-December-2017]
+
+\bibitem[Wil05]{wilkins2005ecg}
+\textsc{Wilkins}, L.W.:
+\newblock \emph{ECG Interpretation Made Incredibly Easy}.
+\newblock Lippincott Williams \& Wilkins, 2005 (Incredibly Easy! Series).
+\newblock \url{https://books.google.de/books?id=mGiTP7zCHUAC}. --
+\newblock ISBN 9781582553559
 
 \bibitem[XCWX13]{xing2013unifying}
 \textsc{Xing}, S. ; \textsc{Chen}, S. ; \textsc{Wei}, Z.  ; \textsc{Xia}, J.:

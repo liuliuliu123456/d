@@ -18,12 +18,12 @@
 \end{chapquote}
 \end{center}
 
-Raw numbers to the users do not make sense and therefore, require necessary tools to display the result. Visualization allows us to see the broader aspects of complex data by showing the data in graphical formats. It really helps in capturing the user's attention and engage him through out the process. Complex data that could easily be ignored, can still be recognized and captured the attention of the user in a graphical reports \cite{quora:Sulakshana}.
+Raw numbers to the users do not make sense and therefore, require necessary tools to display the results. Visualization allows us to see the broader aspects of complex data by showing the data in graphical formats. It really helps in capturing the user's attention and engage him through out the process. Complex data that could easily be ignored, can still be recognized and captured the attention of the user in a graphical reports \cite{quora:Sulakshana}.
 
 The visualization tool Grafana has been set up for displaying the real-time data received from the sensors. All devices send the data in real-time which first get stored in Influxdb and then Grafana tool loads the data from there and display it on the graph. 
 
 \section{Grafana}
-Grafana is an open source real-time visualization tool for analytics and monitoring. It is one of the best tools for time series analytics, therefore, it is used for visualizing the real-time graphs from sensor devices. It can be used for any kind of application analytics, for example, industrial sensors, home automation, hospitals, weather reports etc. It allows to connect to many data sources available and pull data from it to do the analytics or the visualization. The most commonly used data sources these days are:
+Grafana is an open source real-time visualization tool for analytics and monitoring. It is one of the best tools for time series analytics, therefore, it has been used for visualizing the real-time data from sensor devices. It can be used for any kind of application analytics, for example, industrial sensors, home automation, hospitals, weather reports etc. It can connect to many data sources and pull data from it to do the analytics or the visualization. The most commonly used data sources these days are:
 
 \begin{itemize}
 	\item Elasticsearch
@@ -46,7 +46,7 @@ It allows us to connect to these data sources on just few click which makes it v
  	\item Fields (actual data values)
  \end{itemize}
  
- The fields are generally used in a key value pair, with a timestamp field. Only one point can be stored at any specific timestamp. The precision of a single field can be in s, ms, $\mu$s, ns. If the field does not contains a timestamp field, then InfluxDB will generate a timestamp automatically.
+ The fields are generally used as a key value pair, with a timestamp field. Only one point can be stored at any specific timestamp. The precision of a single field can be in s, ms, $\mu$s, ns. If the field does not contains a timestamp field, then the InfluxDB will generate a timestamp automatically.
  
  
  \section{Setting up Grafana with InfluxDB}
@@ -109,7 +109,7 @@ Lambda architecture, as shown in figure \ref{fig:lambda_arc}, consists of 3 main
 	\centering
 	\includegraphics[width=12cm,height=10cm,keepaspectratio=true]{images/lambda_arc}
 	\caption{
-		Basic supervised machine learning workflow.
+		Lambda architecture.
 	}
 	\label{fig:lambda_arc}
 \end{figure}
@@ -132,7 +132,7 @@ The data source will provide the data which will be streamed in the stream layer
 	\centering
 	\includegraphics[width=12cm,height=10cm,keepaspectratio=true]{images/lambda_arc_1}
 	\caption{
-		Basic supervised machine learning workflow.
+		Using more data from serving layer in case of speed layer having a problem.
 	}
 	\label{fig:lambda_arc_1}
 \end{figure}
@@ -143,7 +143,7 @@ The reason why it is called lambda architecture is because the lambda symbol spl
 	\centering
 	\includegraphics[width=12cm,height=10cm,keepaspectratio=true]{images/lambda_new}
 	\caption{
-		Basic supervised machine learning workflow.
+		Lambda symbol representing the lambda architecture.
 	}
 	\label{fig:lambda}
 \end{figure}
@@ -154,7 +154,7 @@ Typically, the data stream is implemented using a publish-subscribe messaging sy
 	\centering
 	\includegraphics[width=17cm,height=15cm,keepaspectratio=true]{images/imp_lambda_arc}
 	\caption{
-		Basic supervised machine learning workflow.
+		Implementation of lambda architecture.
 	}
 	\label{fig:impl_lambda_arc}
 \end{figure}
