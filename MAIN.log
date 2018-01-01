@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.1)  1 JAN 2018 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.1)  1 JAN 2018 15:27
 entering extended mode
 **./MAIN.tex
 (MAIN.tex
@@ -1453,7 +1453,20 @@ LaTeX Warning: Label `fig:ex3-d' multiply defined.
 
 LaTeX Warning: Label `sub@fig:ex3-d' multiply defined.
 
-) (visualization.aux))
+) (visualization.aux
+
+LaTeX Warning: Label `fig:ex3-c' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:ex3-c' multiply defined.
+
+
+LaTeX Warning: Label `fig:ex3-d' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:ex3-d' multiply defined.
+
+))
 \openout1 = `MAIN.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
@@ -1471,8 +1484,7 @@ LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 76.
-
-("C:\Users\waqar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+ ("C:\Users\waqar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box92
@@ -1649,7 +1661,7 @@ pdfTeX warning: pdflatex.exe (file ./images/Formular_Eidesstattliche_Versicheru
 ng_neu.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
 
-<images/Formular_Eidesstattliche_Versicherung_neu.pdf, id=301, 597.45204pt x 84
+<images/Formular_Eidesstattliche_Versicherung_neu.pdf, id=313, 597.45204pt x 84
 5.1575pt>
 File: images/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (type p
 df)
@@ -1679,7 +1691,7 @@ pdfTeX warning: pdflatex.exe (file ./images/Formular_Eidesstattliche_Versicheru
 ng_neu.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> 
 allowed
 
-<images/Formular_Eidesstattliche_Versicherung_neu.pdf, id=304, page=1, 597.4520
+<images/Formular_Eidesstattliche_Versicherung_neu.pdf, id=316, page=1, 597.4520
 4pt x 845.1575pt>
 File: images/Formular_Eidesstattliche_Versicherung_neu.pdf Graphic file (type p
 df)
@@ -1884,7 +1896,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
-<images/electric_activity_heart.jpg, id=428, 1009.371pt x 893.13675pt>
+<images/electric_activity_heart.jpg, id=443, 1009.371pt x 893.13675pt>
 File: images/electric_activity_heart.jpg Graphic file (type jpg)
 
 <use images/electric_activity_heart.jpg>
@@ -1921,8 +1933,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 45.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 45.
- [2 <./images/electric_activity_heart.jpg>] <images/6_lead_placement.jpg, id=45
-3, 301.125pt x 270.25969pt>
+ [2 <./images/electric_activity_heart.jpg>] <images/6_lead_placement.jpg, id=46
+8, 301.125pt x 270.25969pt>
 File: images/6_lead_placement.jpg Graphic file (type jpg)
 
 <use images/6_lead_placement.jpg>
@@ -1945,14 +1957,14 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 76.
 
 [3 <./images/6_lead_placement.jpg>]
-<images/Brantigan_1963_1-53.png, id=469, 737.75626pt x 1508.63625pt>
+<images/Brantigan_1963_1-53.png, id=484, 737.75626pt x 1508.63625pt>
 File: images/Brantigan_1963_1-53.png Graphic file (type png)
 
 <use images/Brantigan_1963_1-53.png>
 Package pdftex.def Info: images/Brantigan_1963_1-53.png used on input line 79.
 (pdftex.def)             Requested size: 83.48369pt x 170.71562pt.
 
-<images/Limb_leads.png, id=473, 1505.625pt x 1003.75pt>
+<images/Limb_leads.png, id=488, 1505.625pt x 1003.75pt>
 File: images/Limb_leads.png Graphic file (type png)
 
 <use images/Limb_leads.png>
@@ -1977,7 +1989,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 116.
  [4 <./images/Brantigan_1963_1-53.png (PNG copy)>]
-<images/SinusRhythmLabels.png, id=487, 1181.41376pt x 1165.35374pt>
+<images/SinusRhythmLabels.png, id=502, 1181.41376pt x 1165.35374pt>
 File: images/SinusRhythmLabels.png Graphic file (type png)
 
 <use images/SinusRhythmLabels.png>
@@ -2049,7 +2061,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 187.
- <images/ACInterference.jpg, id=509, 331.99031pt x 121.95563pt>
+ <images/ACInterference.jpg, id=524, 331.99031pt x 121.95563pt>
 File: images/ACInterference.jpg Graphic file (type jpg)
 
 <use images/ACInterference.jpg>
@@ -2060,7 +2072,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 199.
 
-<images/WBaseline.jpg, id=513, 331.99031pt x 121.95563pt>
+<images/WBaseline.jpg, id=528, 331.99031pt x 121.95563pt>
 File: images/WBaseline.jpg Graphic file (type jpg)
 
 <use images/WBaseline.jpg>
@@ -2071,7 +2083,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 211.
 
-<images/Tremor.jpg, id=519, 331.99031pt x 121.95563pt>
+<images/Tremor.jpg, id=534, 331.99031pt x 121.95563pt>
 File: images/Tremor.jpg Graphic file (type jpg)
  <use images/Tremor.jpg>
 Package pdftex.def Info: images/Tremor.jpg used on input line 216.
@@ -2107,7 +2119,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 240.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 240.
- <images/pvc.jpg, id=539, 301.125pt x 164.615pt>
+ <images/pvc.jpg, id=554, 301.125pt x 164.615pt>
 File: images/pvc.jpg Graphic file (type jpg)
  <use images/pvc.jpg>
 Package pdftex.def Info: images/pvc.jpg used on input line 249.
@@ -2121,7 +2133,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 262.
 
-[10 <./images/pvc.jpg>] <images/af.jpg, id=550, 523.9575pt x 356.33125pt>
+[10 <./images/pvc.jpg>] <images/af.jpg, id=565, 523.9575pt x 356.33125pt>
 File: images/af.jpg Graphic file (type jpg)
 
 <use images/af.jpg>
@@ -2136,7 +2148,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 281.
  [11 <./images/af.jpg>]
-<images/LRBBB.jpg, id=563, 423.83344pt x 118.94438pt>
+<images/LRBBB.jpg, id=578, 423.83344pt x 118.94438pt>
 File: images/LRBBB.jpg Graphic file (type jpg)
  <use images/LRBBB.jpg>
 Package pdftex.def Info: images/LRBBB.jpg used on input line 288.
@@ -2168,31 +2180,31 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 25.
-<images/ecg.jpg, id=574, 479.7925pt x 639.38875pt>
+<images/ecg.jpg, id=589, 479.7925pt x 639.38875pt>
 File: images/ecg.jpg Graphic file (type jpg)
  <use images/ecg.jpg>
 Package pdftex.def Info: images/ecg.jpg used on input line 37.
 (pdftex.def)             Requested size: 108.46112pt x 144.54pt.
 
-<images/mi.jpg, id=575, 167.12437pt x 159.59625pt>
+<images/mi.jpg, id=590, 167.12437pt x 159.59625pt>
 File: images/mi.jpg Graphic file (type jpg)
  <use images/mi.jpg>
 Package pdftex.def Info: images/mi.jpg used on input line 41.
 (pdftex.def)             Requested size: 151.35916pt x 144.54pt.
 
-<images/ppg.jpg, id=576, 140.02313pt x 124.96687pt>
+<images/ppg.jpg, id=591, 140.02313pt x 124.96687pt>
 File: images/ppg.jpg Graphic file (type jpg)
  <use images/ppg.jpg>
 Package pdftex.def Info: images/ppg.jpg used on input line 45.
 (pdftex.def)             Requested size: 161.97185pt x 144.54pt.
 
-<images/bcg.jpg, id=577, 160.34906pt x 123.46124pt>
+<images/bcg.jpg, id=592, 160.34906pt x 123.46124pt>
 File: images/bcg.jpg Graphic file (type jpg)
  <use images/bcg.jpg>
 Package pdftex.def Info: images/bcg.jpg used on input line 48.
 (pdftex.def)             Requested size: 187.7373pt x 144.54pt.
 
-<images/tc.jpg, id=578, 149.05687pt x 111.41624pt>
+<images/tc.jpg, id=593, 149.05687pt x 111.41624pt>
 File: images/tc.jpg Graphic file (type jpg)
  <use images/tc.jpg>
 Package pdftex.def Info: images/tc.jpg used on input line 52.
@@ -2320,7 +2332,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 197.
 
-<images/2_channel_filter_bank.png, id=666, 881.2925pt x 251.94125pt>
+<images/2_channel_filter_bank.png, id=681, 881.2925pt x 251.94125pt>
 File: images/2_channel_filter_bank.png Graphic file (type png)
 
 <use images/2_channel_filter_bank.png>
@@ -2422,7 +2434,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 415.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 415.
- <images/all_signals.png, id=739, 987.2082pt x 459.6372pt>
+ <images/all_signals.png, id=754, 987.2082pt x 459.6372pt>
 File: images/all_signals.png Graphic file (type png)
 
 <use images/all_signals.png>
@@ -2442,7 +2454,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 443.
 
-<images/wavelet_denoised_1.png, id=746, 925.056pt x 643.9257pt>
+<images/wavelet_denoised_1.png, id=761, 925.056pt x 643.9257pt>
 File: images/wavelet_denoised_1.png Graphic file (type png)
 
 <use images/wavelet_denoised_1.png>
@@ -2466,7 +2478,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 472.
 
-<images/bandpass_denoised_1.png, id=757, 925.056pt x 643.9257pt>
+<images/bandpass_denoised_1.png, id=772, 925.056pt x 643.9257pt>
 File: images/bandpass_denoised_1.png Graphic file (type png)
 
 <use images/bandpass_denoised_1.png>
@@ -2481,7 +2493,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 506.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 506.
-<images/detail_coefficients.png, id=761, 925.056pt x 643.9257pt>
+<images/detail_coefficients.png, id=776, 925.056pt x 643.9257pt>
 File: images/detail_coefficients.png Graphic file (type png)
 
 <use images/detail_coefficients.png>
@@ -2501,27 +2513,27 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 516.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 516.
-[28] <images/maximas_on_level_3.png, id=770, 987.2082pt x 459.6372pt>
+[28] <images/maximas_on_level_3.png, id=785, 987.2082pt x 459.6372pt>
 File: images/maximas_on_level_3.png Graphic file (type png)
 
 <use images/maximas_on_level_3.png>
 Package pdftex.def Info: images/maximas_on_level_3.png used on input line 523.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
 
-<images/max_pair.png, id=771, 987.2082pt x 459.6372pt>
+<images/max_pair.png, id=786, 987.2082pt x 459.6372pt>
 File: images/max_pair.png Graphic file (type png)
 
 <use images/max_pair.png>
 Package pdftex.def Info: images/max_pair.png used on input line 532.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
 
-<images/r_peaks.png, id=774, 987.2082pt x 459.6372pt>
+<images/r_peaks.png, id=789, 987.2082pt x 459.6372pt>
 File: images/r_peaks.png Graphic file (type png)
  <use images/r_peaks.png>
 Package pdftex.def Info: images/r_peaks.png used on input line 543.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
 
-<images/qrs.pdf, id=775, 698.61pt x 1115.16624pt>
+<images/qrs.pdf, id=790, 698.61pt x 1115.16624pt>
 File: images/qrs.pdf Graphic file (type pdf)
  <use images/qrs.pdf>
 Package pdftex.def Info: images/qrs.pdf used on input line 553.
@@ -2560,19 +2572,19 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 563.
  [31 <./images/maximas_on_level_3.png> <./images/max_pair.png>]
-<images/qrs.png, id=801, 987.2082pt x 459.6372pt>
+<images/qrs.png, id=816, 987.2082pt x 459.6372pt>
 File: images/qrs.png Graphic file (type png)
  <use images/qrs.png>
 Package pdftex.def Info: images/qrs.png used on input line 566.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
 
-<images/pqrst.png, id=802, 987.2082pt x 459.6372pt>
+<images/pqrst.png, id=817, 987.2082pt x 459.6372pt>
 File: images/pqrst.png Graphic file (type png)
  <use images/pqrst.png>
 Package pdftex.def Info: images/pqrst.png used on input line 576.
 (pdftex.def)             Requested size: 426.79597pt x 198.7132pt.
 
-<images/q-and-s.pdf, id=803, 728.7225pt x 986.68625pt>
+<images/q-and-s.pdf, id=818, 728.7225pt x 986.68625pt>
 File: images/q-and-s.pdf Graphic file (type pdf)
 
 <use images/q-and-s.pdf>
@@ -2626,7 +2638,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 602.
  [35 <./images/q-and-s.pdf>]
-<images/p_Wave.pdf, id=836, 768.8725pt x 1128.215pt>
+<images/p_Wave.pdf, id=851, 768.8725pt x 1128.215pt>
 File: images/p_Wave.pdf Graphic file (type pdf)
  <use images/p_Wave.pdf>
 Package pdftex.def Info: images/p_Wave.pdf used on input line 610.
@@ -2635,7 +2647,7 @@ Package pdftex.def Info: images/p_Wave.pdf used on input line 610.
 
 LaTeX Warning: Float too large for page by 3.3702pt on input line 615.
 
-<images/T_Wave.pdf, id=837, 768.8725pt x 1128.215pt>
+<images/T_Wave.pdf, id=852, 768.8725pt x 1128.215pt>
 File: images/T_Wave.pdf Graphic file (type pdf)
  <use images/T_Wave.pdf>
 Package pdftex.def Info: images/T_Wave.pdf used on input line 619.
@@ -2644,6 +2656,10 @@ Package pdftex.def Info: images/T_Wave.pdf used on input line 619.
 
 LaTeX Warning: Float too large for page by 3.3702pt on input line 624.
 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 627.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 627.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 147.
@@ -2705,7 +2721,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 
-] <images/basic-ml-model.png, id=869, 928.21782pt x 340.27126pt>
+] <images/basic-ml-model.png, id=884, 928.21782pt x 340.27126pt>
 File: images/basic-ml-model.png Graphic file (type png)
 
 <use images/basic-ml-model.png>
@@ -2725,7 +2741,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 55.
 
-<images/neural-net.png, id=877, 225.84375pt x 271.76532pt>
+<images/neural-net.png, id=892, 225.84375pt x 271.76532pt>
 File: images/neural-net.png Graphic file (type png)
 
 <use images/neural-net.png>
@@ -2744,7 +2760,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 77.
  [41 <./images/neural-net.png>]
-<images/single-neuron.png, id=891, 578.16pt x 253.69781pt>
+<images/single-neuron.png, id=906, 578.16pt x 253.69781pt>
 File: images/single-neuron.png Graphic file (type png)
 
 <use images/single-neuron.png>
@@ -2763,7 +2779,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 106.
  [42 <./images/single-neuron.png>]
-<images/act-funcs.png, id=901, 375.4025pt x 113.42375pt>
+<images/act-funcs.png, id=916, 375.4025pt x 113.42375pt>
 File: images/act-funcs.png Graphic file (type png)
 
 <use images/act-funcs.png>
@@ -2782,7 +2798,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 130.
  [43 <./images/act-funcs.png>]
-<images/maxpool.png, id=915, 737.00343pt x 307.1475pt>
+<images/maxpool.png, id=930, 737.00343pt x 307.1475pt>
 File: images/maxpool.png Graphic file (type png)
 
 <use images/maxpool.png>
@@ -2814,14 +2830,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 170.
  [45]
-<images/cnn_model.png, id=932, 467.7475pt x 573.14125pt>
+<images/cnn_model.png, id=947, 467.7475pt x 573.14125pt>
 File: images/cnn_model.png Graphic file (type png)
 
 <use images/cnn_model.png>
 Package pdftex.def Info: images/cnn_model.png used on input line 178.
 (pdftex.def)             Requested size: 348.3117pt x 426.79398pt.
 
-<images/model_def_var.png, id=933, 682.80093pt x 391.4625pt>
+<images/model_def_var.png, id=948, 682.80093pt x 391.4625pt>
 File: images/model_def_var.png Graphic file (type png)
 
 <use images/model_def_var.png>
@@ -2838,13 +2854,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 197.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 197.
- [46 <./images/cnn_model.png>] <images/acc.png, id=942, 462.528pt x 344.0052pt>
+ [46 <./images/cnn_model.png>] <images/acc.png, id=957, 462.528pt x 344.0052pt>
 File: images/acc.png Graphic file (type png)
 
 <use images/acc.png>
 Package pdftex.def Info: images/acc.png used on input line 206.
 (pdftex.def)             Requested size: 388.68318pt x 289.07999pt.
- <images/val.png, id=943, 462.528pt x 344.0052pt>
+ <images/val.png, id=958, 462.528pt x 344.0052pt>
 File: images/val.png Graphic file (type png)
 
 <use images/val.png>
@@ -2908,14 +2924,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 52.
- <images/gr_db_setup.png, id=970, 1371.1225pt x 1027.84pt>
+ <images/gr_db_setup.png, id=987, 1371.1225pt x 1027.84pt>
 File: images/gr_db_setup.png Graphic file (type png)
 
 <use images/gr_db_setup.png>
 Package pdftex.def Info: images/gr_db_setup.png used on input line 60.
 (pdftex.def)             Requested size: 455.23347pt x 341.25848pt.
 
-<images/dashboard.png, id=971, 1027.58907pt x 347.79938pt>
+<images/dashboard.png, id=988, 1027.58907pt x 347.79938pt>
 File: images/dashboard.png Graphic file (type png)
 
 <use images/dashboard.png>
@@ -2939,7 +2955,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 81.
  [51 <./images/gr_db_setup.png> <./images/dashboard.png>] <images/gr_query.png,
- id=986, 1371.1225pt x 831.105pt>
+ id=1003, 1371.1225pt x 831.105pt>
 File: images/gr_query.png Graphic file (type png)
 
 <use images/gr_query.png>
@@ -2958,7 +2974,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 98.
  [52 <./images/gr_query.png>]
-<images/lambda_arc.jpg, id=1002, 963.6pt x 542.025pt>
+<images/lambda_arc.jpg, id=1019, 963.6pt x 542.025pt>
 File: images/lambda_arc.jpg Graphic file (type jpg)
 
 <use images/lambda_arc.jpg>
@@ -2990,14 +3006,14 @@ Package babel Info: Redefining ngerman shorthand "~
 LaTeX Warning: Reference `lambda_arc_1' on page 54 undefined on input line 128.
 
 
-<images/lambda_arc_1.jpg, id=1011, 963.6pt x 542.025pt>
+<images/lambda_arc_1.jpg, id=1028, 963.6pt x 542.025pt>
 File: images/lambda_arc_1.jpg Graphic file (type jpg)
 
 <use images/lambda_arc_1.jpg>
 Package pdftex.def Info: images/lambda_arc_1.jpg used on input line 133.
 (pdftex.def)             Requested size: 341.4261pt x 192.05217pt.
 
-<images/lambda_new.png, id=1012, 274.02374pt x 109.91063pt>
+<images/lambda_new.png, id=1029, 274.02374pt x 109.91063pt>
 File: images/lambda_new.png Graphic file (type png)
 
 <use images/lambda_new.png>
@@ -3012,7 +3028,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 152.
  [54 <./images/lambda_arc_1.jpg>]
-<images/imp_lambda_arc.jpg, id=1018, 963.6pt x 542.025pt>
+<images/imp_lambda_arc.jpg, id=1035, 963.6pt x 542.025pt>
 File: images/imp_lambda_arc.jpg Graphic file (type jpg)
 
 <use images/imp_lambda_arc.jpg>
@@ -3038,29 +3054,102 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 170.
- [55 <./images/lambda_new.png>] <images/sys_arc.png, id=1032, 1065.9825pt x 691
-.83469pt>
+ [55 <./images/lambda_new.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 175.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 175.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 175.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 175.
+ [56 <./images/imp_lambda_arc.jpg>]
+<images/sys_arc.png, id=1055, 1065.9825pt x 691.83469pt>
 File: images/sys_arc.png Graphic file (type png)
 
 <use images/sys_arc.png>
-Package pdftex.def Info: images/sys_arc.png used on input line 178.
-(pdftex.def)             Requested size: 483.68903pt x 313.91963pt.
-
-Overfull \hbox (24.46146pt too wide) in paragraph at lines 178--181
- [][] 
- []
-
-<images/using_ann.jpg, id=1033, 722.7pt x 542.025pt>
+Package pdftex.def Info: images/sys_arc.png used on input line 180.
+(pdftex.def)             Requested size: 455.24055pt x 295.45625pt.
+ <images/using_ann.jpg, id=1056, 722.7pt x 542.025pt>
 File: images/using_ann.jpg Graphic file (type jpg)
 
 <use images/using_ann.jpg>
-Package pdftex.def Info: images/using_ann.jpg used on input line 188.
-(pdftex.def)             Requested size: 483.69922pt x 362.77441pt.
+Package pdftex.def Info: images/using_ann.jpg used on input line 190.
+(pdftex.def)             Requested size: 455.24826pt x 341.4362pt.
 
-Overfull \hbox (24.47165pt too wide) in paragraph at lines 188--191
- [][] 
- []
+<images/ecg_dsh.jpg, id=1060, 1264.725pt x 690.32906pt>
+File: images/ecg_dsh.jpg Graphic file (type jpg)
 
+<use images/ecg_dsh.jpg>
+Package pdftex.def Info: images/ecg_dsh.jpg used on input line 203.
+(pdftex.def)             Requested size: 455.24277pt x 248.48666pt.
+ <images/mi_dsh.jpg, id=1061, 1252.68pt x 697.10437pt>
+File: images/mi_dsh.jpg Graphic file (type jpg)
+
+<use images/mi_dsh.jpg>
+Package pdftex.def Info: images/mi_dsh.jpg used on input line 212.
+(pdftex.def)             Requested size: 455.24606pt x 253.34006pt.
+
+<images/ppg_dsh.jpg, id=1062, 1257.94969pt x 690.32906pt>
+File: images/ppg_dsh.jpg Graphic file (type jpg)
+
+<use images/ppg_dsh.jpg>
+Package pdftex.def Info: images/ppg_dsh.jpg used on input line 221.
+(pdftex.def)             Requested size: 455.2417pt x 249.82443pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 228.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 228.
+
+<images/medit_dsh_2.png, id=1064, 1371.1225pt x 590.205pt>
+File: images/medit_dsh_2.png Graphic file (type png)
+
+<use images/medit_dsh_2.png>
+Package pdftex.def Info: images/medit_dsh_2.png used on input line 237.
+(pdftex.def)             Requested size: 455.23347pt x 195.95702pt.
+
+<images/medit_dsh_3.png, id=1065, 1371.1225pt x 590.205pt>
+File: images/medit_dsh_3.png Graphic file (type png)
+
+<use images/medit_dsh_3.png>
+Package pdftex.def Info: images/medit_dsh_3.png used on input line 241.
+(pdftex.def)             Requested size: 453.30869pt x 195.12877pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 249.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 249.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 251.
+ [57 <./images/sys_arc.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 251.
+ [58 <./images/using_ann.jpg>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 251.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 251.
+ [59 <./images/ecg_dsh.jpg> <./images/mi_dsh.jpg>]
+<images/ecg_and.jpg, id=1088, 3982.88pt x 2987.16pt>
+File: images/ecg_and.jpg Graphic file (type jpg)
+ <use images/ecg_and.jpg>
+Package pdftex.def Info: images/ecg_and.jpg used on input line 254.
+(pdftex.def)             Requested size: 455.19559pt x 341.3967pt.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 161.
@@ -3070,7 +3159,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 161.
- [56 <./images/imp_lambda_arc.jpg>]
+
+[60 <./images/ppg_dsh.jpg>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3079,7 +3169,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 161.
- [57 <./images/sys_arc.png>]
+ [61 <./images/medit_dsh_2.png> <./images/medit_dsh_3.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3088,7 +3178,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 161.
- [58 <./images/using_ann.jpg>] (MAIN.bbl
+ [62 <./images/ecg_and.jpg>] (MAIN.bbl
 chapter without number
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
@@ -3172,7 +3262,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 93.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 93.
-[59
+[63
 
 
 
@@ -3193,7 +3283,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 172.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 172.
-[60]
+[64]
 Underfull \hbox (badness 1117) in paragraph at lines 173--180
 \T1/lmr/m/n/12 Nr. 2, S. 617--643.  [][]$\T1/lmtt/m/n/12 http : / / dx . doi . 
 org / 10 . 1109 / 18 . 119727$[][]\T1/lmr/m/n/12 . --  DOI
@@ -3207,7 +3297,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 248.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 248.
-[61]
+[65]
 Underfull \hbox (badness 1383) in paragraph at lines 250--255
 []\T1/lmr/m/sc/12 Schoolinfo\T1/lmr/m/n/12 :  \T1/lmr/m/it/12 Elec-tri-cal ac-t
 i-vi-ty of He-art\T1/lmr/m/n/12 .  [][]$\T1/lmtt/m/n/12 http : / / schoolbag . 
@@ -3247,7 +3337,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 321.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 321.
-[62])
+[66])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
@@ -3256,7 +3346,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 187.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 187.
- [63]
+ [67]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 187.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
  (MAIN.aux (titelseite.aux) (danksagung.aux) (erklaerung.aux)
@@ -3265,7 +3355,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 187.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 187.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 187.
 Package rerunfilecheck Info: File `MAIN.out' has not changed.
-(rerunfilecheck)             Checksum: C3CD4AD6A37E43862C0234C6891531B3;4884.
+(rerunfilecheck)             Checksum: 871D851ADC957C6F010C74CB2F8294E9;5097.
 
 
 LaTeX Warning: There were undefined references.
@@ -3275,11 +3365,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 31922 strings out of 493634
- 604209 string characters out of 3135239
- 735780 words of memory out of 3000000
- 34372 multiletter control sequences out of 15000+200000
- 599067 words of font info for 67 fonts, out of 3000000 for 9000
+ 31983 strings out of 493634
+ 605241 string characters out of 3135239
+ 736123 words of memory out of 3000000
+ 34411 multiletter control sequences out of 15000+200000
+ 605047 words of font info for 69 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  69i,18n,66p,10511b,696s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
@@ -3311,9 +3401,9 @@ b><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/urw/helvetic/uhvb8a.pfb><C:/Users/waqar/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on MAIN.pdf (75 pages, 4115445 bytes).
+Output written on MAIN.pdf (79 pages, 5741953 bytes).
 PDF statistics:
- 1265 PDF objects out of 1440 (max. 8388607)
- 310 named destinations out of 1000 (max. 500000)
- 825 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1323 PDF objects out of 1440 (max. 8388607)
+ 324 named destinations out of 1000 (max. 500000)
+ 879 words of extra memory for PDF output out of 10000 (max. 10000000)
 

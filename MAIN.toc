@@ -57,6 +57,7 @@
 \contentsline {subsection}{\numberline {2.8.2}Band-pass Filter Method}{28}{subsection.2.8.2}
 \contentsline {section}{\numberline {2.9}QRS Detection}{28}{section.2.9}
 \contentsline {section}{\numberline {2.10}P and T Wave Detection}{32}{section.2.10}
+\contentsline {section}{\numberline {2.11}Heart Rate Calculation}{36}{section.2.11}
 \contentsline {chapter}{\numberline {3}Deep Learning}{39}{chapter.3}
 \contentsline {section}{\numberline {3.1}Machine Learning}{39}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Supervised Learning}{39}{subsection.3.1.1}
@@ -83,4 +84,6 @@
 \contentsline {subsection}{\numberline {4.4.2}Speed Layer}{53}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Serving Layer}{54}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}System Architecture}{56}{section.4.5}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{59}{chapter*.26}
+\contentsline {section}{\numberline {4.6}Device Management Interface}{57}{section.4.6}
+\contentsline {section}{\numberline {4.7}Android Application}{60}{section.4.7}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{63}{chapter*.26}

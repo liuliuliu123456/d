@@ -168,14 +168,16 @@ Apache Spark is a large-scale data processing tool, which runs 100 times faster 
 \section{System Architecture}
 A system has been implemented to collect, process and visualize the data for all the sensors based on the lambda architecture defined in Section \ref{sec:lmb_arc}. But the system has been modified according to the requirements and because of the lack of enough resources to run all the big data tools. The system architecture can be seen in Figure \ref{fig:sys_arc} .
 
-An architecture has been implemented in \textit{pytho} language, which first collects the data from all sensors based on their protocol. The data is then immediately stored in InfluxDB in order to have the original state of the data, as shown in Figure \ref{fig:using_ann}. The data is then cleaned and processed to do the further operations on it, such as for the ECG signal, the feature extraction as defined in Section \ref{sec:ecg_det}. Once the features are extracted, the cleaned signal and the extracted features are saved InfluxDB immediately to save the state of the signal. Then the signal is passed to the deep learning model to identify the type of arrhythmia, as shown in Figure \ref{fig:using_ann}.
+An architecture has been implemented in \textit{pytho} language, which first collects the data from all sensors based on their protocol. The data is then immediately stored in InfluxDB in order to have the original state of the data, as shown in Figure \ref{fig:using_ann}. The data is then cleaned and processed to do the further operations on it, such as for the ECG signal, the feature extraction. 
 
-Once all the information is stored in InfluxDB, then the Grafana takes the job. It retrieves data from InfluxDB and display it on the dashboard. Grafana provides many other options as well such as the refresh time, i.e, how much time retrieves the new data from InfluxDB. If the data is coming from other machine and the clock time is not same, Grafana gives an option to shift the time to adjust the panels and many other helpful functions.
+The main focus of this thesis is on cardiac, therefore, most of the implementation is based on ECG sensor. The NI USB-6259 is used for the signal acquisition. The sample rate of 360 Hz has been used as the deep learning model was trained on 360 Hz frequency data. The same feature extraction algorithm is used that is defined in Section \ref{sec:ecg_det}. Once the R wave is detected, 100 points to the left and 150 points to the right of the R peaks are selected to make a single ECG signal of 250 sample points, which was then passed to the deep learning model to predict the arrhythmia. The window of 10 seconds is used for calculating the heart rate. The complete process is shown in Figure \ref{fig:using_ann}. Once the features are extracted, the cleaned signal and the extracted features are saved in InfluxDB immediately to save the state of the signal.
+
+Once all the information is stored in the InfluxDB, then the Grafana takes the job. It retrieves the desired data from InfluxDB and display it on the dashboard. Grafana provides many other options as well, such as, the refresh time, i.e, how much time retrieves the new data from InfluxDB. If the data is coming from other machine and the clock time is not same, Grafana gives an option to shift the time to adjust the panels and many other helpful functions.
 
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=17cm,height=15cm,keepaspectratio=true]{images/sys_arc}
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/sys_arc}
 	\caption{
 		System architecture for the sensors.
 	}
@@ -185,9 +187,74 @@ Once all the information is stored in InfluxDB, then the Grafana takes the job. 
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=17cm,height=15cm,keepaspectratio=true]{images/using_ann}
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/using_ann}
 	\caption{
 		Using the deep learning model in real-time environment.
 	}
 	\label{fig:using_ann}
 \end{figure}
+
+
+The Grafana dashboards for ECG, MI and PPG sensors can be seen in Figure \ref{fig:ecg_dsh}, \ref{fig:mi_dsh} and \ref{fig:ppg_dsh} respectively.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/ecg_dsh}
+	\caption{
+		Real-time ECG signal visualization.
+	}
+	\label{fig:ecg_dsh}
+\end{figure}
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/mi_dsh}
+	\caption{
+		Real-time MI signal visualization.
+	}
+	\label{fig:mi_dsh}
+\end{figure}
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/ppg_dsh}
+	\caption{
+		Real-time PPG signal visualization.
+	}
+	\label{fig:ppg_dsh}
+\end{figure}
+
+\section{Device Management Interface}
+Starting the system via console is not a very convenient way to interact with the devices. Therefore, a simple web view interface has also been made to operate the sensor devices. The devices can be start, stop and in case of error, the logs can be viewed directly in the same interface. The interface pictures can be seen in Figure \ref{fig:web_int_dev}.
+
+
+\begin{figure}%
+	\centering
+	
+	\subfigure[][]{%
+		\label{fig:ex3-c}%
+		\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/medit_dsh_2}}%
+	\hspace{15pt}%
+	\subfigure[][]{%
+		\label{fig:ex3-d}%
+		\includegraphics[height=2.7in]{images/medit_dsh_3}}%
+	\caption[A set of four subfigures.]{
+		\subref{fig:ex3-c} The device management view to interact with devices; and,
+		\subref{fig:ex3-d} the log view to know the state of each device.}%
+	\label{fig:web_int_dev}%
+\end{figure}
+
+
+\section{Android Application}
+The purpose of this thesis is to implement a system which allows to visualize the data from anywhere. Sometimes, it is not very convenient to visualize the data on laptop, therefore, an android application has been written so the sensors data can be visualized directly on your mobile device as well. The advantage of android application is that it is very light weight and does not require any dependency to visualize the data. The screen shot of android application can be seen in Figure \ref{fig:ecg_and}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/ecg_and}
+	\caption{
+		Real-time ECG signal visualization on android application.
+	}
+	\label{fig:ecg_and}
+\end{figure}
+ 

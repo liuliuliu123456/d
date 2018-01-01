@@ -622,3 +622,11 @@ All detected waves can be seen in the figure \ref{fig:pqrst}. The flow chart for
 	}
 	\label{fig:t_peaks_flow_chart}
 \end{figure}
+
+
+\section{Heart Rate Calculation}
+The heart rate is calculated by first counting the number of R peaks in a 10 seconds window and then multiply the count by 6 to get the heart rate.
+
+\begin{center}
+	$HeartRate = number\_of\_R\_peaks \times 6$
+\end{center}
