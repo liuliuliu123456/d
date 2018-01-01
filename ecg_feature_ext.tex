@@ -189,13 +189,13 @@ The wavelet transform is defined as:
 \end{equation}
 
 
-Biorthogonal Spline wavelet has been used for transforming the ECG signal. This approach is based on the modulus maxima of zero point to detect the singular point. 
+Biorthogonal Spline wavelet has been used for the detection of ECG signal characteristics \cite{zheng2008detection} \cite{pan2010detection} \cite{meena2014comparison}. This approach is based on the modulus maxima of zero point to detect the singular point. 
 
 
 For multi-resolution decomposition of signals, a dyadic DWT (discrete wavelet transform) is used where all bandpass filters have different frequency resolution. This is done by first using low-pass and high-pass filters to split the signal into low and high-frequency components.
 
 \section{Biorthogonal Spline Wavelet Filter Construction}
-Let say, ${H_{0}(z)}$ and ${H_{1}(z)}$ are low-pass filters in the analysis filter bank (decomposition) and ${G_{0}(z)}$, ${G_{1}(z)}$ are high-pass filters in the synthesis filter bank (reconstruction), as can be seen in the figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2  respectively, producing the final output signal $Y[n]$. It is worth to note here that $Y[n]$ is the reconstructed signal. 
+Let say, ${H_{0}(z)}$ and ${H_{1}(z)}$ are low-pass filters in the analysis filter bank (decomposition) and ${G_{0}(z)}$, ${G_{1}(z)}$ are high-pass filters in the synthesis filter bank (reconstruction) \cite{wang2001using}, as can be seen in the figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2  respectively, producing the final output signal $Y[n]$. It is worth to note here that $Y[n]$ is the reconstructed signal. 
 
 
 
@@ -412,27 +412,6 @@ Signals can have negative Lipschitz exponent as well. For example, many signals 
 
 Generally, it is known that the singularity of a signal is directly proportional to the Lipschitz exponent. Therefore, as the transform scale increases, the wavelet transform modulus maxima will also get increases (Lipschitz exponent > 0) and similarly, it will decreases when Lipschitz exponent < 0. It can be seen that R wave in the original ECG signal appears as a pair of positive and negative extreme in the waveform which resulted after the decomposition of a wavelet transform.
 
-
-
-\renewcommand{\arraystretch}{2}
-\begin{table}
-	\caption{Wavelet Transform ECG Signal Frequency Range} \label{tab:sometab}
-	
-	\begin{center}
-		\begin{tabular}{ | l | r | }
-			\hline
-			Transform Scale & Frequency Range (Hz) \\ \hline
-			${2^1}$  & 90.0{\raise.17ex\hbox{$\scriptstyle\sim$}}180.0 \\ \hline
-			${2^2}$  & 29.92{\raise.17ex\hbox{$\scriptstyle\sim$}}84.24  \\ \hline
-			${2^3}$  & 1.52{\raise.17ex\hbox{$\scriptstyle\sim$}}38.88  \\ \hline
-			${2^4}$  & 5.76{\raise.17ex\hbox{$\scriptstyle\sim$}}19.44  \\ 
-			\hline
-		\end{tabular}
-	\end{center}
-	
-\end{table}
-
-
 \section{Dataset}
 
 The MIT-BIH Arrhythmia dataset is used for the implementation of the system. It contains 48 hours of recording of 47 subjects. Each record contains 2 signals, namely MLII and V5, with a recording of 30 minutes duration. The sample rate for the recording is 360 samples per second per channel with 11-bit resolution over a 10mV range. Each record consists of 3 files:
@@ -505,19 +484,38 @@ A band-pass filter can be used to reduce the baseline drift, motion artifacts an
 \end{figure}
 
 
+\renewcommand{\arraystretch}{2}
+\begin{table}
+	\caption{Wavelet Transform ECG Signal Frequency Range, taken from \cite{shang2014qrs}.} \label{tab:qrsenergy}
+	
+	\begin{center}
+		\begin{tabular}{ | l | r | }
+			\hline
+			Transform Scale & Frequency Range (Hz) \\ \hline
+			${2^1}$  & 90.0{\raise.17ex\hbox{$\scriptstyle\sim$}}180.0 \\ \hline
+			${2^2}$  & 29.92{\raise.17ex\hbox{$\scriptstyle\sim$}}84.24  \\ \hline
+			${2^3}$  & 1.52{\raise.17ex\hbox{$\scriptstyle\sim$}}38.88  \\ \hline
+			${2^4}$  & 5.76{\raise.17ex\hbox{$\scriptstyle\sim$}}19.44  \\ 
+			\hline
+		\end{tabular}
+	\end{center}
+	
+\end{table}
+
+
 \section{QRS Detection}\label{sec:ecg_det}
 QRS detection is the basis for processing the ECG signal. Regardless of what application is required, the accurate detection of QRS is a pre-requisite for feature extraction. A good wavelet base can help detect the features of ECG signal more appropriately with speed and accuracy. Therefore, Biorthogonal spline wavelet is used to detect QRS wave. Biorthogonal spline wavelet transform of ECG signal is calculated using the Mallat algorithm. Figure ~\ref{fig:detail_coefficients} shows the Biorthogonal spline wavelet transform of ECG signal at 4 different scales.
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/detail_coefficients}
+	\includegraphics[width=17cm,height=17cm,keepaspectratio=true]{images/detail_coefficients}
 	\caption{
 		ECG signal and its decomposition at different scales.
 	}
 	\label{fig:detail_coefficients}
 \end{figure}
 
-Most of the QRS complex energy lies in the 3rd scale, therefore, the maximal minimal method can be used on the 3rd layer of the detail coefficient to find the R waves.  The process starts by taking the first derivative of the 3rd layer to find the maximum and minimum points and then the 2nd derivative to locate the actual maximum and minimum values. The resulting waves are shown in Figure \ref{fig:maximas_on_level_3}. As it can be seen that, there are other peaks available as well, therefore, to get the maximum and minimum pair only, a threshold needs to be set. And all the values that do not fulfill the threshold should be discarded. 
+Most of the QRS complex energy lies in the 3rd scale as can be seen in Table \ref{tab:qrsenergy}, therefore, the maximal minimal method can be used on the 3rd layer of the detail coefficient to find the R waves.  The process starts by taking the first derivative of the 3rd layer to find the maximum and minimum points and then the 2nd derivative to locate the actual maximum and minimum values. The resulting waves are shown in Figure \ref{fig:maximas_on_level_3}. As it can be seen that, there are other peaks available as well, therefore, to get the maximum and minimum pair only, a threshold needs to be set. And all the values that do not fulfill the threshold should be discarded. 
 For finding the threshold, the result of the 2nd derivative is divided into 4 parts and from each part, the maximum value is located. After getting the values, the average is calculated for these values and that average is then divided by 3. The resultant value is a new threshold. The pair can be seen in Figure \ref{fig:max_pair}.
 
 \begin{figure}[htpb]

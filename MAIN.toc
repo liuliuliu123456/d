@@ -53,9 +53,9 @@
 \contentsline {subsection}{\numberline {2.6.3}Relationship between Lipschitz Exponent and Modulus Maximum}{25}{subsection.2.6.3}
 \contentsline {section}{\numberline {2.7}Dataset}{26}{section.2.7}
 \contentsline {section}{\numberline {2.8}Preprocessing}{27}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}Wavelet Transform Method}{27}{subsection.2.8.1}
+\contentsline {subsection}{\numberline {2.8.1}Wavelet Transform Method}{28}{subsection.2.8.1}
 \contentsline {subsection}{\numberline {2.8.2}Band-pass Filter Method}{28}{subsection.2.8.2}
-\contentsline {section}{\numberline {2.9}QRS Detection}{29}{section.2.9}
+\contentsline {section}{\numberline {2.9}QRS Detection}{28}{section.2.9}
 \contentsline {section}{\numberline {2.10}P and T Wave Detection}{32}{section.2.10}
 \contentsline {chapter}{\numberline {3}Deep Learning}{39}{chapter.3}
 \contentsline {section}{\numberline {3.1}Machine Learning}{39}{section.3.1}
@@ -82,4 +82,5 @@
 \contentsline {subsection}{\numberline {4.4.1}Batch Layer}{53}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Speed Layer}{53}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Serving Layer}{54}{subsection.4.4.3}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{57}{chapter*.26}
+\contentsline {section}{\numberline {4.5}System Architecture}{56}{section.4.5}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{59}{chapter*.26}

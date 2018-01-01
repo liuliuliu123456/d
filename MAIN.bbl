@@ -187,6 +187,12 @@
   Engineering in Medicine and Biology Society}, 2011. --
 \newblock ISSN 1094--687X, S. 7087--7090
 
+\bibitem[MS14]{meena2014comparison}
+\textsc{Meena}, Ravi~S. ; \textsc{Sharma}, Ambalika:
+\newblock COMPARISON AND ANALYSIS OF ORTHOGONAL AND BIORTHOGONAL WAVELETS FOR
+  ECG COMPRSSION.
+\newblock {In: }\emph{Int. J. Res. Eng. Technol.}  (2014), Nr. 3
+
 \bibitem[Pie91]{PIETKA1991139}
 \textsc{Pietka}, Ewa:
 \newblock Feature extraction in computerized approach to the ecg analysis.
@@ -205,13 +211,20 @@
 \newblock DOI 10.1109/TBME.1985.325532. --
 \newblock ISSN 0018--9294
 
-\bibitem[PZZ10]{5639905}
+\bibitem[PZZ10a]{5639905}
 \textsc{Pan}, T. ; \textsc{Zhang}, L.  ; \textsc{Zhou}, S.:
 \newblock Detection of ECG characteristic points using Biorthogonal Spline
   Wavelet.
 \newblock {In: }\emph{2010 3rd International Conference on Biomedical
   Engineering and Informatics} Bd.~2, 2010. --
 \newblock ISSN 1948--2914, S. 858--863
+
+\bibitem[PZZ10b]{pan2010detection}
+\textsc{Pan}, Tao ; \textsc{Zhang}, Lei  ; \textsc{Zhou}, Shumin:
+\newblock Detection of ECG characteristic points using biorthogonal spline
+  wavelet.
+\newblock {In: }\emph{Biomedical Engineering and Informatics (BMEI), 2010 3rd
+  International Conference on} Bd.~2 IEEE, 2010, S. 858--863
 
 \bibitem[QDFM06]{PMID:17228741}
 \textsc{Qiu}, Yazhu ; \textsc{Ding}, Xianfeng ; \textsc{Feng}, Jun  ;
@@ -240,6 +253,13 @@
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 12-November-2017]
 
+\bibitem[SLL14]{shang2014qrs}
+\textsc{Shang}, Yu ; \textsc{Lei}, Shasha  ; \textsc{Liu}, Bin:
+\newblock QRS Characteristic Waveform Extraction Based On Biorthogonal B-Spline
+  Wavelet.
+\newblock {In: }\emph{International Journal of Control and Automation} 7
+  (2014), Nr. 1, S. 95--106
+
 \bibitem[sum17]{sumdu}
 \textsc{sumdu}:
 \newblock \emph{arrhythmia}.
@@ -267,6 +287,13 @@
 \newblock \url{https://books.google.de/books?id=mGiTP7zCHUAC}. --
 \newblock ISBN 9781582553559
 
+\bibitem[WLH01]{wang2001using}
+\textsc{Wang}, Chaowen ; \textsc{Lu}, Yangsheng  ; \textsc{Huang}, Yuxi:
+\newblock Using biorthogonal wavelet filter bank for ECG detection and
+  reconstruction.
+\newblock {In: }\emph{Beijing Biomedical Engineering} 20 (2001), Nr. 1, S.
+  25--28
+
 \bibitem[XCWX13]{xing2013unifying}
 \textsc{Xing}, S. ; \textsc{Chen}, S. ; \textsc{Wei}, Z.  ; \textsc{Xia}, J.:
 \newblock \emph{Unifying Electrical Engineering and Electronics Engineering:
@@ -284,5 +311,12 @@
 \newblock \url{http://dx.doi.org/10.1109/10.126604}. --
 \newblock DOI 10.1109/10.126604. --
 \newblock ISSN 0018--9294
+
+\bibitem[ZLSJ08]{zheng2008detection}
+\textsc{Zheng}, Xiuyu ; \textsc{Li}, Zhen ; \textsc{Shen}, LinLin  ;
+  \textsc{Ji}, Zhen:
+\newblock Detection of QRS complexes based on biorthogonal spline wavelet.
+\newblock {In: }\emph{Information Science and Engineering, 2008. ISISE'08.
+  International Symposium on} Bd.~2 IEEE, 2008, S. 502--506
 
 \end{thebibliography}

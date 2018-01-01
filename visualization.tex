@@ -90,7 +90,7 @@ Lets say a graph is added to the dashboard. Now, a data source is need to be def
 \end{figure}
 
 
-\section{Lambda Architecture for Big Data Processing}
+\section{Lambda Architecture for Big Data Processing} \label{sec:lmb_arc}
 The amount of data being processed nowadays is enormous, and this is often coined as Big Data. Big data is everywhere in the form of web logs, events, social networks, sensors data,etc, and these all are generating around petabytes of data each day. And because of this humongous amount of data, the traditional tools and storage technologies are unable to handle and cope with it. Therefore, this has led to a technology phase shift how we keep and manage our data, and to the development of Advance Analytics solutions.
 
 Lambda Architecture \cite{UBDLAH} \cite{oreillyla} \cite{7364082} \cite{maprla} is getting involved in machine learning and data science applications day by day by enabling the real-time data processing and analytics without using the traditional ETL approach. It is designed to address the fault-tolerance, scalability and robustness issues of big data systems. Moreover, Lambda Architecture also ensure the low-latency and accuracy of the result. It combines the power of stream processing with batch processing to provide such kind of system.
@@ -163,3 +163,31 @@ Typically, the data stream is implemented using a publish-subscribe messaging sy
 The implementation of lambda architecture has been shown in figure \ref{fig:impl_lambda_arc}. The data will directly be published from data source to Kafka based on some topic. Data from multiple data sources can be collected via Kafka based on different topic names. Once the data is fed into the Kafka, the corresponding consumers will read the data from Kafka using the topic name where the data publish to. In this architecture, Apache Spark can be used in both the batch layer and the speed layer. 
 
 Apache Spark is a large-scale data processing tool, which runs 100 times faster than the Hadoop MapReduce by caching the data objects in the memory. Thus, it is a strong candidate to replace the MapReduce. It also creates a lineage graph. So, in case of failure, it can do the computations again and go back to the last state of the data. These are two of the fundamental things that Resilient Distributed Data Set (RDD) is all about. It is specially designed to schedule and execute a large amount of data. Apache Spark does not only provide the batch processing, but it also comes with real-time stream processing, machine learning tools, graph processing, Spark SQL, Spark R and complex analytics. It is designed to run everywhere, such as it can run on Hadoop YARN, apache Mesos or standalone as well. Apache Spark offers interface for several languages to write the applications. The available languages are Java, Scala, Python and R.
+
+
+\section{System Architecture}
+A system has been implemented to collect, process and visualize the data for all the sensors based on the lambda architecture defined in Section \ref{sec:lmb_arc}. But the system has been modified according to the requirements and because of the lack of enough resources to run all the big data tools. The system architecture can be seen in Figure \ref{fig:sys_arc} .
+
+An architecture has been implemented in \textit{pytho} language, which first collects the data from all sensors based on their protocol. The data is then immediately stored in InfluxDB in order to have the original state of the data, as shown in Figure \ref{fig:using_ann}. The data is then cleaned and processed to do the further operations on it, such as for the ECG signal, the feature extraction as defined in Section \ref{sec:ecg_det}. Once the features are extracted, the cleaned signal and the extracted features are saved InfluxDB immediately to save the state of the signal. Then the signal is passed to the deep learning model to identify the type of arrhythmia, as shown in Figure \ref{fig:using_ann}.
+
+Once all the information is stored in InfluxDB, then the Grafana takes the job. It retrieves data from InfluxDB and display it on the dashboard. Grafana provides many other options as well such as the refresh time, i.e, how much time retrieves the new data from InfluxDB. If the data is coming from other machine and the clock time is not same, Grafana gives an option to shift the time to adjust the panels and many other helpful functions.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=17cm,height=15cm,keepaspectratio=true]{images/sys_arc}
+	\caption{
+		System architecture for the sensors.
+	}
+	\label{fig:sys_arc}
+\end{figure}
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=17cm,height=15cm,keepaspectratio=true]{images/using_ann}
+	\caption{
+		Using the deep learning model in real-time environment.
+	}
+	\label{fig:using_ann}
+\end{figure}
