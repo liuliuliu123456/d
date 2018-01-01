@@ -50,7 +50,7 @@ During systole, as the blood volume increases, impedance decreases. Similarly, d
 	\subfigure[][]{%
 		\label{fig:ex3-d}%
 		\includegraphics[height=2in]{images/tc}}%
-	\caption[A set of four subfigures.]{A set of sensor devices:
+	\caption[A set of sensor devices.]{A set of sensor devices:
 		\subref{fig:ex3-e} an ECG sensor;
 		\subref{fig:ex3-a} a MI sensor;
 		\subref{fig:ex3-b} a PPG sensor;
@@ -136,7 +136,7 @@ The sensor provides the PPG signal with 4 different channels, a temperature, whi
 
 
 \subsection{ECG Sensor}
-As described in section \ref{the_electrocardiogram}, the ECG signal is usually collected by placing electrodes directly on the body but it has several disadvantages as well, which is described in section \ref{electrodes_disadv}. Therefore, non-contact capacitive electrodes have been used to collect the ECG signals of the person. Unlike traditional electrodes, which rely on galvanic contact, the capacitive electrodes are insulated from skin using a dielectric material, such as, air gap, clothes, etc. The ECG signal propagates via skin to the dielectric material and then to the electrodes through a capacitive coupling. The major drawback of this approach is that it is very sensitive to body motion.
+As described in section \ref{the_electrocardiogram}, the ECG signal is usually collected by placing electrodes directly on the body but it has several disadvantages as well, which is described in section \ref{electrodes_disadv}. Therefore, non-contact capacitive electrodes have been used to collect the ECG signals of the person. Unlike traditional electrodes, which rely on galvanic contact, the capacitive electrodes are insulated from skin using a dielectric material, such as, air gap, clothes, etc \cite{bouchard2017smart}. The ECG signal propagates via skin to the dielectric material and then to the electrodes through a capacitive coupling. The major drawback of this approach is that it is very sensitive to body motion.
 
 \subsection{Ballistocardiogram Sensor}
 The ballistocardiogram (BCG) sensor measures the ballistic forces associated with cardiac contraction and ejection of blood. These ballistic forces are mainly measures by the electromechanical film (EMFi) sensor which converts the mechanical energy into the electrical signal and vice versa. Most of the time, the EMFi sensing device is placed on a chair or bed, which measures the pressure associated with the cardiac activity.
@@ -630,3 +630,24 @@ The heart rate is calculated by first counting the number of R peaks in a 10 sec
 \begin{center}
 	$HeartRate = number\_of\_R\_peaks \times 6$
 \end{center}
+
+\section{Algorithm Execution on ECG Chair Data}
+The data used in the development of ECG feature extraction algorithm is taken from MIT-BIH data set and the algorithm works great with that data set. To analyze the performance of algorithm on the ECG chair data that is used in the implementation of the system, the data is collected from the ECG chair and passed to the algorithm. It turns out that the algorithm works perfectly fine with this data as well. The original ECG signal can be seen in Figure \ref{fig:device_ecg_orignal} and the extracted features can be seen in Figure \ref{fig:device_ecg_feature_extraction}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/device_ecg_orignal}
+	\caption{
+		Original ECG chair signal.
+	}
+	\label{fig:device_ecg_orignal}
+\end{figure}
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/device_ecg_feature_extraction.png}
+	\caption{
+		Detected P,Q,R,S and T waves on the ECG chair signal.
+	}
+	\label{fig:device_ecg_feature_extraction}
+\end{figure}

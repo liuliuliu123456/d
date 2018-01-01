@@ -32,6 +32,14 @@
 \newblock \url{https://books.google.de/books?id=kTNoQgAACAAJ}. --
 \newblock ISBN 9780387310732
 
+\bibitem[Bou17]{bouchard2017smart}
+\textsc{Bouchard}, B.:
+\newblock \emph{Smart Technologies in Healthcare}.
+\newblock CRC Press, 2017. --
+\newblock  55--56 S.
+\newblock \url{https://books.google.de/books?id=VgsqDwAAQBAJ}. --
+\newblock ISBN 9781498722018
+
 \bibitem[Bro17]{machinelearningmastery}
 \textsc{Brownlee}, Jason:
 \newblock \emph{Supervised and Unsupervised Machine Learning Algorithms}.
