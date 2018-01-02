@@ -169,9 +169,7 @@ A 6-layer Convolutional Neural Network (CNN) has been trained for the identifica
 	\item Premature ventricular contraction (PVC)
 \end{enumerate}
 
-with an accuracy of 99\%. Total 16,415 ECG signals were extracted from the MIT-BIH dataset, out of which 10998 (67\% of the total signals) were used for the training and the remaining 5417 (33\% of the total signals) were used for the testing of the model. The CNN layers can be seen in the figure \ref{fig:cnn_model}.
-
-
+The CNN layers can be seen in the figure \ref{fig:cnn_model}.
 
 \begin{figure}[htpb]
 	\centering
@@ -213,3 +211,74 @@ The model was trained and tested for the several no. of iterations ranging from 
 		\subref{fig:ex3-d} Training and validation loss of CNN model for 30 iterations.}%
 	\label{fig:acc_val}%
 \end{figure}
+
+
+\subsubsection{Results}
+The CNN model has achieved an accuracy of 99.2\% on MIT-BIH data set. Total 16,415 ECG signals were extracted from the MIT-BIH dataset, out of which 10,998 (67\% of the total signals) were used for the training, and the remaining 5,417 (33\% of the total signals) were used for the testing of the model. The types count for training and testing data can be seen in Tables \ref{tab:train_count} and \ref{tab:test_count} respectively. 
+
+\renewcommand{\arraystretch}{2}
+\begin{table}
+	\caption{Training data.} \label{tab:train_count}
+	
+	\begin{center}
+		\begin{tabular}{ | l | r | }
+			\hline
+			\textbf{Type} & \textbf{Count} \\ \hline
+			Normal & 3,352 \\ \hline
+			LBBB  & 2,641  \\ \hline
+			RBBB  & 2,498  \\ \hline
+			PVC  & 2,507  \\ \hline
+			\textbf{Total}  & \textbf{10,998}  \\ \hline
+		\end{tabular}
+	\end{center}
+	
+\end{table}
+
+
+\renewcommand{\arraystretch}{2}
+\begin{table}
+	\caption{Test data.} \label{tab:test_count}
+	
+	\begin{center}
+		\begin{tabular}{ | l | r | }
+			\hline
+			\textbf{Type} & \textbf{Count} \\ \hline
+			Normal & 1,648 \\ \hline
+			LBBB  & 1,308  \\ \hline
+			RBBB  & 1,285  \\ \hline
+			PVC  & 1,176  \\ \hline
+			\textbf{Total}  & \textbf{5,417}  \\ \hline
+		\end{tabular}
+	\end{center}
+	
+\end{table}
+
+During the testing of the model, 42 ECG signals were classified wrong out of 5,417 ECG signals. The false predicted results can be seen in Table \ref{tab:false_pred_count}. In table, $a \rightarrow b$ means is that $a$ was classified as $b$.
+
+
+
+
+
+
+\renewcommand{\arraystretch}{2}
+\begin{table}
+	\caption{False Prediction Counts.} \label{tab:false_pred_count}
+	
+	\begin{center}
+		\begin{tabular}{ | l | r | }
+			\hline
+			\textbf{False Prediction} & \textbf{Count} \\ \hline
+			0 $\rightarrow$ 1  & 1   \\ \hline
+			0 $\rightarrow$ 2  & 1  \\ \hline
+			0 $\rightarrow$ 3  & 3  \\ \hline
+			1 $\rightarrow$ 3  & 6  \\ \hline
+			2 $\rightarrow$ 0  & 5  \\ \hline
+			2 $\rightarrow$ 3  & 3  \\ \hline
+			3 $\rightarrow$ 0  & 9  \\ \hline
+			3 $\rightarrow$ 1  & 12 \\ \hline
+			3 $\rightarrow$ 2  & 2  \\ \hline
+			\textbf{Total}   & \textbf{42}  \\ \hline
+		\end{tabular}
+	\end{center}
+	
+\end{table}

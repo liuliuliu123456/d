@@ -2,8 +2,8 @@
 \contentsline {chapter}{\nonumberline Acknowledgments}{iii}{chapter*.1}
 \contentsline {chapter}{\nonumberline Abstract}{vii}{chapter*.2}
 \contentsline {chapter}{Table of Contents}{ix}{chapter*.2}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{xi}{chapter*.4}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{xiii}{chapter*.5}
+\contentsline {chapter}{\nonumberline List of Figures}{xi}{chapter*.4}
+\contentsline {chapter}{\nonumberline List of Tables}{xiii}{chapter*.5}
 \contentsline {chapter}{Symbolverzeichnis}{xv}{chapter*.6}
 \contentsline {section}{\numberline {1}Abbreviations}{xv}{section.0.1}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
@@ -77,16 +77,17 @@
 \contentsline {subsubsection}{\nonumberline Fully Connected Layer}{46}{section*.21}
 \contentsline {subsection}{\numberline {3.2.4}Keras}{47}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{47}{subsection.3.2.5}
-\contentsline {subsubsection}{\nonumberline Layers Explanation}{49}{section*.22}
-\contentsline {chapter}{\numberline {4}Visualization}{51}{chapter.4}
-\contentsline {section}{\numberline {4.1}Grafana}{51}{section.4.1}
-\contentsline {section}{\numberline {4.2}InfluxDB}{52}{section.4.2}
-\contentsline {section}{\numberline {4.3}Setting up Grafana with InfluxDB}{52}{section.4.3}
-\contentsline {section}{\numberline {4.4}Lambda Architecture for Big Data Processing}{54}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Batch Layer}{55}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Speed Layer}{55}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Serving Layer}{56}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}System Architecture}{58}{section.4.5}
-\contentsline {section}{\numberline {4.6}Device Management Interface}{59}{section.4.6}
-\contentsline {section}{\numberline {4.7}Android Application}{62}{section.4.7}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{65}{chapter*.23}
+\contentsline {subsubsection}{\nonumberline Layers Explanation}{48}{section*.22}
+\contentsline {subsubsection}{\nonumberline Results}{49}{section*.23}
+\contentsline {chapter}{\numberline {4}Visualization}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}Grafana}{53}{section.4.1}
+\contentsline {section}{\numberline {4.2}InfluxDB}{54}{section.4.2}
+\contentsline {section}{\numberline {4.3}Setting up Grafana with InfluxDB}{54}{section.4.3}
+\contentsline {section}{\numberline {4.4}Lambda Architecture for Big Data Processing}{56}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Batch Layer}{57}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Speed Layer}{57}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Serving Layer}{58}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}System Architecture}{60}{section.4.5}
+\contentsline {section}{\numberline {4.6}Device Management Interface}{61}{section.4.6}
+\contentsline {section}{\numberline {4.7}Android Application}{64}{section.4.7}
+\contentsline {chapter}{\nonumberline References}{67}{chapter*.24}

@@ -34,7 +34,7 @@
 \newcommand*{\doclongtitle}{Deep Learning of Cardiac Related Condition using a Non-Contact Multi-Sensor System}
 
 % Art der Arbeit (Diplomarbeit, Studienarbeit, Bachelorarbeit, etc.)
-\newcommand*{\docsubject}{Masterarbeit}
+\newcommand*{\docsubject}{Master Thesis}
 
 % Name des Autors
 \newcommand*{\docauthor}{Waqar Ahmed}
@@ -117,12 +117,14 @@
 %* Inhaltsverzeichnis *
 %**********************
 
-
+\renewcommand{\contentsname}{Table of Contents}
 \addcontentsline{toc}{chapter}{Table of Contents} % Eintrag im Inhaltsverzeichnis erstellen
 \tableofcontents                        % Inhaltsverzeichnis anlegen
 
+\renewcommand{\listfigurename}{List of Figures}
 \addcontentsline{tof}{chapter}{Table of Figures and Tables}
 \listoffigures
+\renewcommand{\listtablename}{List of Tables}
 \listoftables
 
 \cleardoubleemptypage
@@ -180,10 +182,13 @@
 %\include{anhang}
 
 
+
+
+
 %**********************************************************
 % Literaturverzeichnis (hier muss nichts geändert werden) *
 %**********************************************************
-
+\renewcommand{\bibname}{References}
 \bibliographystyle{alphadin}    %\bibliographystyle{} plain dinat
 \bibliography{literatur}%
 
