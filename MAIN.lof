@@ -2,58 +2,59 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 1.1}{\ignorespaces The electrical activity of heart, taken from \cite {electric_activity_heart}. }}{2}{figure.1.1}
-\contentsline {figure}{\numberline {\relax 1.2}{\ignorespaces The leads position on chest, taken from \cite {TUON:six_leads}. }}{3}{figure.1.2}
-\contentsline {figure}{\numberline {\relax 1.3}{\ignorespaces The axillary lines on the right side of chest, taken from \cite {wiki:aux_lines}. }}{4}{figure.1.3}
-\contentsline {figure}{\numberline {\relax 1.4}{\ignorespaces The possible position of limb leads, taken from \cite {wiki:limb_leads}. }}{5}{figure.1.4}
-\contentsline {figure}{\numberline {\relax 1.5}{\ignorespaces The ECG signal, taken from \cite {wiki:SinusRhythmLabels}. }}{5}{figure.1.5}
-\contentsline {figure}{\numberline {\relax 1.6}{\ignorespaces 60 Hz AC Interference, taken from \cite {ecg_artifacts}. }}{8}{figure.1.6}
-\contentsline {figure}{\numberline {\relax 1.7}{\ignorespaces Baseline wandering in ECG signal, taken from \cite {ecg_artifacts}. }}{9}{figure.1.7}
-\contentsline {figure}{\numberline {\relax 1.8}{\ignorespaces ECG signal combined with muscle noise , taken from \cite {ecg_artifacts}. }}{9}{figure.1.8}
-\contentsline {figure}{\numberline {\relax 1.9}{\ignorespaces Premature Ventricular Contraction, taken from \cite {wiki:pvc}. }}{10}{figure.1.9}
-\contentsline {figure}{\numberline {\relax 1.10}{\ignorespaces Atrial Fibrillation vs Atrial Flutter vs Tachycardia , taken from \cite {sumdu}. }}{11}{figure.1.10}
-\contentsline {figure}{\numberline {\relax 1.11}{\ignorespaces LBBB vs RBBB , taken from \cite {bilagi}. }}{12}{figure.1.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces A set of sensor devices.}}{14}{figure.2.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{14}{figure.2.1}
-\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces Two-channel filter bank}}{20}{figure.2.2}
-\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces The ECG signals from MIT-BIH dataset. }}{26}{figure.2.3}
-\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces The filtered ECG signal using wavelet. }}{27}{figure.2.4}
-\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces The filtered ECG signal using bandpass filter. }}{29}{figure.2.5}
-\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces ECG signal and its decomposition at different scales. }}{30}{figure.2.6}
-\contentsline {figure}{\numberline {\relax 2.7}{\ignorespaces Maximum and minimum values on scale 3. }}{31}{figure.2.7}
-\contentsline {figure}{\numberline {\relax 2.8}{\ignorespaces Maximum and minimum values pair for finding the R peaks. }}{31}{figure.2.8}
-\contentsline {figure}{\numberline {\relax 2.9}{\ignorespaces Detected R peaks. }}{32}{figure.2.9}
-\contentsline {figure}{\numberline {\relax 2.10}{\ignorespaces R peak flow chart. }}{33}{figure.2.10}
-\contentsline {figure}{\numberline {\relax 2.11}{\ignorespaces Detected Q, R and S peaks. }}{34}{figure.2.11}
-\contentsline {figure}{\numberline {\relax 2.12}{\ignorespaces Detected P,Q,R,S and T waves. }}{34}{figure.2.12}
-\contentsline {figure}{\numberline {\relax 2.13}{\ignorespaces Q and S peak flow chart. }}{35}{figure.2.13}
-\contentsline {figure}{\numberline {\relax 2.14}{\ignorespaces P wave flow chart. }}{37}{figure.2.14}
-\contentsline {figure}{\numberline {\relax 2.15}{\ignorespaces T wave flow chart. }}{38}{figure.2.15}
-\contentsline {figure}{\numberline {\relax 2.16}{\ignorespaces Original ECG chair signal. }}{39}{figure.2.16}
-\contentsline {figure}{\numberline {\relax 2.17}{\ignorespaces Detected P,Q,R,S and T waves on the ECG chair signal. }}{39}{figure.2.17}
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces The electrical activity of heart, taken from \cite {electric_activity_heart}. }}{4}{figure.2.1}
+\contentsline {figure}{\numberline {\relax 2.2}{\ignorespaces The leads position on chest, taken from \cite {TUON:six_leads}. }}{5}{figure.2.2}
+\contentsline {figure}{\numberline {\relax 2.3}{\ignorespaces The axillary lines on the right side of chest, taken from \cite {wiki:aux_lines}. }}{6}{figure.2.3}
+\contentsline {figure}{\numberline {\relax 2.4}{\ignorespaces The possible position of limb leads, taken from \cite {wiki:limb_leads}. }}{7}{figure.2.4}
+\contentsline {figure}{\numberline {\relax 2.5}{\ignorespaces The ECG signal, taken from \cite {wiki:SinusRhythmLabels}. }}{7}{figure.2.5}
+\contentsline {figure}{\numberline {\relax 2.6}{\ignorespaces 60 Hz AC Interference, taken from \cite {ecg_artifacts}. }}{10}{figure.2.6}
+\contentsline {figure}{\numberline {\relax 2.7}{\ignorespaces Baseline wandering in ECG signal, taken from \cite {ecg_artifacts}. }}{11}{figure.2.7}
+\contentsline {figure}{\numberline {\relax 2.8}{\ignorespaces ECG signal combined with muscle noise , taken from \cite {ecg_artifacts}. }}{11}{figure.2.8}
+\contentsline {figure}{\numberline {\relax 2.9}{\ignorespaces Premature Ventricular Contraction, taken from \cite {wiki:pvc}. }}{12}{figure.2.9}
+\contentsline {figure}{\numberline {\relax 2.10}{\ignorespaces Atrial Fibrillation vs Atrial Flutter vs Tachycardia , taken from \cite {sumdu}. }}{13}{figure.2.10}
+\contentsline {figure}{\numberline {\relax 2.11}{\ignorespaces LBBB vs RBBB , taken from \cite {bilagi}. }}{14}{figure.2.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Basic supervised machine learning workflow. }}{42}{figure.3.1}
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces An artificial neural network with its 3 basic layers, taken from \cite {wiki:ann}. }}{43}{figure.3.2}
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces A single artificial neuron. }}{44}{figure.3.3}
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Activation functions, taken from \cite {ujjwalkarn}. }}{45}{figure.3.4}
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces Max pooling layer example. }}{46}{figure.3.5}
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces A 6-layer Convolutional Neural Network model for the identification of cardiac arrhythmia. }}{48}{figure.3.6}
-\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Layers used in the model and number of parameters to be optimized. }}{49}{figure.3.7}
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces A set of four subfigures.}}{50}{figure.3.8}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces A set of sensor devices.}}{16}{figure.3.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{16}{figure.3.1}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Two-channel filter bank}}{22}{figure.3.2}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The ECG signals from MIT-BIH dataset. }}{28}{figure.3.3}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The filtered ECG signal using wavelet. }}{29}{figure.3.4}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The filtered ECG signal using bandpass filter. }}{31}{figure.3.5}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces ECG signal and its decomposition at different scales. }}{32}{figure.3.6}
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Maximum and minimum values on scale 3. }}{33}{figure.3.7}
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Maximum and minimum values pair for finding the R peaks. }}{33}{figure.3.8}
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Detected R peaks. }}{34}{figure.3.9}
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces R peak flow chart. }}{35}{figure.3.10}
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Detected Q, R and S peaks. }}{36}{figure.3.11}
+\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Detected P,Q,R,S and T waves. }}{36}{figure.3.12}
+\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Q and S peak flow chart. }}{37}{figure.3.13}
+\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces P wave flow chart. }}{39}{figure.3.14}
+\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces T wave flow chart. }}{40}{figure.3.15}
+\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces Original ECG chair signal. }}{41}{figure.3.16}
+\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces Detected P,Q,R,S and T waves on the ECG chair signal. }}{41}{figure.3.17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces InfluxDB data source setup in Grafana. }}{55}{figure.4.1}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Dashboard setup. }}{55}{figure.4.2}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Interface to add query for the panel. }}{56}{figure.4.3}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Lambda architecture. }}{57}{figure.4.4}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Using more data from serving layer in case of speed layer having a problem. }}{58}{figure.4.5}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Lambda symbol representing the lambda architecture. }}{59}{figure.4.6}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Implementation of lambda architecture. }}{60}{figure.4.7}
-\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces System architecture for the sensors. }}{61}{figure.4.8}
-\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Using the deep learning model in real-time environment. }}{62}{figure.4.9}
-\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Real-time ECG signal visualization. }}{63}{figure.4.10}
-\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Real-time MI signal visualization. }}{63}{figure.4.11}
-\contentsline {figure}{\numberline {\relax 4.12}{\ignorespaces Real-time PPG signal visualization. }}{64}{figure.4.12}
-\contentsline {figure}{\numberline {\relax 4.13}{\ignorespaces The device management interface.}}{65}{figure.4.13}
-\contentsline {figure}{\numberline {\relax 4.14}{\ignorespaces Real-time ECG signal visualization on android application. }}{66}{figure.4.14}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Basic supervised machine learning workflow. }}{44}{figure.4.1}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces An artificial neural network with its 3 basic layers, taken from \cite {wiki:ann}. }}{45}{figure.4.2}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces A single artificial neuron. }}{46}{figure.4.3}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Activation functions, taken from \cite {ujjwalkarn}. }}{47}{figure.4.4}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Max pooling layer example. }}{48}{figure.4.5}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces A 6-layer Convolutional Neural Network model for the identification of cardiac arrhythmia. }}{50}{figure.4.6}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Layers used in the model and number of parameters to be optimized. }}{51}{figure.4.7}
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces A set of four subfigures.}}{52}{figure.4.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces InfluxDB data source setup in Grafana. }}{57}{figure.5.1}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Dashboard setup. }}{57}{figure.5.2}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Interface to add query for the panel. }}{58}{figure.5.3}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Lambda architecture. }}{59}{figure.5.4}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Using more data from serving layer in case of speed layer having a problem. }}{60}{figure.5.5}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Lambda symbol representing the lambda architecture. }}{61}{figure.5.6}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Implementation of lambda architecture. }}{62}{figure.5.7}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces System architecture for the sensors. }}{63}{figure.5.8}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Using the deep learning model in real-time environment. }}{64}{figure.5.9}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Real-time ECG signal visualization. }}{65}{figure.5.10}
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Real-time MI signal visualization. }}{65}{figure.5.11}
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Real-time PPG signal visualization. }}{66}{figure.5.12}
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces The device management interface.}}{67}{figure.5.13}
+\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Real-time ECG signal visualization on android application. }}{68}{figure.5.14}
 \addvspace {10\p@ }
