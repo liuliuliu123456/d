@@ -119,6 +119,11 @@
 \newblock DOI 10.1109/10.58593. --
 \newblock ISSN 0018--9294
 
+\bibitem[{Gre}]{TUON:six_leads}
+\textsc{{Greg Moran}}:
+\newblock \emph{Chest Leads}. --
+\newblock [Online; accessed 8-November-2017]
+
 \bibitem[Hau17]{maprla}
 \textsc{Hausenblas}, Michael:
 \newblock \emph{Lambda Architecture}.
@@ -275,11 +280,6 @@
   \url{https://elearning.sumdu.edu.ua/free_content/lectured:a3664646bdd2fb5e12ac4d9fc4d3dff83793be56/20150113065426//64025/index.html}.
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 13-December-2017]
-
-\bibitem[{The}]{TUON:six_leads}
-\textsc{{The University of Nottingham}}:
-\newblock \emph{Chest Leads}. --
-\newblock [Online; accessed 8-November-2017]
 
 \bibitem[ujj17]{ujjwalkarn}
 \textsc{ujjwalkarn}:

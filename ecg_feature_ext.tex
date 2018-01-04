@@ -68,8 +68,7 @@ There is an exception in the data packet when it contains 0x8101 or 0x8102. In t
 
 \renewcommand{\arraystretch}{2}
 \begin{table}
-	\caption{Attributes of MI s
-		ensor.} \label{tab:att_mi}
+	\caption{Attributes of MI sensor.} \label{tab:att_mi}
 	
 	\begin{center}
 		\begin{tabular}{ | l | r | }
@@ -118,7 +117,7 @@ The sensor provides the PPG signal with 4 different channels, a temperature, whi
 % \usepackage{multirow}
 \begin{table}[]
 	\centering
-	\caption{Attributes of PPG Sensor.}
+	\caption{Attributes of PPG sensor.}
 	\label{tab:att_ppg}
 	\begin{tabular}{|l|l|l|l|}
 		\hline
@@ -195,7 +194,7 @@ Biorthogonal Spline wavelet has been used for the detection of ECG signal charac
 For multi-resolution decomposition of signals, a dyadic DWT (discrete wavelet transform) is used where all bandpass filters have different frequency resolution. This is done by first using low-pass and high-pass filters to split the signal into low and high-frequency components.
 
 \section{Biorthogonal Spline Wavelet Filter Construction}
-Let say, ${H_{0}(z)}$ and ${H_{1}(z)}$ are low-pass filters in the analysis filter bank (decomposition) and ${G_{0}(z)}$, ${G_{1}(z)}$ are high-pass filters in the synthesis filter bank (reconstruction) \cite{wang2001using}, as can be seen in the figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2  respectively, producing the final output signal $Y[n]$. It is worth to note here that $Y[n]$ is the reconstructed signal. 
+Let say, ${H_{0}(z)}$ and ${H_{1}(z)}$ are low-pass filters in the analysis filter bank (decomposition) and ${G_{0}(z)}$, ${G_{1}(z)}$ are high-pass filters in the synthesis filter bank (reconstruction) \cite{wang2001using}, as can be seen in Figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2  respectively, producing the final output signal $Y[n]$. It is worth to note here that $Y[n]$ is the reconstructed signal. 
 
 
 
@@ -486,7 +485,7 @@ A band-pass filter can be used to reduce the baseline drift, motion artifacts an
 
 \renewcommand{\arraystretch}{2}
 \begin{table}
-	\caption{Wavelet Transform ECG Signal Frequency Range, taken from \cite{shang2014qrs}.} \label{tab:qrsenergy}
+	\caption{Wavelet transform ECG signal frequency range\cite{shang2014qrs}.} \label{tab:qrsenergy}
 	
 	\begin{center}
 		\begin{tabular}{ | l | r | }
@@ -536,7 +535,7 @@ For finding the threshold, the result of the 2nd derivative is divided into 4 pa
 	\label{fig:max_pair}
 \end{figure}
 
-The value of R wave lies at the zero-crossing point (with a little delay) which is between the maximum and the minimum value pair. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point. The detected R-peaks can be seen in Figure \ref{fig:r_peaks}. The flow chart for finding the R peaks is shown in figure \ref{fig:r_peaks_flow_chart}.
+The value of R wave lies at the zero-crossing point (with a little delay) which is between the maximum and the minimum value pair. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point. The detected R-peaks can be seen in Figure \ref{fig:r_peaks}. The flow chart for finding the R peaks is shown in Figure \ref{fig:r_peaks_flow_chart}.
 
 \begin{figure}[htpb]
 	\centering
@@ -602,7 +601,7 @@ After getting the QRS on scale 4, a window size of 100 is used for detecting the
 
 The same approach is used for detecting the T wave, but instead of looking the window before the QRS complex, here the window is searched after the QRS complex for detecting the T wave.
 
-All detected waves can be seen in the figure \ref{fig:pqrst}. The flow chart for finding the P wave and T wave is shown in figures \ref{fig:p_peaks_flow_chart} and \ref{fig:t_peaks_flow_chart} respectively.
+All detected waves can be seen in Figure \ref{fig:pqrst}. The flow chart for finding the P wave and T wave is shown in Figures \ref{fig:p_peaks_flow_chart} and \ref{fig:t_peaks_flow_chart} respectively.
 
 
 \begin{figure}[htpb]

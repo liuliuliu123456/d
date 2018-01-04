@@ -12,28 +12,28 @@
 \contentsline {section}{\numberline {2.2}The Electrocardiogram}{4}{section.2.2}
 \contentsline {subsubsection}{\nonumberline Chest Electrodes}{5}{section*.7}
 \contentsline {subsubsection}{\nonumberline Limb Electrodes}{6}{section*.8}
-\contentsline {section}{\numberline {2.3}ECG Complex}{6}{section.2.3}
+\contentsline {section}{\numberline {2.3}ECG Complex}{7}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}P Wave}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}QRS Complex}{8}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}QRS Complex}{7}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}T Wave}{8}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}PR Interval}{8}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}ST Segment}{9}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.5}ST Segment}{8}{subsection.2.3.5}
 \contentsline {subsection}{\numberline {2.3.6}QT Interval}{9}{subsection.2.3.6}
 \contentsline {section}{\numberline {2.4}Disadvantages of Attached Electrodes}{9}{section.2.4}
-\contentsline {section}{\numberline {2.5}Noise in ECG Signal}{10}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Power Line Interference}{10}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.5}Noise in ECG Signal}{9}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Power Line Interference}{9}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Baseline wander}{10}{subsection.2.5.2}
 \contentsline {subsection}{\numberline {2.5.3}Muscle Noise}{10}{subsection.2.5.3}
 \contentsline {section}{\numberline {2.6}Arrhythmias}{11}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Causes of an Arrhythmia}{11}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Types of Arrhythmias}{12}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.1}Causes of Arrhythmia}{11}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Types of Arrhythmias}{11}{subsection.2.6.2}
 \contentsline {subsubsection}{\nonumberline Premature Ventricular Contraction}{12}{section*.9}
 \contentsline {subsubsection}{\nonumberline Atrial Fibrillation}{12}{section*.10}
-\contentsline {subsubsection}{\nonumberline Atrial Flutter}{13}{section*.11}
-\contentsline {subsubsection}{\nonumberline Bradycardia}{13}{section*.12}
+\contentsline {subsubsection}{\nonumberline Atrial Flutter}{12}{section*.11}
+\contentsline {subsubsection}{\nonumberline Bradycardia}{12}{section*.12}
 \contentsline {subsubsection}{\nonumberline Tachycardia}{13}{section*.13}
-\contentsline {subsubsection}{\nonumberline Heart Block}{14}{section*.14}
-\contentsline {subsubsection}{\nonumberline Bundle Branch Block}{14}{section*.15}
+\contentsline {subsubsection}{\nonumberline Heart Block}{13}{section*.14}
+\contentsline {subsubsection}{\nonumberline Bundle Branch Block}{13}{section*.15}
 \contentsline {chapter}{\numberline {3}ECG Signal and Data Processing}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Devices}{15}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Magnetic Impedance Sensor}{15}{subsection.3.1.1}
@@ -77,18 +77,18 @@
 \contentsline {subsubsection}{\nonumberline Pooling Layer}{48}{section*.20}
 \contentsline {subsubsection}{\nonumberline Fully Connected Layer}{48}{section*.21}
 \contentsline {subsection}{\numberline {4.2.4}Keras}{49}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{49}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{50}{subsection.4.2.5}
 \contentsline {subsubsection}{\nonumberline Layers Explanation}{50}{section*.22}
-\contentsline {subsubsection}{\nonumberline Results}{51}{section*.23}
-\contentsline {chapter}{\numberline {5}Visualization}{55}{chapter.5}
-\contentsline {section}{\numberline {5.1}Grafana}{55}{section.5.1}
-\contentsline {section}{\numberline {5.2}InfluxDB}{56}{section.5.2}
-\contentsline {section}{\numberline {5.3}Setting up Grafana with InfluxDB}{56}{section.5.3}
-\contentsline {section}{\numberline {5.4}Lambda Architecture for Big Data Processing}{58}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Batch Layer}{59}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Speed Layer}{59}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Serving Layer}{60}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}System Architecture}{62}{section.5.5}
-\contentsline {section}{\numberline {5.6}Device Management Interface}{63}{section.5.6}
-\contentsline {section}{\numberline {5.7}Android Application}{66}{section.5.7}
-\contentsline {chapter}{\nonumberline References}{69}{chapter*.24}
+\contentsline {subsubsection}{\nonumberline Results}{52}{section*.23}
+\contentsline {chapter}{\numberline {5}Visualization}{57}{chapter.5}
+\contentsline {section}{\numberline {5.1}Grafana}{57}{section.5.1}
+\contentsline {section}{\numberline {5.2}InfluxDB}{58}{section.5.2}
+\contentsline {section}{\numberline {5.3}Setting up Grafana with InfluxDB}{58}{section.5.3}
+\contentsline {section}{\numberline {5.4}Lambda Architecture for Big Data Processing}{60}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Batch Layer}{61}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Speed Layer}{61}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Serving Layer}{62}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}System Architecture}{64}{section.5.5}
+\contentsline {section}{\numberline {5.6}Device Management Interface}{65}{section.5.6}
+\contentsline {section}{\numberline {5.7}Android Application}{70}{section.5.7}
+\contentsline {chapter}{\nonumberline References}{71}{chapter*.24}

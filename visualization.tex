@@ -53,7 +53,7 @@ It allows us to connect to these data sources on just few click which makes it v
  Another reason for choosing the InfluxDB is that, it is really easy to configure Grafana for using InfluxDB as a data source. It is so simple that, the setup can be done in just 5 minutes. First, a user needs to create a database in the InfluxDB. Once the database is ready, starts the Grafana server. Generally, it runs on port 3000 but because of ports conflict, it is recommended to change the port to some other address by editing the \textit{conf\textbackslash sample.ini} file.
  
  
- Once the server is started, go to \textit{localhost:3000} address to open the Grafana web interface. Select an option to add a new data source. Lets say the database name is ``medit'', then configure the InfluxDB data source as shown in figure \ref{fig:gr_db_setup}.
+ Once the server is started, go to \textit{localhost:3000} address to open the Grafana web interface. Select an option to add a new data source. Lets say the database name is ``medit'', then configure the InfluxDB data source as shown in Figure \ref{fig:gr_db_setup}.
  
  \begin{figure}[htpb]
  	\centering
@@ -77,7 +77,7 @@ It allows us to connect to these data sources on just few click which makes it v
 
 Once the data source is setup, a dashboard is created to add the graphs and panels where the data is visualized. Multiple types of panels are available by default such as table, graphs, text, single stat, alert list, etc.
 
-Lets say a graph is added to the dashboard. Now, a data source is need to be defined for the graph. That can be done by selecting the graph and edit it. The interface for setting up the data source for graph can be seen in figure \ref{fig:gr_query}. A very user-friendly interface is available where one can define a query for the panel. A query can be build just by selecting the option from drop down. It will contains all the information from the database that is setted up in the data source, that shown in figure \ref{fig:gr_db_setup}. So user simply needs to select the data source, then from the measurements select the specific measurement that wants to be chosen. One measurement can have multiple fields therefore, select a specific field which needs to be displayed on graph. Once all the steps are done, the panel is ready to display the information from the InfluxDB.
+Lets say a graph is added to the dashboard. Now, a data source is need to be defined for the graph. That can be done by selecting the graph and edit it. The interface for setting up the data source for graph can be seen in Figure \ref{fig:gr_query}. A very user-friendly interface is available where one can define a query for the panel. A query can be build just by selecting the option from drop down. It will contains all the information from the database that is setted up in the data source, that shown in Figure \ref{fig:gr_db_setup}. So user simply needs to select the data source, then from the measurements select the specific measurement that wants to be chosen. One measurement can have multiple fields therefore, select a specific field which needs to be displayed on graph. Once all the steps are done, the panel is ready to display the information from the InfluxDB.
 
 
  \begin{figure}[htpb]
@@ -94,7 +94,7 @@ Lets say a graph is added to the dashboard. Now, a data source is need to be def
 The amount of data being processed nowadays is enormous, and this is often coined as Big Data. Big data is everywhere in the form of web logs, events, social networks, sensors data,etc, and these all are generating around petabytes of data each day. And because of this humongous amount of data, the traditional tools and storage technologies are unable to handle and cope with it. Therefore, this has led to a technology phase shift how we keep and manage our data, and to the development of Advance Analytics solutions.
 
 Lambda Architecture \cite{UBDLAH} \cite{oreillyla} \cite{7364082} \cite{maprla} is getting involved in machine learning and data science applications day by day by enabling the real-time data processing and analytics without using the traditional ETL approach. It is designed to address the fault-tolerance, scalability and robustness issues of big data systems. Moreover, Lambda Architecture also ensure the low-latency and accuracy of the result. It combines the power of stream processing with batch processing to provide such kind of system.
-Lambda architecture, as shown in figure \ref{fig:lambda_arc}, consists of 3 main components:
+Lambda architecture, as shown in Figure \ref{fig:lambda_arc}, consists of 3 main components:
 
 
 \begin{enumerate}
@@ -125,7 +125,7 @@ Typically, it is known that a Hadoop processing frameworks are slow and take a l
 \subsection{Serving Layer}
 This is a place where the final results and data are visualized. Serving layer provides an interface which integrates real-time views with batch views and unified them together. An accurate view of data will be presented by the batch layer, whereas the fresh view of the data will be presented by the speed layer. It also supports ad-hoc queries which are optimized for low-latency. Technologies which can be used in this layers are Cassandra, HBase, etc.
 
-The data source will provide the data which will be streamed in the stream layer and at the same time to the batch layer. Batch layer will hold the data for a long time and stream layer will process the stream in a window of short time and then provide the calculated result. The serving layer will combine the data received from the batch layer, more specifically the batch views, and the data received from the speed layer and allow them to query from a single interface. The advantage of the Lambda Architecture is that if one layer is down, the other layer can be used to make system available. For example, in figure \ref{lambda_arc_1}, if a speed layer is down, which of course can happen in the production environment, The batch layer can be used to compensate the failure.
+The data source will provide the data which will be streamed in the stream layer and at the same time to the batch layer. Batch layer will hold the data for a long time and stream layer will process the stream in a window of short time and then provide the calculated result. The serving layer will combine the data received from the batch layer, more specifically the batch views, and the data received from the speed layer and allow them to query from a single interface. The advantage of the Lambda Architecture is that if one layer is down, the other layer can be used to make system available. For example, in Figure \ref{lambda_arc_1}, if a speed layer is down, which of course can happen in the production environment, The batch layer can be used to compensate the failure.
 
 
 \begin{figure}[htpb]
@@ -160,7 +160,7 @@ Typically, the data stream is implemented using a publish-subscribe messaging sy
 \end{figure}
 
 
-The implementation of lambda architecture has been shown in figure \ref{fig:impl_lambda_arc}. The data will directly be published from data source to Kafka based on some topic. Data from multiple data sources can be collected via Kafka based on different topic names. Once the data is fed into the Kafka, the corresponding consumers will read the data from Kafka using the topic name where the data publish to. In this architecture, Apache Spark can be used in both the batch layer and the speed layer. 
+The implementation of lambda architecture has been shown in Figure \ref{fig:impl_lambda_arc}. The data will directly be published from data source to Kafka based on some topic. Data from multiple data sources can be collected via Kafka based on different topic names. Once the data is fed into the Kafka, the corresponding consumers will read the data from Kafka using the topic name where the data publish to. In this architecture, Apache Spark can be used in both the batch layer and the speed layer. 
 
 Apache Spark is a large-scale data processing tool, which runs 100 times faster than the Hadoop MapReduce by caching the data objects in the memory. Thus, it is a strong candidate to replace the MapReduce. It also creates a lineage graph. So, in case of failure, it can do the computations again and go back to the last state of the data. These are two of the fundamental things that Resilient Distributed Data Set (RDD) is all about. It is specially designed to schedule and execute a large amount of data. Apache Spark does not only provide the batch processing, but it also comes with real-time stream processing, machine learning tools, graph processing, Spark SQL, Spark R and complex analytics. It is designed to run everywhere, such as it can run on Hadoop YARN, apache Mesos or standalone as well. Apache Spark offers interface for several languages to write the applications. The available languages are Java, Scala, Python and R.
 

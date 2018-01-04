@@ -4,13 +4,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 3.1}{\ignorespaces Attributes of MI s ensor.}}{17}{table.3.1}
+\contentsline {table}{\numberline {\relax 3.1}{\ignorespaces Attributes of MI sensor.}}{17}{table.3.1}
 \contentsline {table}{\numberline {\relax 3.2}{\ignorespaces Byte identifiers for the MI sensor.}}{18}{table.3.2}
-\contentsline {table}{\numberline {\relax 3.3}{\ignorespaces Attributes of PPG Sensor.}}{19}{table.3.3}
-\contentsline {table}{\numberline {\relax 3.4}{\ignorespaces Wavelet Transform ECG Signal Frequency Range, taken from \cite {shang2014qrs}.}}{32}{table.3.4}
+\contentsline {table}{\numberline {\relax 3.3}{\ignorespaces Attributes of PPG sensor.}}{19}{table.3.3}
+\contentsline {table}{\numberline {\relax 3.4}{\ignorespaces Wavelet transform ECG signal frequency range\cite {shang2014qrs}.}}{32}{table.3.4}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Training data.}}{53}{table.4.1}
-\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Test data.}}{53}{table.4.2}
-\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces False Prediction Counts.}}{54}{table.4.3}
+\contentsline {table}{\numberline {\relax 4.1}{\ignorespaces Training data.}}{54}{table.4.1}
+\contentsline {table}{\numberline {\relax 4.2}{\ignorespaces Test data.}}{54}{table.4.2}
+\contentsline {table}{\numberline {\relax 4.3}{\ignorespaces False Prediction Counts.}}{55}{table.4.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

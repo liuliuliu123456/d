@@ -29,7 +29,7 @@ In unsupervised learning, only the input variables are known and no correspondin
 	\item \textbf{Association}: Discover rules that define the large portions of the data such as people who buy product X may buy Y as well.
 \end{itemize}
 
-The objective of machine learning is to analyze the past and present data and predict or make a decision for the future data. In supervised learning, the basic workflow is to build a model, evaluate or tune a model and then deploy it in the production environment where it will do the predictions. The workflow can be seen in the figure.
+The objective of machine learning is to analyze the past and present data and predict or make a decision for the future data. In supervised learning, the basic workflow is to build a model, evaluate or tune a model and then deploy it in the production environment where it will do the predictions. The workflow can be seen in Figure.
 
 
 \begin{figure}[htpb]
@@ -66,14 +66,14 @@ In the most basic state, an ANN consists of 3 layers:
 	\centering
 	\includegraphics[width=6cm,height=10cm,keepaspectratio=true]{images/neural-net}
 	\caption{
-		An artificial neural network with its 3 basic layers, taken from \cite{wiki:ann}.
+		An artificial neural network with its 3 basic layers\cite{wiki:ann}.
 	}
 	\label{fig:wiki:ann}
 \end{figure}
 
 
 \subsection{Artificial Neuron}
-An artificial neuron is the most basic unit of ANN. It takes inputs and produces an output. Generally, the inputs are multiplied by some weights to specify which inputs are more important. The higher the value of weights, the more important they are. The inputs are shown as a, b, and c, and weights as $w_1$, $w_2$ and $w_3$ in figure \ref{fig:single-neuron}. After then the products are summed together and passed to the activation function. An activation function is a function which takes an input an generates an output based on a certain threshold. So, if the summed value is greater than the threshold value of that activation function, the output is produced or in other terms, the neuron fired else no output is produced and neuron does not fire.
+An artificial neuron is the most basic unit of ANN. It takes inputs and produces an output. Generally, the inputs are multiplied by some weights to specify which inputs are more important. The higher the value of weights, the more important they are. The inputs are shown as a, b, and c, and weights as $w_1$, $w_2$ and $w_3$ in Figure \ref{fig:single-neuron}. After then the products are summed together and passed to the activation function. An activation function is a function which takes an input an generates an output based on a certain threshold. So, if the summed value is greater than the threshold value of that activation function, the output is produced or in other terms, the neuron fired else no output is produced and neuron does not fire.
 
 \begin{figure}[htpb]
 	\centering
@@ -114,22 +114,30 @@ It stands for Rectified Linear Unit. It is the most used activation function as 
 	\centering
 	\includegraphics[width=15cm,height=10cm,keepaspectratio=true]{images/act-funcs}
 	\caption{
-		Activation functions, taken from \cite{ujjwalkarn}.
+		Activation functions\cite{ujjwalkarn}.
 	}
 	\label{fig:funcs}
 \end{figure}
 
-The graph of all the activation functions defined above can be seen in figure \ref{fig:funcs}.
+The graph of all the activation functions defined above can be seen in Figure \ref{fig:funcs}.
 
 \subsection{Convolutional Neural Network}
 Convolutional neural network (CNN) is a class of deep neural network which uses multilayer perceptrons. It consists of an input layer, an output layer, and multiple hidden layers. The hidden layers can be convolutional, pooling or fully connected layer.
 
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/cnn_1d}
+	\caption{
+		Convolutional neural network example.
+	}
+	\label{fig:cnn_1d}
+\end{figure}
 
 \subsubsection{Convolutional Layer}
 In CNN, the first layer is always the convolutional layer. This layer applies a convolutional operation to the input and passes the output to the next layer. A filter (or sometimes referred as a kernel) is used which slides over all the area of the input and extract the features from it. The region where the filter is being applied at any instant of time is called as a receptive field. As the filter slides or convolves over the input signal, it multiples the filter with the original signal values (which can also be referred as element-wise multiplication) which results in a single value. The important point to note here is that this single result is just from a single receptive field. Therefore, the same operation will be carried out on other receptive fields by sliding the filter over the different areas of the input signal. The filter can slide for any unit and this sliding unit is known as stride. Every unique area of the input signal will produce an output and the combined output together is called as feature map or an activation map.  If we assume that, the input size is 32x32, the filter size is 5x5 and the stride is 1 unit, then the size of the activation map will be 28x28. In a 2D array, the filter can be moved in both directions.
 
 \subsubsection{Pooling Layer}
-Pooling layer is used to downsampled the convolutional layer output. There are several pooling options, for example, average pooling, L2-norm pooling, etc., but max polling is the most popular. This layer basically takes a filter of size 2x2 with the same stride size. It then applies the filter to the part of input and output the maximum number in that region. The same process is applied to the different sub-region by sliding the filter all over the input. By convolving the filter around the input, it drastically reduces the spatial size of the input. The example can be seen in the figure \ref{fig:maxpool}.
+Pooling layer is used to downsampled the convolutional layer output. There are several pooling options, for example, average pooling, L2-norm pooling, etc., but max polling is the most popular. This layer basically takes a filter of size 2x2 with the same stride size. It then applies the filter to the part of input and output the maximum number in that region. The same process is applied to the different sub-region by sliding the filter all over the input. By convolving the filter around the input, it drastically reduces the spatial size of the input. The example can be seen in Figure \ref{fig:maxpool}.
 
 \begin{figure}[htpb]
 	\centering
@@ -141,7 +149,7 @@ Pooling layer is used to downsampled the convolutional layer output. There are s
 \end{figure}
 
 \subsubsection{Fully Connected Layer}
-In fully connected layer, the neurons of one layer are connected to all the neurons of the other second layer, as it can be seen in figure 6. This layer can be seen in the regular neural network as well. The softmax function is applied to the output of the second layer to produce the probabilities for the classification of the input. 
+In fully connected layer, the neurons of one layer are connected to all the neurons of the other second layer, as it can be seen in Figure \ref{fig:cnn_1d}. This layer can be seen in the regular neural network as well. The softmax function is applied to the output of the second layer to produce the probabilities for the classification of the input. 
 
 \subsection{Keras}
 
@@ -169,7 +177,7 @@ A 6-layer Convolutional Neural Network (CNN) has been trained for the identifica
 	\item Premature ventricular contraction (PVC)
 \end{enumerate}
 
-The CNN layers can be seen in the figure \ref{fig:cnn_model}.
+The CNN layers can be seen in Figure \ref{fig:cnn_model}.
 
 \begin{figure}[htpb]
 	\centering
@@ -194,7 +202,7 @@ The CNN layers can be seen in the figure \ref{fig:cnn_model}.
 The 1st convolutional layer (Conv\_1D\_1) consists of 64 filters, whereas, the 2nd convolutional layer (Conv\_1D\_2) consists of 32 filters with a kernel of size 3. For both convolutional layers, Relu has been used as an activation function each followed by a MaxPooling layer. The batch size of 1000 was used for the training, along with the Adam algorithm to optimize the CNN. Since the model is trained for performing the classification of an ECG signal, therefore, categorical cross-entropy loss function was used for calculating the loss of training and validation. After performing the convolutions, the flattening and dense layer has been used followed by a softmax activation function to produce the final probabilities with 4 classes.
 
 
-The model was trained and tested for the several no. of iterations ranging from 10 to 100. The best model was found after the 20 iterations. After that, the model remained stable with the slight improvement in the training as well as in the validation accuracy. The training and validation accuracy can be seen in the figure \ref{fig:acc_val}.
+The model was trained and tested for the several no. of iterations ranging from 10 to 100. The best model was found after the 20 iterations. After that, the model remained stable with the slight improvement in the training as well as in the validation accuracy. The training and validation accuracy can be seen in Figure \ref{fig:acc_val}.
 
 \begin{figure}%
 	\centering
