@@ -115,8 +115,8 @@ ECG complex represents the electrical activity of the heart during one cardiac c
 
 The P wave is the first component of the ECG signal. It occurs due to contraction of both left and right atrium. This process is also known as atrial depolarization. A normal P wave has following characteristics (in lead II):
 \begin{itemize}
-	\item Duration: 0.06 to 0.12 seconds
-	\item Amplitude: 2 to 3 mm high
+	\item Duration: less than 120 milliseconds
+	\item Amplitude: less 0.25 mV in the limb leads and less than 0.15 mV in the precordial leads
 	\item Location: before the QRS complex
 \end{itemize}
 
@@ -133,8 +133,7 @@ The P wave is the first component of the ECG signal. It occurs due to contractio
 The QRS complex follows the P wave and represents a contraction of both right and left ventricles. This contraction results in the blood ejection from the heart which eventually pumps into the arteries and create a pulse. The Q and S waves are relatively very small whereas, R wave is comparatively very big. A normal QRS complex has following characteristics (in lead II):
 
 \begin{itemize}
-	\item Duration: 0.06 to 0.10 seconds
-	\item Amplitude: 5 to 30 mm high
+	\item Duration: 70 to 100 milliseconds
 	\item Location: follows the P wave
 \end{itemize}
 
@@ -142,8 +141,7 @@ The QRS complex follows the P wave and represents a contraction of both right an
 The T wave represents the ventricles repolarization. It occurs during the last part of ventricle systole. The T wave has following characteristics (in lead II):
 
 \begin{itemize}
-	\item Duration: 0.10 to 0.25 seconds or greater
-	\item Amplitude: <5 mm high
+	\item Duration: 100 to 250 milliseconds or greater
 	\item Location: follows the QRS complex
 \end{itemize}
 
@@ -151,7 +149,7 @@ The T wave represents the ventricles repolarization. It occurs during the last p
 The PR interval is the time interval between the end of contraction of the atria and the beginning of contraction of the ventricles. A normal PR interval has following characteristics:
 
 \begin{itemize}
-	\item Duration: 0.12 to 0.20 seconds
+	\item Duration: 120 to 200 milliseconds
 	\item Location: From the beginning of P wave to the beginning of the QRS complex
 \end{itemize}
 
@@ -159,7 +157,7 @@ The PR interval is the time interval between the end of contraction of the atria
 The ST segment represents the end of ventricular depolarization and the beginning of the ventricles relaxation. The point between the end of QRS complex and the beginning of ST segment is called as the J point. A normal ST segment has following characteristics:
 
 \begin{itemize}
-	\item Duration: 0.08 to 0.12 seconds
+	\item Duration: 80 to 120 milliseconds
 	\item Location: From the end of QRS complex to the beginning of T wave
 \end{itemize}
 
@@ -167,7 +165,7 @@ The ST segment represents the end of ventricular depolarization and the beginnin
 The QT interval is the time interval between the ventricular depolarization and repolarization. The QT duration varies according to the heart rate. Faster heart rate results in smaller QT interval whereas, slower heart rate may result in a bigger QT interval. The bigger QT interval may result in an irregular heartbeat. A normal QT interval has following characteristics:
 
 \begin{itemize}
-	\item Duration: 0.36 to 0.44 seconds
+	\item Duration: 360 to 440 milliseconds
 	\item Location: From the beginning of QRS complex to the end of T wave
 \end{itemize}
 
@@ -198,7 +196,7 @@ Power line interference is a 50 Hz noise, which is present in ECG signal because
 \end{figure}
 
 \subsection{Baseline wander}
-Baseline wander is a low-frequency component which corrupts the ECG signal because of breathing, body movements, dirty or lose electrodes or electrode impedance. Generally, they have a frequency greater than 1 Hz. A high pass filter can be used to remove the baseline wander. The baseline wandering in ECG signal can be seen in Figure ~\ref{fig:WBaseline}.
+Baseline wander is a low-frequency component which corrupts the ECG signal because of breathing, body movements, dirty or lose electrodes or electrode impedance. Generally, they have a frequency lower than 2 Hz \cite{schilling2012analysis}. A high pass filter can be used to remove the baseline wander. The baseline wandering in ECG signal can be seen in Figure ~\ref{fig:WBaseline}.
 
 \begin{figure}[htpb]
 	\centering
@@ -280,7 +278,7 @@ In this type of arrhythmia, the heart beats faster than the normal pace, usually
 In this type of arrhythmia, the heart beats slowly because of the delay or complete block of the electrical signal between the upper chambers and the lower chambers of the heart. It is also called atrial ventricular block (AV block).
 
 \subsubsection{Bundle Branch Block}
-Bundle branch block can be of two types, left bundle branch block (LBBB) and right bundle branch block (RBBB). In a normal heart, both bundles depolarized simultaneously and contract at the same time. In this type of arrhythmia, the affected bundle depolarized slowly whereas the un-affected bundle depolarized normally which results in a broader QRS complex, generally longer than 120 milliseconds duration. LBBB and RBBB can be seen in Figure ~\ref{fig:LRBBB}.
+Bundle branch block can be of two types, left bundle branch block (LBBB) and right bundle branch block (RBBB). In a normal heart, both bundles depolarized simultaneously and contract at the same time. In this type of arrhythmia, the affected bundle depolarized slowly whereas the un-affected bundle depolarized normally which results in a broader QRS complex, generally longer than 120 milliseconds duration. LBBB and RBBB can be seen in Figure ~\ref{fig:LRBBB}. In RBBB, the delayed activation of the right ventricle gives rise to the ST depression and the T wave inversion in the lead V1 and the wide S wave in the lead V6. Similarly, in LBBB, the delayed activation of the left ventricle, results in the absence of Q wave and tall R wave appeared as M shaped in lead V6 and deep S wave in the lead V1 \cite{cablesandsensors}.
 
 
 \begin{figure}[htpb]

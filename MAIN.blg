@@ -16,6 +16,15 @@ I was expecting a `,' or a `}'---line 154 of file literatur.bib
  :  url = {http://www.nottingham.ac.uk/nursing/practice/resources/cardiology/images/6_lead_placement.gif}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 465 of file literatur.bib
+ :  
+ :  pages={64}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 468 of file literatur.bib
+ : @misc{cablesandsensors
+ :                       ,
+I'm skipping whatever remains of this entry
 Warning--empty year in TUON:six_leads
 Warning--there's no year in limaye2016ecg
-(There was 1 error message)
+(There were 3 error messages)
