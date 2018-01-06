@@ -18,21 +18,21 @@
 \contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces A set of sensor devices.}}{16}{figure.3.1}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{16}{figure.3.1}
 \contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Two-channel filter bank}}{22}{figure.3.2}
-\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The ECG signals from MIT-BIH dataset. }}{28}{figure.3.3}
-\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The filtered ECG signal using wavelet. }}{29}{figure.3.4}
-\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The filtered ECG signal using bandpass filter. }}{31}{figure.3.5}
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces ECG signal and its decomposition at different scales. }}{32}{figure.3.6}
-\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Maximum and minimum values on scale 3. }}{33}{figure.3.7}
-\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Maximum and minimum values pair for finding the R peaks. }}{33}{figure.3.8}
-\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Detected R peaks. }}{34}{figure.3.9}
-\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces R peak flow chart. }}{35}{figure.3.10}
-\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Detected Q, R and S peaks. }}{36}{figure.3.11}
-\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Detected P,Q,R,S and T waves. }}{36}{figure.3.12}
-\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Q and S peak flow chart. }}{37}{figure.3.13}
-\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces P wave flow chart. }}{39}{figure.3.14}
-\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces T wave flow chart. }}{40}{figure.3.15}
-\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces Original ECG chair signal. }}{41}{figure.3.16}
-\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces Detected P,Q,R,S and T waves on the ECG chair signal. }}{41}{figure.3.17}
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The ECG signals from MIT-BIH dataset. }}{29}{figure.3.3}
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The filtered ECG signal using wavelet. }}{30}{figure.3.4}
+\contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The filtered ECG signal using bandpass filter. }}{32}{figure.3.5}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces ECG signal and its decomposition at different scales. }}{33}{figure.3.6}
+\contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Maximum and minimum values on scale 3. }}{34}{figure.3.7}
+\contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Maximum and minimum values pair for finding the R peaks. }}{34}{figure.3.8}
+\contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Detected R peaks. }}{35}{figure.3.9}
+\contentsline {figure}{\numberline {\relax 3.10}{\ignorespaces R peak flow chart. }}{36}{figure.3.10}
+\contentsline {figure}{\numberline {\relax 3.11}{\ignorespaces Detected Q, R and S peaks. }}{37}{figure.3.11}
+\contentsline {figure}{\numberline {\relax 3.12}{\ignorespaces Detected P,Q,R,S and T waves. }}{37}{figure.3.12}
+\contentsline {figure}{\numberline {\relax 3.13}{\ignorespaces Q and S peak flow chart. }}{38}{figure.3.13}
+\contentsline {figure}{\numberline {\relax 3.14}{\ignorespaces P wave flow chart. }}{40}{figure.3.14}
+\contentsline {figure}{\numberline {\relax 3.15}{\ignorespaces T wave flow chart. }}{41}{figure.3.15}
+\contentsline {figure}{\numberline {\relax 3.16}{\ignorespaces Original ECG chair signal. }}{42}{figure.3.16}
+\contentsline {figure}{\numberline {\relax 3.17}{\ignorespaces Detected P,Q,R,S and T waves on the ECG chair signal. }}{42}{figure.3.17}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Basic supervised machine learning workflow. }}{44}{figure.4.1}
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces An artificial neural network with its 3 basic layers\cite {wiki:ann}. }}{45}{figure.4.2}

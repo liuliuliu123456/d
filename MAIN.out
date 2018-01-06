@@ -24,7 +24,7 @@
 \BOOKMARK [1][-]{section.2.6}{Arrhythmias}{chapter.2}% 24
 \BOOKMARK [2][-]{subsection.2.6.1}{Causes of Arrhythmia}{section.2.6}% 25
 \BOOKMARK [2][-]{subsection.2.6.2}{Types of Arrhythmias}{section.2.6}% 26
-\BOOKMARK [0][-]{chapter.3}{ECG Signal and Data Processing}{}% 27
+\BOOKMARK [0][-]{chapter.3}{Signal Processing and Feature Extraction}{}% 27
 \BOOKMARK [1][-]{section.3.1}{Devices}{chapter.3}% 28
 \BOOKMARK [2][-]{subsection.3.1.1}{Magnetic Impedance Sensor}{section.3.1}% 29
 \BOOKMARK [2][-]{subsection.3.1.2}{Photoplethysmogram Sensor}{section.3.1}% 30
@@ -36,41 +36,39 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Artificial Intelligence Method}{section.3.2}% 36
 \BOOKMARK [2][-]{subsection.3.2.3}{Wavelet Transform Method}{section.3.2}% 37
 \BOOKMARK [1][-]{section.3.3}{Wavelet Transform}{chapter.3}% 38
-\BOOKMARK [1][-]{section.3.4}{Biorthogonal Spline Wavelet Filter Construction}{chapter.3}% 39
-\BOOKMARK [2][-]{subsection.3.4.1}{Design of Biorthogonal Spline Wavelet Filter}{section.3.4}% 40
-\BOOKMARK [2][-]{subsection.3.4.2}{Steps for Designing FIR Filter Bank}{section.3.4}% 41
-\BOOKMARK [1][-]{section.3.5}{Mallat's Algorithm}{chapter.3}% 42
-\BOOKMARK [1][-]{section.3.6}{Using Wavelet Transform to Identify Singular Point of QRS Complex}{chapter.3}% 43
-\BOOKMARK [2][-]{subsection.3.6.1}{Feature Extraction Using Wavelets}{section.3.6}% 44
-\BOOKMARK [2][-]{subsection.3.6.2}{Lipschitz Exponent}{section.3.6}% 45
-\BOOKMARK [2][-]{subsection.3.6.3}{Relationship between Lipschitz Exponent and Modulus Maximum}{section.3.6}% 46
-\BOOKMARK [1][-]{section.3.7}{Dataset}{chapter.3}% 47
-\BOOKMARK [1][-]{section.3.8}{Preprocessing}{chapter.3}% 48
-\BOOKMARK [2][-]{subsection.3.8.1}{Wavelet Transform Method}{section.3.8}% 49
-\BOOKMARK [2][-]{subsection.3.8.2}{Band-pass Filter Method}{section.3.8}% 50
-\BOOKMARK [1][-]{section.3.9}{QRS Detection}{chapter.3}% 51
-\BOOKMARK [1][-]{section.3.10}{P and T Wave Detection}{chapter.3}% 52
-\BOOKMARK [1][-]{section.3.11}{Heart Rate Calculation}{chapter.3}% 53
-\BOOKMARK [1][-]{section.3.12}{Algorithm Execution on ECG Chair Data}{chapter.3}% 54
-\BOOKMARK [0][-]{chapter.4}{Deep Learning}{}% 55
-\BOOKMARK [1][-]{section.4.1}{Machine Learning}{chapter.4}% 56
-\BOOKMARK [2][-]{subsection.4.1.1}{Supervised Learning}{section.4.1}% 57
-\BOOKMARK [2][-]{subsection.4.1.2}{Unsupervised Learning}{section.4.1}% 58
-\BOOKMARK [1][-]{section.4.2}{Artificial Neural Networks}{chapter.4}% 59
-\BOOKMARK [2][-]{subsection.4.2.1}{Artificial Neuron}{section.4.2}% 60
-\BOOKMARK [2][-]{subsection.4.2.2}{Activation Function}{section.4.2}% 61
-\BOOKMARK [2][-]{subsection.4.2.3}{Convolutional Neural Network}{section.4.2}% 62
-\BOOKMARK [2][-]{subsection.4.2.4}{Keras}{section.4.2}% 63
-\BOOKMARK [2][-]{subsection.4.2.5}{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{section.4.2}% 64
-\BOOKMARK [0][-]{chapter.5}{Visualization}{}% 65
-\BOOKMARK [1][-]{section.5.1}{Grafana}{chapter.5}% 66
-\BOOKMARK [1][-]{section.5.2}{InfluxDB}{chapter.5}% 67
-\BOOKMARK [1][-]{section.5.3}{Setting up Grafana with InfluxDB}{chapter.5}% 68
-\BOOKMARK [1][-]{section.5.4}{Lambda Architecture for Big Data Processing}{chapter.5}% 69
-\BOOKMARK [2][-]{subsection.5.4.1}{Batch Layer}{section.5.4}% 70
-\BOOKMARK [2][-]{subsection.5.4.2}{Speed Layer}{section.5.4}% 71
-\BOOKMARK [2][-]{subsection.5.4.3}{Serving Layer}{section.5.4}% 72
-\BOOKMARK [1][-]{section.5.5}{System Architecture}{chapter.5}% 73
-\BOOKMARK [1][-]{section.5.6}{Device Management Interface}{chapter.5}% 74
-\BOOKMARK [1][-]{section.5.7}{Android Application}{chapter.5}% 75
-\BOOKMARK [0][-]{chapter*.24}{References}{}% 76
+\BOOKMARK [1][-]{section.3.4}{Filter Bank Construction}{chapter.3}% 39
+\BOOKMARK [1][-]{section.3.5}{Mallat's Algorithm}{chapter.3}% 40
+\BOOKMARK [1][-]{section.3.6}{Using Wavelet Transform to Identify Singular Point of QRS Complex}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.6.1}{Feature Extraction Using Wavelets}{section.3.6}% 42
+\BOOKMARK [2][-]{subsection.3.6.2}{Lipschitz Exponent}{section.3.6}% 43
+\BOOKMARK [2][-]{subsection.3.6.3}{Relationship between Lipschitz Exponent and Modulus Maximum}{section.3.6}% 44
+\BOOKMARK [1][-]{section.3.7}{Dataset}{chapter.3}% 45
+\BOOKMARK [1][-]{section.3.8}{Preprocessing}{chapter.3}% 46
+\BOOKMARK [2][-]{subsection.3.8.1}{Wavelet Transform Method}{section.3.8}% 47
+\BOOKMARK [2][-]{subsection.3.8.2}{Band-pass Filter Method}{section.3.8}% 48
+\BOOKMARK [1][-]{section.3.9}{QRS Detection}{chapter.3}% 49
+\BOOKMARK [1][-]{section.3.10}{P and T Wave Detection}{chapter.3}% 50
+\BOOKMARK [1][-]{section.3.11}{Heart Rate Calculation}{chapter.3}% 51
+\BOOKMARK [1][-]{section.3.12}{Algorithm Execution on ECG Chair Data}{chapter.3}% 52
+\BOOKMARK [0][-]{chapter.4}{Deep Learning}{}% 53
+\BOOKMARK [1][-]{section.4.1}{Machine Learning}{chapter.4}% 54
+\BOOKMARK [2][-]{subsection.4.1.1}{Supervised Learning}{section.4.1}% 55
+\BOOKMARK [2][-]{subsection.4.1.2}{Unsupervised Learning}{section.4.1}% 56
+\BOOKMARK [1][-]{section.4.2}{Artificial Neural Networks}{chapter.4}% 57
+\BOOKMARK [2][-]{subsection.4.2.1}{Artificial Neuron}{section.4.2}% 58
+\BOOKMARK [2][-]{subsection.4.2.2}{Activation Function}{section.4.2}% 59
+\BOOKMARK [2][-]{subsection.4.2.3}{Convolutional Neural Network}{section.4.2}% 60
+\BOOKMARK [2][-]{subsection.4.2.4}{Keras}{section.4.2}% 61
+\BOOKMARK [2][-]{subsection.4.2.5}{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{section.4.2}% 62
+\BOOKMARK [0][-]{chapter.5}{Visualization}{}% 63
+\BOOKMARK [1][-]{section.5.1}{Grafana}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.2}{InfluxDB}{chapter.5}% 65
+\BOOKMARK [1][-]{section.5.3}{Setting up Grafana with InfluxDB}{chapter.5}% 66
+\BOOKMARK [1][-]{section.5.4}{Lambda Architecture for Big Data Processing}{chapter.5}% 67
+\BOOKMARK [2][-]{subsection.5.4.1}{Batch Layer}{section.5.4}% 68
+\BOOKMARK [2][-]{subsection.5.4.2}{Speed Layer}{section.5.4}% 69
+\BOOKMARK [2][-]{subsection.5.4.3}{Serving Layer}{section.5.4}% 70
+\BOOKMARK [1][-]{section.5.5}{System Architecture}{chapter.5}% 71
+\BOOKMARK [1][-]{section.5.6}{Device Management Interface}{chapter.5}% 72
+\BOOKMARK [1][-]{section.5.7}{Android Application}{chapter.5}% 73
+\BOOKMARK [0][-]{chapter*.24}{References}{}% 74

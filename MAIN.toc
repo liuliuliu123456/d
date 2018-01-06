@@ -34,7 +34,7 @@
 \contentsline {subsubsection}{\nonumberline Tachycardia}{13}{section*.13}
 \contentsline {subsubsection}{\nonumberline Heart Block}{13}{section*.14}
 \contentsline {subsubsection}{\nonumberline Bundle Branch Block}{13}{section*.15}
-\contentsline {chapter}{\numberline {3}ECG Signal and Data Processing}{15}{chapter.3}
+\contentsline {chapter}{\numberline {3}Signal Processing and Feature Extraction}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Devices}{15}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Magnetic Impedance Sensor}{15}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Photoplethysmogram Sensor}{18}{subsection.3.1.2}
@@ -46,22 +46,20 @@
 \contentsline {subsection}{\numberline {3.2.2}Artificial Intelligence Method}{20}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Wavelet Transform Method}{20}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Wavelet Transform}{21}{section.3.3}
-\contentsline {section}{\numberline {3.4}Biorthogonal Spline Wavelet Filter Construction}{22}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Design of Biorthogonal Spline Wavelet Filter}{23}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Steps for Designing FIR Filter Bank}{24}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Mallat's Algorithm}{26}{section.3.5}
-\contentsline {section}{\numberline {3.6}Using Wavelet Transform to Identify Singular Point of QRS Complex}{27}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Feature Extraction Using Wavelets}{27}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Lipschitz Exponent}{27}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Relationship between Lipschitz Exponent and Modulus Maximum}{27}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Dataset}{28}{section.3.7}
-\contentsline {section}{\numberline {3.8}Preprocessing}{29}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Wavelet Transform Method}{30}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Band-pass Filter Method}{30}{subsection.3.8.2}
-\contentsline {section}{\numberline {3.9}QRS Detection}{30}{section.3.9}
-\contentsline {section}{\numberline {3.10}P and T Wave Detection}{34}{section.3.10}
-\contentsline {section}{\numberline {3.11}Heart Rate Calculation}{38}{section.3.11}
-\contentsline {section}{\numberline {3.12}Algorithm Execution on ECG Chair Data}{38}{section.3.12}
+\contentsline {section}{\numberline {3.4}Filter Bank Construction}{22}{section.3.4}
+\contentsline {section}{\numberline {3.5}Mallat's Algorithm}{27}{section.3.5}
+\contentsline {section}{\numberline {3.6}Using Wavelet Transform to Identify Singular Point of QRS Complex}{28}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Feature Extraction Using Wavelets}{28}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Lipschitz Exponent}{28}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Relationship between Lipschitz Exponent and Modulus Maximum}{28}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Dataset}{29}{section.3.7}
+\contentsline {section}{\numberline {3.8}Preprocessing}{30}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Wavelet Transform Method}{31}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Band-pass Filter Method}{31}{subsection.3.8.2}
+\contentsline {section}{\numberline {3.9}QRS Detection}{31}{section.3.9}
+\contentsline {section}{\numberline {3.10}P and T Wave Detection}{35}{section.3.10}
+\contentsline {section}{\numberline {3.11}Heart Rate Calculation}{39}{section.3.11}
+\contentsline {section}{\numberline {3.12}Algorithm Execution on ECG Chair Data}{39}{section.3.12}
 \contentsline {chapter}{\numberline {4}Deep Learning}{43}{chapter.4}
 \contentsline {section}{\numberline {4.1}Machine Learning}{43}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Supervised Learning}{43}{subsection.4.1.1}

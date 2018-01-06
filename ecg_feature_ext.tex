@@ -1,5 +1,5 @@
 %\ihead{\headmark}
-\chapter{ECG Signal and Data Processing}
+\chapter{Signal Processing and Feature Extraction}
 
 
 \section{Devices}
@@ -150,17 +150,11 @@ The ``QRS Complex'' is the combination of Q, R and S waves and it represents the
 
 Many methods have already been proposed for the detection of QRS complex. These methods fall into 3 categories \cite{5639905}.
 
-\begin{enumerate}
-	\item Filter Method
-	\item Artificial Intelligence Method
-	\item Wavelet transform Method
-\end{enumerate}
-
 \subsection{Filter Method}
-The filter method uses bandpass filter to filter the ECG signal \cite{4122029}\cite{554762}. In this method, a QRS complex is intensified by suppressing the P and T wave. This method is generally very quick and takes less time to implement. But the major drawback of this method is that the frequency band of QRS complex and of noise overlapping, affect its performance.
+The filter method uses bandpass filter to filter the ECG signal \cite{4122029}\cite{554762}. In this method, a QRS complex is intensified by suppressing the P and T wave. This method is generally very quick and takes less time to implement. But the major drawback of this method is that the frequency band of QRS complex and of noise overlapping affect its performance.
 
 \subsection{Artificial Intelligence Method}
-The detection of QRS complex using this method is fast, accurate and more robust, but in reality, it is very time-consuming and difficult to implement \cite{126604}\cite{PIETKA1991139}\cite{58593}. Therefore, this method is not very popular and not widely used as compared to the other methods.
+The detection of QRS complex using this method is fast, accurate and more robust, but in reality, it is time-consuming and difficult to implement \cite{126604}\cite{PIETKA1991139}\cite{58593}. Therefore, this method is not very popular and not widely used as compared to the other methods.
 
 \subsection{Wavelet Transform Method}
 Wavelet transform method becomes very popular in detecting the QRS complex. It is based on time-frequency analysis. It is very efficient and takes less to implement. Many people have already used wavelet transform for detecting the QRS complex. Yazhu Qiu \cite{PMID:17228741} used Mexican-hat wavelet to detect ECG signal. In the proposed method, although the processing was fast, but it sometimes didn't detect the onset and offset of QRS complex accurately. Nevertheless, it is considered as simple, faster and easier to implement comparatively.
@@ -193,8 +187,10 @@ Biorthogonal Spline wavelet has been used for the detection of ECG signal charac
 
 For multi-resolution decomposition of signals, a dyadic DWT (discrete wavelet transform) is used where all bandpass filters have different frequency resolution. This is done by first using low-pass and high-pass filters to split the signal into low and high-frequency components.
 
-\section{Biorthogonal Spline Wavelet Filter Construction}
-Let say, ${H_{0}(z)}$ and ${H_{1}(z)}$ are low-pass filters in the analysis filter bank (decomposition) and ${G_{0}(z)}$, ${G_{1}(z)}$ are high-pass filters in the synthesis filter bank (reconstruction) \cite{wang2001using}, as can be seen in Figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2  respectively, producing the final output signal $Y[n]$. It is worth to note here that $Y[n]$ is the reconstructed signal. 
+\section{Filter Bank Construction}
+A filter bank is a set of filters and sampling operators. The downsampling operators are decimators, whereas, upsampling operators are expanders. In a 2-channel filter bank, the analysis filters contains a low-pass and high-pass filters. These filters are ${H_{0}(z)}$ and ${H_{1}(z)}$ respectively \cite{wang2001using}, as shown in Figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2 respectively, producing the final output signal $Y[n]$. 
+
+The filters ${H_{0}(z)}$ and ${H_{1}(z)}$ are not ideal filters, therefore, there responses overlap, there is aliasing in each channel and there is distortion. The synthesis filters ${G_{0}(z)}$ and ${G_{1}(z)}$ should be adjusted according to the analysis filters ${H_{0}(z)}$ and ${H_{1}(z)}$ to cancel out the error.
 
 
 
@@ -208,7 +204,22 @@ Let say, ${H_{0}(z)}$ and ${H_{1}(z)}$ are low-pass filters in the analysis filt
 
 
 
-The idea is to determine $H_0$, $H_1$, $G_0$ and $G_1$ such that, $Y[n]$ is just a delayed version of input signal $X[n]$. This is called as perfect reconstruction filter bank. A perfect reconstruction filter bank is also known as ``biorthogonal`` and the associated filters as biorthogonal filters. 
+The idea is to determine $H_0$, $H_1$, $G_0$ and $G_1$ such that, $Y[n]$ is a delayed version of input signal $X[n]$. This is called as perfect reconstruction filter bank. A perfect reconstruction filter bank is also known as ``biorthogonal'' and the associated filters as biorthogonal filters. A perfect reconstruction with an $l-$step delayed in $z$ domain without upsampling and downsampling represented as:
+
+
+\begin{equation} \label{eqn_wavelet_transform}
+{H_{0}(z)G_{0}(z) + H_{1}(z)G_{1}(z) = z^{-l}}
+\end{equation}
+
+
+The combination of downsampler ($\downarrow$ 2) and an upsampler ($\uparrow$ 2) removes the odd number components. In $z$ domain, it can be written as:
+
+\begin{equation} \label{eqn_wavelet_transform}
+{(\downarrow 2)(\uparrow 2)H_{0}x = \frac{1}{2}[H_{0}(z)X(z) + H_{0}(-z)X(-z)]}
+\end{equation}
+ 
+It contains only the even components as the odd components have already been removed. The term $H_{0}(-z)X(-z)$ is an aliasing term, which is multiplied by $G_{0}(z)$. This aliasing term has to cancel the aliasing affect of  $G_{1}(z)H_{1}(-z)X(-z)$ from the other channel.
+
 
 After passing the input signal from the channel 1, it will produce:
 
@@ -237,33 +248,32 @@ Y(z)  &= Y_{0}(z) + Y_{1}(z) \\
 
 Arranging $Y(z)$ in such a way so that, one part should depends on $X(z)$ and the other part on $X(-z)$. We get,
 
-\begin{equation} \label{eqn_wavelet_transform}
+\begin{equation} \label{eqn:cmp}
 {Y(z) = \frac{1}{2}[G_{0}(z)H_{0}(z) + G_{1}(z)H_{1}(z)]X(z) + \frac{1}{2}[G_{0}(z)H_{0}(-z) + G_{1}(z)H_{1}(-z)]X(-z)}
 \end{equation}
 
-The important thing to note here is that $X(-z)$ is the aliasing part, and $X(z)$ is the distortion part.
+In Equation \ref{eqn:cmp}, the part that depends on $X(-z)$ is the aliasing part, and the part that depends on $X(z)$ is the distortion part.
 
 %In order to satisfy the condition, $Y(n) = X(n-k)$ ($Y(z) = X(z)z^{-k}$) i.e., %the output signal $Y(z)$ to be some sort of delayed version of input signal, we %need to satisfy 2 conditions:
 
-\subsection{Design of Biorthogonal Spline Wavelet Filter}
 
 The perfect reconstruction for filter bank can be achieved if the following two conditions are satisfied.
 
 \begin{enumerate}
 	\item No aliasing: 
-	\begin{equation} 
-	{G_{0}(z)H_{0}(-z) + G_{1}(z)H_{1}(-z)]X(-z) = 0}
+	\begin{equation} \label{eqn:noalias}
+	{G_{0}(z)H_{0}(-z) + G_{1}(z)H_{1}(-z) = 0}
 	\end{equation}
 	\item No distortion:
-	\begin{equation} 
-	{G_{0}(z)H_{0}(z) + G_{1}(z)H_{1}(z) = mz^{-k}}
+	\begin{equation} \label{eqn:nodistor}
+	{G_{0}(z)H_{0}(z) + G_{1}(z)H_{1}(z) = 2z^{-k}}
 	\end{equation}
 \end{enumerate}
 
 
 where $m$ is constant and $k$ is a time delay.
 
-In order to satisfy condition 1 i.e., to get rid of aliasing, one can do:
+In order to satisfy condition 1 i.e., to get rid of aliasing, choose:
 
 \begin{align}
 	\label{eqn:antialiasing_cdn}
@@ -273,29 +283,68 @@ In order to satisfy condition 1 i.e., to get rid of aliasing, one can do:
 	\end{split}
 \end{align}
 
+Now, the equation \ref{eqn:noalias} becomes:
 
-So now, we only need to find two filters values instead of four. Lets assume that,
+\begin{equation} \label{eqn:aliasrem}
+{H_{0}(-z)H_1(-z)-H_0(-z)H_{1}(-z) = 0}
+\end{equation}
+
+which implies to 0, hence the aliasing is removed.
+
+In order to remove the distortion, i.e, to satisfy equation \ref{eqn:nodistor}, lets assume that,
 
 \begin{equation}\label{eqn:p0} 
 {P_0(z)=G_{0}(z)H_{0}(z)}
 \end{equation}
 
-From equation \ref{eqn:antialiasing_cdn} and \ref{eqn:p0}, we can deduce:
+This is a low-pass product filter. The high-pass product filer is ${P_1(z)=G_{1}(z)H_{1}(z)}$. The relationship between the terms $P_0$ and $P_1$ can be deduce by Equation \ref{eqn:antialiasing_cdn}:
 
 \begin{equation} 
-{G_{1}(z)H_{1}(z) = -H_{0}(-z)G_{0}(-z) = -P_0(-z)}
+{P_1(z) = G_{1}(z)H_{1}(z) = -H_{0}(-z)G_{0}(-z) = -P_0(-z)}
 \end{equation}
 
-After getting these values, the condition 2 (no distortion) can be re-written as:
+The equation \ref{eqn:nodistor} can be re-written as:
+
+\begin{equation}\label{eqn:updated_no_dist} 
+{P_0(z) - P_0(-z) =  2z^{-k}}
+\end{equation}
+
+The design of 2-channel filter bank is now reduced to only two steps:
+
+\begin{enumerate}
+	\item Design a low-pass filter which satisfy Equation \ref{eqn:updated_no_dist}.
+	\item Factor $P_0$ to find the values of $H_1$ and $G_1$.
+\end{enumerate}
+
+Let $p_0(n)$ be the impulse response corresponding to $P_0(Z)$
+and the sequence $p(n)$ is obtained by shifting the $p_0(n)$ to the left side by $k$ samples to center it around the origin:
+
+\begin{equation}\label{eqn:pn} 
+{p(n) =  p_0(n+k)}
+\end{equation}
+
+similarly,
+
+\begin{equation}\label{eqn:pin} 
+{P(z) =  P_0(z)z^k}
+\end{equation}
+
+Subsituting Equation \ref{eqn:pin} into Equation \ref{eqn:updated_no_dist}, produces:
+
+ \begin{equation}\label{eqn:piern} 
+ {P(z) + P(-z) =  2}
+ \end{equation}
+
+Equation \ref{eqn:piern} implies that $P(Z)$ is a half-band filter, in which all even powers of $z$ in $P(z)$ are zero except for the one at origin.
+
+One possibility to define the low-pass filter for $P_0(z)$ is to use the Daubechies function:
 
 \begin{equation}\label{eqn:updated_no_distortion} 
-{P_0(z) - P_0(-z) =  mz^{-k}}
+{P_0(z) = (1 + z^{-1})^{2p}Q(z)}
 \end{equation}
 
-In the above equation, only one filter value is required i.e., $P_0(z)$ (also called half-band filter). The perfect reconstruction conditions naturally imply that both analysis and the synthesis filters are biorthogonal to each other, i.e., a biorthogonal filter bank makes sure that synthesis filter bank is the inverse of analysis filter bank.
+where $p$ can be any integer and $Q(z)$ be a polynomial of degree $(2p-2)$ is chosen to satisfy equation \ref{eqn:updated_no_dist}.
 
-
-\subsection{Steps for Designing FIR Filter Bank}
 The steps for designing FIR filter bank can be summarized as:
 
 \begin{enumerate}
@@ -303,7 +352,7 @@ The steps for designing FIR filter bank can be summarized as:
 	\begin{equation}\label{eqn:updated_no_distortion} 
 	{P_0(z) = (1 + z^{-1})^{2p}Q(z)}
 	\end{equation} \\
-	where $p$ can be any integer and $Q(z)$ be a polynomial of degree $(2p-2)$.
+	
 	\item Factorize $P_0(z)$ to get the values for $G_0(z)$ and $H_0(z)$.
 	\item Find the filter coefficients for high-pass filters using the equations \ref{eqn:antialiasing_cdn}. 
 \end{enumerate}
