@@ -286,6 +286,13 @@
 \newblock {In: }\emph{International Journal of Control and Automation} 7
   (2014), Nr. 1, S. 95--106
 
+\bibitem[SN96]{strang1996wavelets}
+\textsc{Strang}, G. ; \textsc{Nguyen}, T.:
+\newblock \emph{Wavelets and Filter Banks}.
+\newblock Wellesley-Cambridge Press, 1996
+  \url{https://books.google.de/books?id=Z76N\_Ab5pp8C}. --
+\newblock ISBN 9780961408879
+
 \bibitem[sum17]{sumdu}
 \textsc{sumdu}:
 \newblock \emph{arrhythmia}.

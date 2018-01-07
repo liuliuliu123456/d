@@ -46,25 +46,26 @@
 \BOOKMARK [1][-]{section.3.9}{P and T Wave Detection}{chapter.3}% 46
 \BOOKMARK [1][-]{section.3.10}{Heart Rate Calculation}{chapter.3}% 47
 \BOOKMARK [1][-]{section.3.11}{Algorithm Execution on ECG Chair Data}{chapter.3}% 48
-\BOOKMARK [0][-]{chapter.4}{Deep Learning}{}% 49
-\BOOKMARK [1][-]{section.4.1}{Machine Learning}{chapter.4}% 50
-\BOOKMARK [2][-]{subsection.4.1.1}{Supervised Learning}{section.4.1}% 51
-\BOOKMARK [2][-]{subsection.4.1.2}{Unsupervised Learning}{section.4.1}% 52
-\BOOKMARK [1][-]{section.4.2}{Artificial Neural Networks}{chapter.4}% 53
-\BOOKMARK [2][-]{subsection.4.2.1}{Artificial Neuron}{section.4.2}% 54
-\BOOKMARK [2][-]{subsection.4.2.2}{Activation Function}{section.4.2}% 55
-\BOOKMARK [2][-]{subsection.4.2.3}{Convolutional Neural Network}{section.4.2}% 56
-\BOOKMARK [2][-]{subsection.4.2.4}{Keras}{section.4.2}% 57
-\BOOKMARK [2][-]{subsection.4.2.5}{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{section.4.2}% 58
-\BOOKMARK [0][-]{chapter.5}{Visualization}{}% 59
-\BOOKMARK [1][-]{section.5.1}{Grafana}{chapter.5}% 60
-\BOOKMARK [1][-]{section.5.2}{InfluxDB}{chapter.5}% 61
-\BOOKMARK [1][-]{section.5.3}{Setting up Grafana with InfluxDB}{chapter.5}% 62
-\BOOKMARK [1][-]{section.5.4}{Lambda Architecture for Big Data Processing}{chapter.5}% 63
-\BOOKMARK [2][-]{subsection.5.4.1}{Batch Layer}{section.5.4}% 64
-\BOOKMARK [2][-]{subsection.5.4.2}{Speed Layer}{section.5.4}% 65
-\BOOKMARK [2][-]{subsection.5.4.3}{Serving Layer}{section.5.4}% 66
-\BOOKMARK [1][-]{section.5.5}{System Architecture}{chapter.5}% 67
-\BOOKMARK [1][-]{section.5.6}{Device Management Interface}{chapter.5}% 68
-\BOOKMARK [1][-]{section.5.7}{Android Application}{chapter.5}% 69
-\BOOKMARK [0][-]{chapter*.24}{References}{}% 70
+\BOOKMARK [1][-]{section.3.12}{PPG Signal Processing}{chapter.3}% 49
+\BOOKMARK [0][-]{chapter.4}{Deep Learning}{}% 50
+\BOOKMARK [1][-]{section.4.1}{Machine Learning}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.1.1}{Supervised Learning}{section.4.1}% 52
+\BOOKMARK [2][-]{subsection.4.1.2}{Unsupervised Learning}{section.4.1}% 53
+\BOOKMARK [1][-]{section.4.2}{Artificial Neural Networks}{chapter.4}% 54
+\BOOKMARK [2][-]{subsection.4.2.1}{Artificial Neuron}{section.4.2}% 55
+\BOOKMARK [2][-]{subsection.4.2.2}{Activation Function}{section.4.2}% 56
+\BOOKMARK [2][-]{subsection.4.2.3}{Convolutional Neural Network}{section.4.2}% 57
+\BOOKMARK [2][-]{subsection.4.2.4}{Keras}{section.4.2}% 58
+\BOOKMARK [2][-]{subsection.4.2.5}{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{section.4.2}% 59
+\BOOKMARK [0][-]{chapter.5}{Visualization}{}% 60
+\BOOKMARK [1][-]{section.5.1}{Grafana}{chapter.5}% 61
+\BOOKMARK [1][-]{section.5.2}{InfluxDB}{chapter.5}% 62
+\BOOKMARK [1][-]{section.5.3}{Setting up Grafana with InfluxDB}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.4}{Lambda Architecture for Big Data Processing}{chapter.5}% 64
+\BOOKMARK [2][-]{subsection.5.4.1}{Batch Layer}{section.5.4}% 65
+\BOOKMARK [2][-]{subsection.5.4.2}{Speed Layer}{section.5.4}% 66
+\BOOKMARK [2][-]{subsection.5.4.3}{Serving Layer}{section.5.4}% 67
+\BOOKMARK [1][-]{section.5.5}{System Architecture}{chapter.5}% 68
+\BOOKMARK [1][-]{section.5.6}{Device Management Interface}{chapter.5}% 69
+\BOOKMARK [1][-]{section.5.7}{Android Application}{chapter.5}% 70
+\BOOKMARK [0][-]{chapter*.24}{References}{}% 71

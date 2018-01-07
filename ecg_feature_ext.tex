@@ -2,19 +2,18 @@
 \chapter{Signal Processing and Feature Extraction}
 
 Wireless sensor devices and contact-less sensor devices are the current trends in the health informatics. The recent improvements in the sensor devices made it possible for the people to bring this idea
-into reality. When  medical sensor devices are combined with cloud computing, it can be thought of as a complete
-solution for a health care system which can be used not only
+into reality. When medical sensor devices are combined with cloud computing, it can be thought of as a complete
+solution for a healthcare system which can be used not only
 in hospitals but also can be utilized out of the hospital.
-These sensors can monitor sme vital signs such as body temperature, respiration, heart rate, blood pressure, ECG or EEG.
+These sensors can monitor some vital signs such as body temperature, respiration, heart rate, blood pressure, ECG or EEG.
 
 \section{Devices}
 
-Multiple contact-less sensors are used to implement a system for this thesis, which collects data of the user and process them in real-time. The following devices are used in this work:
+Multiple contact-less sensors are used to implement a system for this thesis, which collects data of the user and processes them in real-time. The following devices are used in this work:
 
 \subsection{Magnetic Induction Sensor}
 
-The magnetic induction (MI) sensor uses the magnetic fields to measures the small changes in electrical resistance of the thorax. A magnetic coil is used which induces an eddy currents within thorax. This eddy current reinduces a secondary magnetic field which can be measured with the same or other coil. The amplitude of the eddy current is directly proportional to the magnetic flux density and the conduction of the material. Based on this concept, the thorax conductivity, which changes according to the inflation and deflation of the lungs, enable us to capture the breathing of the patient \cite{1742-6596-434-1-012085}. 
-
+The magnetic induction (MI) sensor uses the magnetic fields to measures the small changes in electrical resistance of the thorax. A magnetic coil is used which induces eddy currents within the thorax. This eddy current reinduces a secondary magnetic field which can be measured with the same or another coil. The amplitude of the eddy current is directly proportional to the magnetic flux density and the conduction of the material. Based on this concept, the thorax conductivity, which changes according to the inflation and deflation of the lungs, enable us to capture the breathing of the patient \cite{1742-6596-434-1-012085}. 
 \begin{figure}%
 	\centering
 	
@@ -50,7 +49,7 @@ The magnetic induction (MI) sensor uses the magnetic fields to measures the smal
 The MI sensor provides a data packet of 42 bytes, which splits into the attributes shown in Table \ref{tab:att_mi} and the byte identifier is shown in Table \ref{tab:bi_mi}.
 
 
-As mentioned in Table \ref{tab:bi_mi}, 0x81 and 0x82 represents the byte identifier, but in some cases it also presents in the data as they are simply the hexadecimal number. The sensor algorithm replaces the 0x81 by 0x8101 and 0x82 by 0x8102 in order to differentiate the values from the byte identifiers. Therefore, to do the correct processing of the sensor data, the hexadecimal value 0x8101 should be replaced by 0x81 and 0x8102 by 0x82.
+As mentioned in Table \ref{tab:bi_mi}, 0x81 and 0x82 represents the byte identifier, but in some cases, it also presents in the data as they are simply the hexadecimal number. The sensor algorithm replaces the 0x81 by 0x8101 and 0x82 by 0x8102 in order to differentiate the values from the byte identifiers. Therefore, to do the correct processing of the sensor data, the hexadecimal value 0x8101 should be replaced by 0x81 and 0x8102 by 0x82.
 
 \renewcommand{\arraystretch}{2}
 \begin{table}
@@ -94,10 +93,10 @@ As mentioned in Table \ref{tab:bi_mi}, 0x81 and 0x82 represents the byte identif
 	
 \end{table}
 
-\subsection{Photoplethysmogram Sensor}
-The photoplethysmogram (PPG) sensor is used to measures the variations in blood flow in the body with each heartbeat. It is an optical, simple, low cost and non-invasive technique, which can measures various vital signs at the surface of the skin. A PPG sensor uses a light source to illuminate the skin and a photo-detector to measures the variations in the light intensity associated with changes of the oxygen level in blood. The decrease in light intensity indicates the increase in oxygen level in blood, whereas, increase in light intensity indicates the decrease of oxygen level in blood. They can provide valuable information about the cardiovascular system such as the pulse rate.
+\subsection{Photoplethysmogram Sensor} \label{sec:ppg_def}
+The photoplethysmogram (PPG) sensor is used to measures the variations in blood flow in the body with each heartbeat. It is an optical, simple, low cost and non-invasive technique, which can measure various vital signs at the surface of the skin. A PPG sensor uses a light source to illuminate the skin and a photo-detector to measures the variations in the light intensity associated with changes in the oxygen level in blood. The decrease in light intensity indicates the increase in oxygen level in blood, whereas, increase in light intensity indicates the decrease of oxygen level in blood. They can provide valuable information about the cardiovascular system such as the pulse rate.
 
-The sensor provides PPG signals with 4 different channels, a temperature, and an accelerometer coordinates. The size of the data changes according to the attributes, as shown in Table \ref{tab:att_ppg}. The temperature value is sent every one second, while, the frequency rate of PPG channels is 100 samples per second. For the accelerometer coordinates, the data rate is 50 samples per second.
+The sensor provides PPG signals with 4 different channels, a temperature, and accelerometer coordinates. The size of the data changes according to the attributes, as shown in Table \ref{tab:att_ppg}. The temperature value is sent every one second, while, the frequency rate of PPG channels is 100 samples per second. For the accelerometer coordinates, the data rate is 50 samples per second.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -137,13 +136,13 @@ The ``QRS Complex'' is the combination of Q, R and S waves and it represents the
 Many methods have already been proposed for the detection of QRS complex. These methods fall into 3 categories \cite{5639905}:
 
 \subsection{Filter Method}
-The filter method uses bandpass filter to filter the ECG signal \cite{4122029}\cite{554762}. In this method, a QRS complex is intensified by suppressing the P and T wave. This method is generally very quick and takes less time to implement. But the major drawback of this method is that the frequency band of QRS complex and of noise overlapping affect its performance.
+The filter method uses a bandpass filter to filter the ECG signal \cite{4122029}\cite{554762}. In this method, a QRS complex is intensified by suppressing the P and T wave. This method is generally very quick and takes less time to implement. But the major drawback of this method is that the frequency band of QRS complex and of noise overlapping affect its performance.
 
 \subsection{Artificial Intelligence Method}
 The detection of QRS complex using this method is fast, accurate and more robust, but in reality, it is time-consuming and difficult to implement \cite{126604}\cite{PIETKA1991139}\cite{58593}. Therefore, this method is not very popular and not widely used as compared to the other methods.
 
 \subsection{Wavelet Transform Method}
-Wavelet transform method becomes popular in detecting the QRS complex. It is based on time-frequency analysis. It is efficient and takes less to implement. Many researchers have already used wavelet transform for detecting the QRS complex. Yazhu Qiu \cite{PMID:17228741} used Mexican-hat wavelet to detect ECG signal. In the proposed method, although the processing was fast, but it sometimes did not detect the onset and offset of QRS complex accurately. Nevertheless, it is considered as faster and easier to implement and it is used to extract the ECG signal features in this thesis.
+Wavelet transform method becomes popular in detecting the QRS complex. It is based on time-frequency analysis. It is efficient and takes less to implement. Many researchers have already used wavelet transform for detecting the QRS complex. Yazhu Qiu \cite{PMID:17228741} used Mexican-hat wavelet to detect ECG signal. In the proposed method, although the processing was fast, it sometimes did not detect the onset and offset of QRS complex accurately. Nevertheless, it is considered as faster and easier to implement and it is used to extract the ECG signal features in this thesis.
 
 
 \section{Wavelet Transform}
@@ -165,7 +164,7 @@ The wavelet transform of a signal $f(x)$ is defined as:
 \end{equation}
 
 If $a=2^j (j \in Z)$, then the wavelet transform is called the dyadic wavelet transform or the binary wavelet transform \cite{119727}. 
-To calculate the dyadic wavelet transform of a signal, a mother wavelet is first chosen and then dilated by a power of two. The Quadratic Spline wavelet is used with ECG signal as the mother wavelet. It has a property that the sharp edges occurs at the zero crossing point in the transformation, which corresponds to the local maxima or minima of the smoothed signal. The dyadic wavelet transform of a signal $f(n)$ can be calculated by using Mallat's Algorithm. 
+To calculate the dyadic wavelet transform of a signal, a mother wavelet is first chosen and then dilated by a power of two. The Quadratic Spline wavelet is used with ECG signal as the mother wavelet. It has a property that the sharp edges occur at the zero crossing point in the transformation, which corresponds to the local maxima or minima of the smoothed signal. The dyadic wavelet transform of a signal $f(n)$ can be calculated by using Mallat's Algorithm \cite{5639905}. 
 
 \section{Mallat's Algorithm}
 Mallat algorithm \cite{119727} for the signal $f(n)$ is defined as follows:
@@ -178,14 +177,12 @@ Mallat algorithm \cite{119727} for the signal $f(n)$ is defined as follows:
 { w_{2^j}f(n) = \sum g_ks_{2^{j-1}}f(n - 2^{j-1}k).   }
 \end{equation}
 
-where, $s_{2^0}f(n)$ is the original signal to be processed, in this case, it is the ECG signal. $w_{2^j}f(n)$ is the wavelet transform of the input signal $f(n)$ at scale $2^j$. $h_k$ and $g_k$ are the coefficients of a low-pass filter and high-pass filter respectively. The wavelet transform of a signal $f(n)$ is obtained by passing the input signal through a digital filter bank, which consists of a low-pass and high-pass filters. The design and implementation of Wavelet transform is based on perfect reconstruction filter banks. The coefficients of low-pass filter $H(z)$ and high-pass filter $G(z)$ can be calculated by constructing a filter bank.
+where, $s_{2^0}f(n)$ is the original signal to be processed, in this case, it is the ECG signal. $w_{2^j}f(n)$ is the wavelet transform of the input signal $f(n)$ at scale $2^j$. $h_k$ and $g_k$ are the coefficients of a low-pass filter and high-pass filter respectively. The wavelet transform of a signal $f(n)$ is obtained by passing the input signal through a digital filter bank, which consists of a low-pass and high-pass filters. The design and implementation of the Wavelet transform is based on perfect reconstruction filter banks. The coefficients of low-pass filter $H(z)$ and high-pass filter $G(z)$ can be calculated by constructing a filter bank.
 
 \section{Filter Bank Construction}
-A biorthogonal filter bank is designed based on Quadratic Spline wavelet. A filter bank is a set of filters and sampling operators. The downsampling operators are decimators, whereas, upsampling operators are expanders. In a 2-channel filter bank, the analysis filters contains a low-pass and high-pass filters. These filters are ${H_{0}(z)}$ and ${H_{1}(z)}$ respectively \cite{wang2001using}, as shown in Figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2 respectively, producing the final output signal $Y[n]$. 
+A biorthogonal filter bank is designed based on Quadratic Spline wavelet. A filter bank is a set of filters and sampling operators \cite{strang1996wavelets}. The downsampling operators are decimators, whereas, upsampling operators are expanders. In a 2-channel filter bank, the analysis and synthesis phase both contain a low-pass and a high-pass filter. These filters are ${H_{0}(z)}$ and ${H_{1}(z)}$ for the analysis phase, and ${G_{0}(z)}$ and ${G_{1}(z)}$ for the synthesis phase respectively \cite{wang2001using}, as shown in Figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2 respectively, producing the final output signal $Y[n]$. 
 
-The filters ${H_{0}(z)}$ and ${H_{1}(z)}$ are not ideal filters, therefore, there responses overlap, there is aliasing in each channel and there is distortion. The synthesis filters ${G_{0}(z)}$ and ${G_{1}(z)}$ should be adjusted according to the analysis filters ${H_{0}(z)}$ and ${H_{1}(z)}$ to cancel out the error.
-
-
+The filters ${H_{0}(z)}$ and ${H_{1}(z)}$ are not ideal filters, therefore, their responses overlap, there is aliasing in each channel and there is distortion. The synthesis filters ${G_{0}(z)}$ and ${G_{1}(z)}$ should be adjusted according to the analysis filters ${H_{0}(z)}$ and ${H_{1}(z)}$ to cancel out the error.
 
 %\begin{figure}[h] for figure at the place, where we put the picture.
 \begin{figure}[h]
@@ -210,24 +207,24 @@ The combination of downsampler ($\downarrow$ 2) and an upsampler ($\uparrow$ 2) 
 \begin{equation} \label{eqn_wavelet_transform}
 {(\downarrow 2)(\uparrow 2)H_{0}X = \frac{1}{2}[H_{0}(z)X(z) + H_{0}(-z)X(-z)]}
 \end{equation}
- 
-It contains only the even components as the odd components have already been removed. The term $H_{0}(-z)X(-z)$ is an aliasing term. This aliasing term has to cancel the aliasing affect from the other channel to remove the alias.
+
+It contains only the even components as the odd components have already been removed. The term $H_{0}(-z)X(-z)$ is an aliasing term. This aliasing term has to cancel the aliasing effect from the other channel to remove the alias.
 
 
-After passing the input signal from the channel 1, it will produce:
+After passing the input signal from the channel 1, it produces:
 
 \begin{equation} \label{eqn_wavelet_transform}
 {Y_{0}(z) = \frac{1}{2}G_{0}(z)[H_{0}(z)X(z) + H_{0}(-z)X(-z)]}
 \end{equation}
 
-Similarly, for the 2nd channel, it will produce:
+Similarly, for the 2nd channel, it produces:
 
 
 \begin{equation} \label{eqn_wavelet_transform}
 {Y_{1}(z) = \frac{1}{2}G_{1}(z)[H_{1}(z)X(z) + H_{1}(-z)X(-z)]}
 \end{equation}
 
-Adding the output of these 2 channels will produce the final output.
+Adding the output of these 2 channels produce the final output.
 
 
 
@@ -239,7 +236,7 @@ Y(z)  &= Y_{0}(z) + Y_{1}(z) \\
 \end{equation}
 
 
-Arranging $Y(z)$ in such a way so that, one part should depends on $X(z)$ and the other part on $X(-z)$. We get,
+Arranging $Y(z)$ in such a way so that, one part depends on $X(z)$ and the other part on $X(-z)$. We get,
 
 \begin{equation} \label{eqn:cmp}
 {Y(z) = \frac{1}{2}[G_{0}(z)H_{0}(z) + G_{1}(z)H_{1}(z)]X(z) + \frac{1}{2}[G_{0}(z)H_{0}(-z) + G_{1}(z)H_{1}(-z)]X(-z)}
@@ -306,52 +303,52 @@ The design of 2-channel filter bank is now reduced to only two steps:
 
 \begin{enumerate}
 	\item Design a low-pass filter which satisfy Equation \ref{eqn:updated_no_dist}.
-	\item Factor $P_0$ to find the values of $H_0$ and $G_0$.
+	\item Factorize $P_0$ to find the values of $H_0$ and $G_0$.
 \end{enumerate}
 
-Equation \ref{eqn:updated_no_dist} can further be simplified by normalizing $P_0(z)$ by $z^k$ to center it. Substituting $P(z)$ by $z^kP_0(z)$ and $P(-z)$ by $-z^kP_0(-z)$ produces:
+Equation \ref{eqn:updated_no_dist} can be further simplified by normalizing $P_0(z)$ by $z^k$ to center it. Substituting $P(z)$ by $z^kP_0(z)$ and $P(-z)$ by $-z^kP_0(-z)$ produces:
 
 
- \begin{equation}\label{eqn:piern} 
- {P(z) + P(-z) =  m}
- \end{equation}
- 
- Equation \ref{eqn:piern} implies that $P(Z)$ is a half-band filter, in which all even powers of $z$ in $P(z)$ are zero except for the constant term (coefficient of the term $z^0$). Furthermore, all the odd powers cancel out when $P(z)$ and $P(-z)$ are added. 
- 
- 
- One possibility to design the low-pass filter $P_0(z)$ is to use the Daubechies construction:
- 
- \begin{equation}\label{eqn:daubechies} 
- {P_0(z) = (1 + z^{-1})^{2p}Q(z)}
- \end{equation}
- 
+\begin{equation}\label{eqn:piern} 
+{P(z) + P(-z) =  m}
+\end{equation}
+
+Equation \ref{eqn:piern} implies that $P(Z)$ is a half-band filter, in which all even powers of $z$ in $P(z)$ are zero except for the constant term (coefficient of the term $z^0$). Furthermore, all the odd powers cancel out when $P(z)$ and $P(-z)$ are added. 
+
+
+One possibility to design the low-pass filter $P_0(z)$ is to use the Daubechies construction:
+
+\begin{equation}\label{eqn:daubechies} 
+{P_0(z) = (1 + z^{-1})^{2p}Q(z)}
+\end{equation}
+
 $P_0(z)$ is called ``maxflat filter'' where $p$ can be any integer and has $2p$ coefficients, i.e., the length of the filter. $(1 + z^{-1})^{2p}$ is called \textit{binomial filter} and it is a spline filter, and $Q(z)$ be a polynomial of degree $(2p-2)$ is chosen such that $P_0(z)$ satisfy  the half-band filter property. Moreover, the order of $P_0(z)$ is always an even number. $p$ defines the number of zeros to be placed at $\pi$ in a unit circle. 
 %The filter bank is orthogonal and the product filters $P_0(z)$ and %$P_1(z)$ have a length of $4p-2$. 
 
-Any value of $p$ can be chosen and the polynomial $Q(z)$ depends on the value of $p$, i.e., $Q(z)$ should be chosen in such a way that it satisfies the half-band filter property. If $p=1$, then this represent the Haar case and it has 2 coefficients.
+Any value of $p$ can be chosen and the polynomial $Q(z)$ depends on the value of $p$, i.e., $Q(z)$ should be chosen in such a way that it satisfies the half-band filter property. If $p=1$, then this represents the Haar case and it has 2 coefficients.
 
 In this case, $p=2$ is chosen. Therefore, the number of coefficients are 4 and degree of $Q(z)$ be 2. Then Equation \ref{eqn:daubechies} becomes:
 
- \begin{equation}\label{eqn:daubechies_upd} 
+\begin{equation}\label{eqn:daubechies_upd} 
 {P_0(z) = (1 + z^{-1})^{4}Q(z)}
 \end{equation}
 
 Let $Q(z)$ be of form,
 
- \begin{equation}\label{eqn:qz} 
+\begin{equation}\label{eqn:qz} 
 {Q(z) = a+bz^{-1}+az^{-2}}
 \end{equation}
 
 
 Substituting Equation \ref{eqn:qz} in \ref{eqn:daubechies_upd} produces:
 
- \begin{equation}\label{eqn:producer} 
+\begin{equation}\label{eqn:producer} 
 {P_0(z) = a + (4a+b)z^{-1} + (7a + 4b)z^{-2} + (8a+6b)z^{-3} + (7a+4b)z^{-4} + (4a+b)z^{-5} + az^{-6}}
 \end{equation}
 
 To satisfy the condition on $P_0(z)$, equating all the coefficients of odd power of $z$ to 0, except for the center term, i.e., term at $z^{-3}$ which equates to 1, produces:
 
- \begin{equation}\label{eqn:yiedl} 
+\begin{equation}\label{eqn:yiedl} 
 {4a + b = 0}
 \end{equation}
 
@@ -383,7 +380,7 @@ H_0(z) & = \frac{(1 + z^{-1})^3}{4} \\
 \end{equation}
 
 
-and
+%and
 
 
 \begin{equation} \label{eq1}
@@ -404,7 +401,7 @@ H_1(z) = G_0(-z) \\
 \end{split}
 \end{equation}
 
-and
+%and
 
 \begin{equation} \label{eq1}
 \begin{split}
@@ -429,7 +426,7 @@ g_1(2) & =  \quad \frac{-3}{4}   & \quad &\quad   g_1(3) &= \quad \frac{1}{4}
 \end{aligned}
 \end{equation}
 
-The coefficients of filters are just simple fractions, therefore, the amount of computation and time needed for the transformation is small. As our interest is only in the decomposition of the signal therefore, we will consider only the $H_0$ and $H_1$ filters coefficients.
+The coefficients of filters are just simple fractions, therefore, the amount of computation and time needed for the transformation is small. As our interest is only in the decomposition of the signal, therefore, we will consider only the $H_0$ and $H_1$ filters coefficients.
 
 Let $f(n)$ be the ECG signal, then the wavelet transform of $f(n)$ can be calculated by using Mallat algorithm as follows:
 
@@ -445,7 +442,7 @@ Let $f(n)$ be the ECG signal, then the wavelet transform of $f(n)$ can be calcul
 { w_{2^j}f(n) = \frac{-1}{4}s_{2^{j-1}}f(n) + \frac{-3}{4}s_{2^{j-1}}f(n-2^{j-1}) + \frac{3}{4}s_{2^{j-1}}f(n-2^{j}) + \frac{1}{4}s_{2^{j-1}}f(n-2^{j} * 3) }
 \end{equation}
 
-where $w_{2^j}f(n)$ is the Biorthogonal Spline Wavelet Transform of ECG signal $f(n)$ at scale $2^j$.
+where $w_{2^j}f(n)$ is the Biorthogonal Spline Wavelet Transform of ECG signal at scale $2^j$.
 
 
 \section{Dataset}
@@ -500,13 +497,13 @@ The wavelet transform decomposes the signal into different frequency bands by pa
 \end{figure}
 
 
-The original signal contains the high-frequency noise and the baseline drift. The wavelet transform can be used to remove the corresponding noises and the baseline drift. The process starts by decomposing the original signal into 8 layers using wavelet type bior2.6, which results in the corresponding detail and approximation coefficients. Mostly, the layers 1 and 2 of the detail coefficients contain the high-frequency noise and the layer 8 of the approximation coefficients contain the baseline drift. Therefore, the layers 1 and 2 of the detail coefficients and layer 8 of the approximation coefficients are set to 0, which then results in the de-noised signal with no baseline drift. The resulting ECG signal can be seen in the Figure \ref{fig:wavelet_denoised}. 
+The original signal contains the high-frequency noise and the baseline drift. The wavelet transform can be used to remove the corresponding noises and the baseline drift. The process starts by decomposing the original signal into 8 layers using Wavelet type \textit{bior2.6}, which results in the corresponding detail and approximation coefficients. Mostly, the layers 1 and 2 of the detail coefficients contain the high-frequency noise and the layer 8 of the approximation coefficients contain the baseline drift. Therefore, the layers 1 and 2 of the detail coefficients and layer 8 of the approximation coefficients are set to 0, which then results in the de-noised signal with no baseline drift. The resulting ECG signal is shown in Figure \ref{fig:wavelet_denoised}. 
 
 
 
 
 \subsection{Band-pass Filter Method}
-A band-pass filter is a type of filter, which passes frequencies only in a certain range or spread without disturbing the input signal. A band-pass filter can be used to reduce the baseline drift, motion artifacts and high-frequency noise from the ECG signal. A passband of 0.5 Hz to 40 Hz has been used. After applying the band-pass filter, this results in the denoised signal with no high-frequency and baseline drift. The denoised signal can be seen in the Figure \ref{fig:bandpass_denoised}. 
+A band-pass filter is a type of filter, which passes frequencies only in a certain range or spread without disturbing the input signal. A band-pass filter can be used to reduce the baseline drift, motion artifacts and high-frequency noise from the ECG signal. A passband of 0.5 Hz to 40 Hz has been used. After applying the band-pass filter, this results in the denoised signal with no high-frequency and baseline drift. The denoised signal is shown in Figure \ref{fig:bandpass_denoised}. 
 
 \begin{figure}[h]
 	\centering
@@ -520,7 +517,7 @@ A band-pass filter is a type of filter, which passes frequencies only in a certa
 
 \section{QRS Detection}\label{sec:ecg_det}
 
-From Equation \ref{eqn:approx} and \ref{eqn:detail}, we get the Biorthogonal Spline Wavelet Transform of ECG signal, which is the first derivative of the signal. The signal is decomposed into 4 levels, as shown in  Figure ~\ref{fig:detail_coefficients}. The procedure starts by first locating the R peaks and then the onset and offset of QRS complexes, and finally the onset and offset of P and T waves. Due to Wavelet characteristic derivative, this wavelet transform the signal maxima and minima into the zero crossing point at the different scales, which makes it easier to detect the location of P, QRS and T waves \cite{e2010cardiac}.
+From Equation \ref{eqn:approx} and \ref{eqn:detail}, the Biorthogonal Spline Wavelet Transform of ECG signal is obtained, which is the first derivative of the signal at different scales. The signal is decomposed into 4 levels, as shown in  Figure ~\ref{fig:detail_coefficients}. The procedure starts by first locating the R peaks and then the onset and offset of QRS complexes, and finally the onset and offset of P and T waves. Due to Wavelet characteristic derivative, this wavelet transforms the signal maxima and minima into the zero crossing point at the different scales, which makes it easier to detect the location of P, QRS and T waves \cite{e2010cardiac}.
 
 
 \begin{figure}[htpb]
@@ -550,7 +547,7 @@ From Equation \ref{eqn:approx} and \ref{eqn:detail}, we get the Biorthogonal Spl
 	
 \end{table}
 
-Most of the QRS complex energy lies between 3 Hz and 40 Hz, and it corresponds to the $3^{rd}$ scale as shown in Table \ref{tab:qrsenergy}. The R peaks correspond to the zero-crossing point of the modulus maxima pair, with a little delay, therefore, first all the positive and negative extrema on scale 3 be identified. The extrema are shown in Figure \ref{fig:maximas_on_level_3}.  To reduce the influence of noise and other interference in locating the R peaks, the scale 3 signal is divided into four parts, lets say, $A1, A2, A3$ and $A4$. To find the average maximum and minimum values, the maximum and minimum values from each part is identified.
+Most of the QRS complex energy lies between 3 Hz and 40 Hz, and it corresponds to the $3^{rd}$ scale as shown in Table \ref{tab:qrsenergy}. The R peaks correspond to the zero-crossing point of the modulus maxima pair, with a little delay, therefore, first all the positive and negative extrema on scale 3 be identified. The extrema are shown in Figure \ref{fig:maximas_on_level_3}.  To reduce the influence of noise and other interference in locating the R peaks, the scale 3 signal is divided into four parts, let's say, $A1, A2, A3$ and $A4$. To find the average maximum and minimum values, the maximum and minimum values from each part are identified.
 
 
 \begin{equation} 
@@ -568,7 +565,7 @@ Not all the extrema are important, therefore, only modulus maxima pair in certai
 { Th_1 = \frac{MAX}{2}} , { Th_2 = \frac{MIN}{2}} 
 \end{equation}
 
-The threshold values can be adjusted. If they are too big, then the missing probability of R peaks would be higher and if they are too low, then the noise or interference can be misdetected as R peaks. The thresholds defined above, provided the best result in our experiment. The modulus maxima pair are shown in Figure \ref{fig:max_pair}.
+The threshold values can be adjusted. If they are too big, then the missing probability of R peaks would be higher and if they are too low, then the noise or interference can be misdetected as R peaks. The thresholds defined above provided the best result in our experiment. The modulus maxima pair are shown in Figure \ref{fig:max_pair}.
 
 \begin{figure}[]
 	\centering
@@ -591,7 +588,7 @@ The threshold values can be adjusted. If they are too big, then the missing prob
 
 The best modulus maxima pair corresponds to the R peaks and the value of R peaks lie at the zero-crossing point of modulus maxima pair with a little delay. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point to determine the accurate position of R peaks. 
 
-To compensate the false R peak detection or misdetection, the distance between the adjacent R peaks is calculated. If the distance is less than 40\% of the average RR interval, then one of the peak is misdetected. Therefore, the larger one is kept as R peak and the smaller one is eliminated.
+To compensate the false R peak detection or misdetection, the distance between the adjacent R peaks is calculated. If the distance is less than 40\% of the average RR interval, then one of the peaks is misdetected. Therefore, the larger one is kept as R peak and the smaller one is eliminated.
 
 If the distance between adjacent R peaks is greater than 160\% of the average RR interval, it is considered as misdetection. Therefore, the threshold values defined in Equation \ref{eqn:thresholds}, are further reduced and R peak is searched again in the adjacent R peaks window or interval.
 
@@ -629,7 +626,7 @@ The detected R-peaks are shown in Figure \ref{fig:r_peaks}. The flowchart for fi
 
 \bigskip
 
-Q and S peaks generally are of high frequency. Therefore, their energies are mainly lies on the $1^{st}$ scale. For finding the Q wave, the algorithm starts by looking on the left side of the R wave and finds the first non-zero value i.e. the Q wave. And because of the delay, the minimum value is searched in the window of 10 points to the detected Q wave. The same process is executed for the S wave, but in this case, the direction was on the right side of the R wave. The detected QRS complex can be seen in Figure \ref{fig:qrs_peaks}.
+Q and S peaks generally are of high frequency. Therefore, their energies mainly lie at the $1^{st}$ scale. For finding the Q wave, the algorithm starts by looking on the left side of the R wave and finds the first non-zero value i.e. the Q wave. And because of the delay, the minimum value is searched in the window of 10 points to the detected Q wave. The same process is executed for the S wave, but in this case, the direction was on the right side of the R wave. The detected QRS complex can be seen in Figure \ref{fig:qrs_peaks}.
 
 \begin{figure}[htpb]
 	\centering
@@ -652,8 +649,8 @@ After detecting the QRS complex, P and T waves are required to be detected as th
 
 After the detection of QRS complex, the P and T waves are also detected. According to power spectra of ECG signal \cite{4121752} and Table \ref{tab:qrsenergy}, most of the P and T waves energy lies at scale 4. Therefore, the scale 4 is selected to detect P and T waves. 
 
-The corresponding modulus maxima pair of P and T waves can be seen in Figure \ref{fig:detail_coefficients} at scale 4 before and after the the QRS complex. Therefore, P and T waves can be search in a window before and after the QRS complex.
-A window size of 100 is used for detecting the P wave and T waves. The P wave is searched within the 33\% of the average RR interval to the left of QRS complex and T wave is searched within the 67\% to the right of QRS complex. The P and T waves lies at the zero-crossing point of the identified modulus maxima pair in their respective windows. Because of the delay, a maximum value is searched in the window of 20 points to the zero-crossing point to determine the accurate position of P and T waves.
+The corresponding modulus maxima pair of P and T waves can be seen in Figure \ref{fig:detail_coefficients} at scale 4 before and after the QRS complex. Therefore, P and T waves can be searched in a window before and after the QRS complex.
+A window size of 100 is used for detecting the P wave and T waves. The P wave is searched within the 33\% of the average RR interval to the left of QRS complex and T wave is searched within the 67\% to the right of QRS complex. The P and T waves lie at the zero-crossing point of the identified modulus maxima pair in their respective windows. Because of the delay, a maximum value is searched in the window of 20 points to the zero-crossing point to determine the accurate position of P and T waves.
 
 All detected waves are shown in Figure \ref{fig:pqrst}. The Flowchart for finding the P and T waves are shown in Figures \ref{fig:p_peaks_flow_chart} and \ref{fig:t_peaks_flow_chart} respectively.
 
@@ -706,7 +703,7 @@ The data used in the development of ECG feature extraction algorithm is taken fr
 	\centering
 	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/device_ecg_orignal}
 	\caption{
-		Original ECG chair signal.
+		Original ECG signal from the chair.
 	}
 	\label{fig:device_ecg_orignal}
 \end{figure}
@@ -715,7 +712,19 @@ The data used in the development of ECG feature extraction algorithm is taken fr
 	\centering
 	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/device_ecg_feature_extraction.png}
 	\caption{
-		Detected P,Q,R,S and T waves on the ECG chair signal.
+		Detected P,Q,R,S and T waves on the chair's ECG signal.
 	}
 	\label{fig:device_ecg_feature_extraction}
+\end{figure}
+
+\section{PPG Signal Processing}
+A band-pass filter can be used to reduce the baseline drift and and high-frequency noise from the PPG signal. A passband of 0.5 Hz to 5 Hz has been used. After applying the band-pass filter, the resulting signal is the denoised PPG signal. The denoised channel 1 signal is shown in Figure \ref{fig:ppg_bandpass_denoised}. 
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/ppg_orig_denoised.png}
+	\caption{
+		The denoised PPG signal using band-pass filter.
+	}
+	\label{fig:ppg_bandpass_denoised}
 \end{figure}
