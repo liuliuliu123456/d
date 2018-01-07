@@ -294,6 +294,15 @@
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 13-December-2017]
 
+\bibitem[TWT84]{4121752}
+\textsc{Thakor}, N.~V. ; \textsc{Webster}, J.~G.  ; \textsc{Tompkins}, W.~J.:
+\newblock Estimation of QRS Complex Power Spectra for Design of a QRS Filter.
+\newblock {In: }\emph{IEEE Transactions on Biomedical Engineering} BME-31
+  (1984), Nov, Nr. 11, S. 702--706.
+\newblock \url{http://dx.doi.org/10.1109/TBME.1984.325393}. --
+\newblock DOI 10.1109/TBME.1984.325393. --
+\newblock ISSN 0018--9294
+
 \bibitem[ujj17]{ujjwalkarn}
 \textsc{ujjwalkarn}:
 \newblock \emph{A Quick Introduction to Neural Networks}.

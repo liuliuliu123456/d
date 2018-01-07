@@ -21,7 +21,7 @@
 \contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces The ECG signals from MIT-BIH dataset. }}{28}{figure.3.3}
 \contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces The filtered ECG signal using wavelet. }}{30}{figure.3.4}
 \contentsline {figure}{\numberline {\relax 3.5}{\ignorespaces The filtered ECG signal using bandpass filter. }}{30}{figure.3.5}
-\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces ECG signal and its decomposition at different scales. }}{32}{figure.3.6}
+\contentsline {figure}{\numberline {\relax 3.6}{\ignorespaces ECG signal and its decomposition at different scales. }}{31}{figure.3.6}
 \contentsline {figure}{\numberline {\relax 3.7}{\ignorespaces Maximum and minimum values on scale 3. }}{32}{figure.3.7}
 \contentsline {figure}{\numberline {\relax 3.8}{\ignorespaces Maximum and minimum values pair for finding the R peaks. }}{33}{figure.3.8}
 \contentsline {figure}{\numberline {\relax 3.9}{\ignorespaces Detected R peaks. }}{33}{figure.3.9}

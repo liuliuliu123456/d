@@ -519,8 +519,22 @@ A band-pass filter is a type of filter, which passes frequencies only in a certa
 \end{figure}
 
 
+\section{QRS Detection}\label{sec:ecg_det}
+
+From Equation \ref{eqn:approx} and \ref{eqn:detail}, we get the Biorthogonal Spline Wavelet Transform of ECG signal, which is the first derivative of the signal. The signal is decomposed into 4 levels, as shown in  Figure ~\ref{fig:detail_coefficients}. The procedure starts by first locating the R peaks and then the onset and offset of QRS complexes, and finally the onset and offset of P and T waves. Due to Wavelet characteristic derivative, this wavelet transform the signal maxima and minima into the zero crossing point at the different scales, which makes it easier to detect the location of P, QRS and T waves \cite{e2010cardiac}.
+
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=14cm,height=17cm,keepaspectratio=true]{images/detail_coefficients}
+	\caption{
+		ECG signal and its decomposition at different scales.
+	}
+	\label{fig:detail_coefficients}
+\end{figure}
+
 \renewcommand{\arraystretch}{2}
-\begin{table}
+\begin{table}[h]
 	\caption{Wavelet transform ECG signal frequency range\cite{shang2014qrs}.} \label{tab:qrsenergy}
 	
 	\begin{center}
@@ -537,29 +551,27 @@ A band-pass filter is a type of filter, which passes frequencies only in a certa
 	
 \end{table}
 
-
-\section{QRS Detection}\label{sec:ecg_det}
-
-One of the most used mother wavelet for WT is called Quadratic Spline Wavelet. It can easily be implemented by using linear phase filters, which in results produces time invariant decomposition of signal at different scales. Due to its characteristic derivative, this wavelet transform the signal maxima and minima into the zero crossing point at the different scales, which makes easier to detect the location of P, QRS and T waves \cite{e2010cardiac}.
+Most of the QRS complex energy lies between 3 Hz and 40 Hz, and it corresponds to the $3^{rd}$ scale as shown in Table \ref{tab:qrsenergy}. The R peaks correspond to the zero-crossing point of the modulus maxima pair, with a little delay, therefore, first all the positive and negative extrema on scale 3 can be identified. The extrema are shown in Figure \ref{fig:maximas_on_level_3}.  To reduce the influence of noise and other interference in locating the R peaks, the scale 3 signal is divided into four parts, lets say, $A1, A2, A3$ and $A4$. To find the average maximum and minimum values, the maximum and minimum values from each part is identified.
 
 
+\begin{equation} 
+{ MAX = \frac{max(A1) + max(A2) + max(A3) + max(A4)}{4}}
+\end{equation}
 
-From Equation \ref{eqn:approx} and \ref{eqn:detail}, we get the Biorthogonal Spline Wavelet Transform of ECG signal. The signal is decomposed into 4 levels, as shown in  Figure ~\ref{fig:detail_coefficients}. The procedure starts by first locating the R peaks and then the onset and offset of QRS complexes, and finally the onset and offset of P and T waves.
+
+\begin{equation} 
+{ MIN = \frac{min(A1) + min(A2) + min(A3) + min(A4)}{4}}
+\end{equation}
 
 
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[width=17cm,height=17cm,keepaspectratio=true]{images/detail_coefficients}
-	\caption{
-		ECG signal and its decomposition at different scales.
-	}
-	\label{fig:detail_coefficients}
-\end{figure}
+Not all the extrema are important, therefore, only modulus maxima pair in certain scope can be focused and the rest can be ignored. The threshold are calculated as:
+\begin{equation} 
+{ Th_1 = \frac{MAX}{2}} , { Th_2 = \frac{MIN}{2}} 
+\end{equation}
 
-Most of the QRS complex energy lies between 3 Hz and 40 Hz, and it corresponds to the $3^{rd}$ scale as shown in Table \ref{tab:qrsenergy}, therefore, the maximal minimal method can be used on the 3rd layer of the detail coefficient to find the R waves.  The process starts by taking the first derivative of the 3rd layer to find the maximum and minimum points and then the 2nd derivative to locate the actual maximum and minimum values. The resulting waves are shown in Figure \ref{fig:maximas_on_level_3}. As it can be seen that, there are other peaks available as well, therefore, to get the maximum and minimum pair only, a threshold needs to be set. And all the values that do not fulfill the threshold should be discarded. 
-For finding the threshold, the result of the 2nd derivative is divided into 4 parts and from each part, the maximum value is located. After getting the values, the average is calculated for these values and that average is then divided by 3. The resultant value is a new threshold. The pair can be seen in Figure \ref{fig:max_pair}.
+The threshold values can be adjusted. If they are too big, then the missing probability of R peaks would be higher and if they are too low, then the noise or interference can be misdetected as R peaks. The thresholds defined above, provided the best result in our experiment. The modulus maxima pair are shown in Figure \ref{fig:max_pair}.
 
-\begin{figure}[htpb]
+\begin{figure}[]
 	\centering
 	\includegraphics[width=15cm,height=15cm,keepaspectratio=true]{images/maximas_on_level_3}
 	\caption{
@@ -577,7 +589,7 @@ For finding the threshold, the result of the 2nd derivative is divided into 4 pa
 	\label{fig:max_pair}
 \end{figure}
 
-The value of R wave lies at the zero-crossing point (with a little delay) which is between the maximum and the minimum value pair. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point. The detected R-peaks can be seen in Figure \ref{fig:r_peaks}. The flow chart for finding the R peaks is shown in Figure \ref{fig:r_peaks_flow_chart}.
+The value of R wave lies at the zero-crossing point of modulus maxima pair. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point. The detected R-peaks can be seen in Figure \ref{fig:r_peaks}. The flow chart for finding the R peaks is shown in Figure \ref{fig:r_peaks_flow_chart}.
 
 \begin{figure}[htpb]
 	\centering
@@ -599,8 +611,7 @@ The value of R wave lies at the zero-crossing point (with a little delay) which 
 \end{figure}
 
 
-
-After getting the R-peaks, Q and S peaks have to be detected. Q and S wave generally are of high frequency; therefore, their energies are mainly on the 1st scale. For finding the Q wave, the algorithm starts by looking on the left side of the R wave and finds the first non-zero value i.e. the Q wave. And because of the delay, the minimum value is searched in the window of 10 points to the detected Q wave. The same process is executed for the S wave, but in this case, the direction was on the right side of the R wave. The detected QRS complex can be seen in Figure \ref{fig:qrs_peaks}.
+Q and S peaks generally are of high frequency. Therefore, their energies are mainly lies on the $1{st}$ scale. For finding the Q wave, the algorithm starts by looking on the left side of the R wave and finds the first non-zero value i.e. the Q wave. And because of the delay, the minimum value is searched in the window of 10 points to the detected Q wave. The same process is executed for the S wave, but in this case, the direction was on the right side of the R wave. The detected QRS complex can be seen in Figure \ref{fig:qrs_peaks}.
 
 \begin{figure}[htpb]
 	\centering
@@ -634,12 +645,13 @@ After getting the R-peaks, Q and S peaks have to be detected. Q and S wave gener
 
 
 
-After detecting the QRS complex, P and T waves are required to be detected as they also have very important significance to identify the arrhythmia. P wave generally occurred before the QRS complex and T wave after the QRS complex, therefore, they can be detected based on QRS location.
+After detecting the QRS complex, P and T waves are required to be detected as they are important for the identification of the arrhythmia. P wave occurred before the QRS complex and T wave after the QRS complex. Therefore, they can be detected based on the QRS location.
 
 \section{P and T Wave Detection}
-Most of the P and T waves energy lies on the scale 4 and the QRS complex energy lies on the scale 3 of detail coefficient. If QRS complex (that was detected on scale 3) is used, it sometimes misses the P wave or identifies the wrong position. Therefore, it is first required to detect QRS complex on scale 4 and then find P and T waves. The same algorithm is used to detect the QRS complex on scale 4 that is used to detect on scale 3, as described in section \ref{sec:ecg_det}.
 
-After getting the QRS on scale 4, a window size of 100 is used for detecting the P wave. The starting point of the window is one sample less than from Q wave position and if the window size is added to this position, we get the beginning of the window. RR interval is also calculated between the 2 consecutive R peaks. 1/3 of the RR interval is used for detecting the P wave and 2/3 of the RR interval is used for detecting the T wave. Once the window is identified on the scale 4, the max and min values are identified in that window as P wave lies on the zero-crossing point of min and max pair. The average is taken to calculate the P wave position of scale 4. Once the P wave position is calculated, the P wave is identified relatively on the original signal. One point to note here is that the scale 4 data is shifted because of filtering, therefore, it is required to shift the detected position few samples back to get the appropriate value.
+After the detection of QRS complex, the P and T waves are also detected. According to power spectra of ECG signal \cite{4121752} and Table \ref{tab:qrsenergy}, most of the P and T waves energy lies at scale 4. Therefore, the scale 4 is selected to detect P and T waves. 
+
+A window size of 100 is used for detecting the P wave. The starting point of the window is one sample less than from Q wave position and if the window size is added to this position, we get the beginning of the window. RR interval is also calculated between the 2 consecutive R peaks. 1/3 of the RR interval is used for detecting the P wave and 2/3 of the RR interval is used for detecting the T wave. Once the window is identified on the scale 4, the max and min values are identified in that window as P wave lies on the zero-crossing point of min and max pair. The average is taken to calculate the P wave position of scale 4. Once the P wave position is calculated, the P wave is identified relatively on the original signal. One point to note here is that the scale 4 data is shifted because of filtering, therefore, it is required to shift the detected position few samples back to get the appropriate value.
 
 The same approach is used for detecting the T wave, but instead of looking the window before the QRS complex, here the window is searched after the QRS complex for detecting the T wave.
 
@@ -673,7 +685,7 @@ The heart rate is calculated by first counting the number of R peaks in a 10 sec
 \end{center}
 
 \section{Algorithm Execution on ECG Chair Data}
-The data used in the development of ECG feature extraction algorithm is taken from MIT-BIH data set and the algorithm works great with that data set. To analyze the performance of algorithm on the ECG chair data that is used in the implementation of the system, the data is collected from the ECG chair and passed to the algorithm. It turns out that the algorithm works perfectly fine with this data as well. The original ECG signal can be seen in Figure \ref{fig:device_ecg_orignal} and the extracted features can be seen in Figure \ref{fig:device_ecg_feature_extraction}.
+The data used in the development of ECG feature extraction algorithm is taken from MIT-BIH dataset and the algorithm works great with that dataset. The original ECG signal from the chair is shown in Figure \ref{fig:device_ecg_orignal} and the extracted features are shown in Figure \ref{fig:device_ecg_feature_extraction}.
 
 \begin{figure}[htpb]
 	\centering
