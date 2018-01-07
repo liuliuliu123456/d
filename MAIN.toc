@@ -36,57 +36,53 @@
 \contentsline {subsubsection}{\nonumberline Bundle Branch Block}{13}{section*.15}
 \contentsline {chapter}{\numberline {3}Signal Processing and Feature Extraction}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Devices}{15}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Magnetic Impedance Sensor}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.1}Magnetic Induction Sensor}{15}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Photoplethysmogram Sensor}{18}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}ECG Sensor}{18}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Ballistocardiogram Sensor}{18}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.4}Ballistocardiogram Sensor}{19}{subsection.3.1.4}
 \contentsline {subsection}{\numberline {3.1.5}Thermal Camera}{19}{subsection.3.1.5}
 \contentsline {section}{\numberline {3.2}ECG Signal Processing}{19}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Filter Method}{20}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Artificial Intelligence Method}{20}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Wavelet Transform Method}{20}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Wavelet Transform}{21}{section.3.3}
-\contentsline {section}{\numberline {3.4}Filter Bank Construction}{22}{section.3.4}
-\contentsline {section}{\numberline {3.5}Mallat's Algorithm}{27}{section.3.5}
-\contentsline {section}{\numberline {3.6}Using Wavelet Transform to Identify Singular Point of QRS Complex}{28}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Feature Extraction Using Wavelets}{28}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Lipschitz Exponent}{28}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Relationship between Lipschitz Exponent and Modulus Maximum}{28}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Dataset}{29}{section.3.7}
-\contentsline {section}{\numberline {3.8}Preprocessing}{30}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Wavelet Transform Method}{31}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Band-pass Filter Method}{31}{subsection.3.8.2}
-\contentsline {section}{\numberline {3.9}QRS Detection}{31}{section.3.9}
-\contentsline {section}{\numberline {3.10}P and T Wave Detection}{35}{section.3.10}
-\contentsline {section}{\numberline {3.11}Heart Rate Calculation}{39}{section.3.11}
-\contentsline {section}{\numberline {3.12}Algorithm Execution on ECG Chair Data}{39}{section.3.12}
-\contentsline {chapter}{\numberline {4}Deep Learning}{43}{chapter.4}
-\contentsline {section}{\numberline {4.1}Machine Learning}{43}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Supervised Learning}{43}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Unsupervised Learning}{44}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Artificial Neural Networks}{45}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Artificial Neuron}{45}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Activation Function}{46}{subsection.4.2.2}
-\contentsline {subsubsection}{\nonumberline Sigmoid}{46}{section*.16}
-\contentsline {subsubsection}{\nonumberline Tanh}{47}{section*.17}
-\contentsline {subsubsection}{\nonumberline ReLU}{47}{section*.18}
-\contentsline {subsection}{\numberline {4.2.3}Convolutional Neural Network}{47}{subsection.4.2.3}
-\contentsline {subsubsection}{\nonumberline Convolutional Layer}{47}{section*.19}
-\contentsline {subsubsection}{\nonumberline Pooling Layer}{48}{section*.20}
-\contentsline {subsubsection}{\nonumberline Fully Connected Layer}{48}{section*.21}
-\contentsline {subsection}{\numberline {4.2.4}Keras}{49}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{50}{subsection.4.2.5}
-\contentsline {subsubsection}{\nonumberline Layers Explanation}{50}{section*.22}
-\contentsline {subsubsection}{\nonumberline Results}{52}{section*.23}
-\contentsline {chapter}{\numberline {5}Visualization}{57}{chapter.5}
-\contentsline {section}{\numberline {5.1}Grafana}{57}{section.5.1}
-\contentsline {section}{\numberline {5.2}InfluxDB}{58}{section.5.2}
-\contentsline {section}{\numberline {5.3}Setting up Grafana with InfluxDB}{58}{section.5.3}
-\contentsline {section}{\numberline {5.4}Lambda Architecture for Big Data Processing}{60}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Batch Layer}{61}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Speed Layer}{61}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Serving Layer}{62}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}System Architecture}{64}{section.5.5}
-\contentsline {section}{\numberline {5.6}Device Management Interface}{65}{section.5.6}
-\contentsline {section}{\numberline {5.7}Android Application}{70}{section.5.7}
-\contentsline {chapter}{\nonumberline References}{71}{chapter*.24}
+\contentsline {section}{\numberline {3.3}Wavelet Transform}{20}{section.3.3}
+\contentsline {section}{\numberline {3.4}Mallat's Algorithm}{21}{section.3.4}
+\contentsline {section}{\numberline {3.5}Filter Bank Construction}{22}{section.3.5}
+\contentsline {section}{\numberline {3.6}Dataset}{28}{section.3.6}
+\contentsline {section}{\numberline {3.7}Preprocessing}{29}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Wavelet Transform Method}{29}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Band-pass Filter Method}{30}{subsection.3.7.2}
+\contentsline {section}{\numberline {3.8}QRS Detection}{31}{section.3.8}
+\contentsline {section}{\numberline {3.9}P and T Wave Detection}{37}{section.3.9}
+\contentsline {section}{\numberline {3.10}Heart Rate Calculation}{37}{section.3.10}
+\contentsline {section}{\numberline {3.11}Algorithm Execution on ECG Chair Data}{40}{section.3.11}
+\contentsline {chapter}{\numberline {4}Deep Learning}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Machine Learning}{41}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Supervised Learning}{41}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Unsupervised Learning}{42}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Artificial Neural Networks}{43}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Artificial Neuron}{43}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Activation Function}{44}{subsection.4.2.2}
+\contentsline {subsubsection}{\nonumberline Sigmoid}{44}{section*.16}
+\contentsline {subsubsection}{\nonumberline Tanh}{45}{section*.17}
+\contentsline {subsubsection}{\nonumberline ReLU}{45}{section*.18}
+\contentsline {subsection}{\numberline {4.2.3}Convolutional Neural Network}{45}{subsection.4.2.3}
+\contentsline {subsubsection}{\nonumberline Convolutional Layer}{45}{section*.19}
+\contentsline {subsubsection}{\nonumberline Pooling Layer}{46}{section*.20}
+\contentsline {subsubsection}{\nonumberline Fully Connected Layer}{46}{section*.21}
+\contentsline {subsection}{\numberline {4.2.4}Keras}{47}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{48}{subsection.4.2.5}
+\contentsline {subsubsection}{\nonumberline Layers Explanation}{48}{section*.22}
+\contentsline {subsubsection}{\nonumberline Results}{50}{section*.23}
+\contentsline {chapter}{\numberline {5}Visualization}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Grafana}{55}{section.5.1}
+\contentsline {section}{\numberline {5.2}InfluxDB}{56}{section.5.2}
+\contentsline {section}{\numberline {5.3}Setting up Grafana with InfluxDB}{56}{section.5.3}
+\contentsline {section}{\numberline {5.4}Lambda Architecture for Big Data Processing}{58}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Batch Layer}{59}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Speed Layer}{59}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Serving Layer}{60}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}System Architecture}{62}{section.5.5}
+\contentsline {section}{\numberline {5.6}Device Management Interface}{63}{section.5.6}
+\contentsline {section}{\numberline {5.7}Android Application}{68}{section.5.7}
+\contentsline {chapter}{\nonumberline References}{69}{chapter*.24}

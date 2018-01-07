@@ -119,6 +119,16 @@
 \newblock DOI 10.1109/10.58593. --
 \newblock ISSN 0018--9294
 
+\bibitem[E10]{e2010cardiac}
+\textsc{E}, V.M.:
+\newblock \emph{Cardiac Fibrillation-defibrillation: Clinical And Engineering
+  Aspects}.
+\newblock World Scientific Publishing Company, 2010 (Series On Bioengineering
+  And Biomedical Engineering). --
+\newblock  131--132 S.
+\newblock \url{https://books.google.de/books?id=\_L7FCgAAQBAJ}. --
+\newblock ISBN 9789814465793
+
 \bibitem[{Gre}]{TUON:six_leads}
 \textsc{{Greg Moran}}:
 \newblock \emph{Chest Leads}. --
@@ -200,11 +210,13 @@
   Engineering in Medicine and Biology Society}, 2011. --
 \newblock ISSN 1094--687X, S. 7087--7090
 
-\bibitem[MS14]{meena2014comparison}
-\textsc{Meena}, Ravi~S. ; \textsc{Sharma}, Ambalika:
-\newblock COMPARISON AND ANALYSIS OF ORTHOGONAL AND BIORTHOGONAL WAVELETS FOR
-  ECG COMPRSSION.
-\newblock {In: }\emph{Int. J. Res. Eng. Technol.}  (2014), Nr. 3
+\bibitem[MRF13]{1742-6596-434-1-012085}
+\textsc{Mahdavi}, H ; \textsc{Rosell-Ferrer}, J:
+\newblock A magnetic induction measurement system for adult vital sign
+  monitoring: evaluation of capacitive and inductive effects.
+\newblock {In: }\emph{Journal of Physics: Conference Series} 434 (2013), Nr. 1,
+  012085.
+\newblock \url{http://stacks.iop.org/1742-6596/434/i=1/a=012085}
 
 \bibitem[Pie91]{PIETKA1991139}
 \textsc{Pietka}, Ewa:
@@ -224,20 +236,13 @@
 \newblock DOI 10.1109/TBME.1985.325532. --
 \newblock ISSN 0018--9294
 
-\bibitem[PZZ10a]{5639905}
+\bibitem[PZZ10]{5639905}
 \textsc{Pan}, T. ; \textsc{Zhang}, L.  ; \textsc{Zhou}, S.:
 \newblock Detection of ECG characteristic points using Biorthogonal Spline
   Wavelet.
 \newblock {In: }\emph{2010 3rd International Conference on Biomedical
   Engineering and Informatics} Bd.~2, 2010. --
 \newblock ISSN 1948--2914, S. 858--863
-
-\bibitem[PZZ10b]{pan2010detection}
-\textsc{Pan}, Tao ; \textsc{Zhang}, Lei  ; \textsc{Zhou}, Shumin:
-\newblock Detection of ECG characteristic points using biorthogonal spline
-  wavelet.
-\newblock {In: }\emph{Biomedical Engineering and Informatics (BMEI), 2010 3rd
-  International Conference on} Bd.~2 IEEE, 2010, S. 858--863
 
 \bibitem[QDFM06]{PMID:17228741}
 \textsc{Qiu}, Yazhu ; \textsc{Ding}, Xianfeng ; \textsc{Feng}, Jun  ;
@@ -310,15 +315,6 @@
 \newblock {In: }\emph{Beijing Biomedical Engineering} 20 (2001), Nr. 1, S.
   25--28
 
-\bibitem[XCWX13]{xing2013unifying}
-\textsc{Xing}, S. ; \textsc{Chen}, S. ; \textsc{Wei}, Z.  ; \textsc{Xia}, J.:
-\newblock \emph{Unifying Electrical Engineering and Electronics Engineering:
-  Proceedings of the 2012 International Conference on Electrical and
-  Electronics Engineering}.
-\newblock Springer New York, 2013 (Lecture Notes in Electrical Engineering).
-\newblock \url{https://books.google.de/books?id=plq4BAAAQBAJ}. --
-\newblock ISBN 9781461449812
-
 \bibitem[XHT92]{126604}
 \textsc{Xue}, Q. ; \textsc{Hu}, Y.~H.  ; \textsc{Tompkins}, W.~J.:
 \newblock Neural-network-based adaptive matched filtering for QRS detection.
@@ -327,12 +323,5 @@
 \newblock \url{http://dx.doi.org/10.1109/10.126604}. --
 \newblock DOI 10.1109/10.126604. --
 \newblock ISSN 0018--9294
-
-\bibitem[ZLSJ08]{zheng2008detection}
-\textsc{Zheng}, Xiuyu ; \textsc{Li}, Zhen ; \textsc{Shen}, LinLin  ;
-  \textsc{Ji}, Zhen:
-\newblock Detection of QRS complexes based on biorthogonal spline wavelet.
-\newblock {In: }\emph{Information Science and Engineering, 2008. ISISE'08.
-  International Symposium on} Bd.~2 IEEE, 2008, S. 502--506
 
 \end{thebibliography}
