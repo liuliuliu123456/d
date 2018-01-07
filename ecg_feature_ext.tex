@@ -164,9 +164,8 @@ The wavelet transform of a signal $f(x)$ is defined as:
 {X_{W}(a, b) = \frac{1}{\sqrt{|a|}} \int_{-\infty}^\infty \bigg(\frac{t-b}{a}\bigg)f(x) \mathrm{d}x}
 \end{equation}
 
-If $a=2^j (j \in Z)$, then the wavelet transform is called the dyadic wavelet transform or the binary wavelet transform \cite{119727}. The dyadic wavelet transform of a signal $f(n)$ can be calculated with Mallat's Algorithm.
-
-
+If $a=2^j (j \in Z)$, then the wavelet transform is called the dyadic wavelet transform or the binary wavelet transform \cite{119727}. 
+To calculate the dyadic wavelet transform of a signal, a mother wavelet is first chosen and then dilated by a power of two. The Quadratic Spline wavelet is used with ECG signal as the mother wavelet. It has a property that the sharp edges occurs at the zero crossing point in the transformation, which corresponds to the local maxima or minima of the smoothed signal. The dyadic wavelet transform of a signal $f(n)$ can be calculated by using Mallat's Algorithm. 
 
 \section{Mallat's Algorithm}
 Mallat algorithm \cite{119727} for the signal $f(n)$ is defined as follows:
@@ -179,11 +178,10 @@ Mallat algorithm \cite{119727} for the signal $f(n)$ is defined as follows:
 { w_{2^j}f(n) = \sum g_ks_{2^{j-1}}f(n - 2^{j-1}k).   }
 \end{equation}
 
-where, $s_{2^0}f(n)$ is the original signal to be processed, in this case, it is the ECG signal. $w_{2^j}f(n)$ is the wavelet transform of the input signal $f(n)$ at scale $2^j$. $h_k$ and $g_k$ are the coefficients of a low-pass filter and high-pass filter respectively. The wavelet transform of a signal $f(n)$ is obtained by passing the input signal through a digital filter bank, which consists of a low-pass and high-pass filters. To find the appropriate coefficients for the filters, a filter bank is required to be constructed. 
-
+where, $s_{2^0}f(n)$ is the original signal to be processed, in this case, it is the ECG signal. $w_{2^j}f(n)$ is the wavelet transform of the input signal $f(n)$ at scale $2^j$. $h_k$ and $g_k$ are the coefficients of a low-pass filter and high-pass filter respectively. The wavelet transform of a signal $f(n)$ is obtained by passing the input signal through a digital filter bank, which consists of a low-pass and high-pass filters. The design and implementation of Wavelet transform is based on perfect reconstruction filter banks. The coefficients of low-pass filter $H(z)$ and high-pass filter $G(z)$ can be calculated by constructing a filter bank.
 
 \section{Filter Bank Construction}
-A filter bank is a set of filters and sampling operators. The downsampling operators are decimators, whereas, upsampling operators are expanders. In a 2-channel filter bank, the analysis filters contains a low-pass and high-pass filters. These filters are ${H_{0}(z)}$ and ${H_{1}(z)}$ respectively \cite{wang2001using}, as shown in Figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2 respectively, producing the final output signal $Y[n]$. 
+A biorthogonal filter bank is designed based on Quadratic Spline wavelet. A filter bank is a set of filters and sampling operators. The downsampling operators are decimators, whereas, upsampling operators are expanders. In a 2-channel filter bank, the analysis filters contains a low-pass and high-pass filters. These filters are ${H_{0}(z)}$ and ${H_{1}(z)}$ respectively \cite{wang2001using}, as shown in Figure \ref{fig:2_channel_filter_bank}. After passing the input signal $X[n]$ from the filters, the resulting signal is first down-sampled by 2 and then up-sampled by 2 respectively, producing the final output signal $Y[n]$. 
 
 The filters ${H_{0}(z)}$ and ${H_{1}(z)}$ are not ideal filters, therefore, there responses overlap, there is aliasing in each channel and there is distortion. The synthesis filters ${G_{0}(z)}$ and ${G_{1}(z)}$ should be adjusted according to the analysis filters ${H_{0}(z)}$ and ${H_{1}(z)}$ to cancel out the error.
 
@@ -261,12 +259,12 @@ The perfect reconstruction for filter bank can be achieved if the following two 
 	\end{equation}
 	\item No distortion:
 	\begin{equation} \label{eqn:nodistor}
-	{G_{0}(z)H_{0}(z) + G_{1}(z)H_{1}(z) = 2z^{-k}}
+	{G_{0}(z)H_{0}(z) + G_{1}(z)H_{1}(z) = mz^{-k}}
 	\end{equation}
 \end{enumerate}
 
 
-where $k$ is a time delay.
+where $m$ is a constant and $k$ is a time delay.
 
 In order to satisfy condition 1 i.e., to get rid of aliasing, choose:
 
@@ -301,7 +299,7 @@ This is a low-pass product filter. The high-pass product filer is ${P_1(z)=G_{1}
 The equation \ref{eqn:nodistor} can be re-written as:
 
 \begin{equation}\label{eqn:updated_no_dist} 
-{P_0(z) - P_0(-z) =  2z^{-k}}
+{P_0(z) - P_0(-z) =  mz^{-k}}
 \end{equation}
 
 The design of 2-channel filter bank is now reduced to only two steps:
@@ -311,14 +309,14 @@ The design of 2-channel filter bank is now reduced to only two steps:
 	\item Factor $P_0$ to find the values of $H_0$ and $G_0$.
 \end{enumerate}
 
-Equation \ref{eqn:updated_no_dist} can further be simplified by substituting $P(z)$ by $z^kP_0(z)$ and $P(-z)$ by $-z^kP_0(-z)$, then the perfect reconstruction condition becomes:
+Equation \ref{eqn:updated_no_dist} can further be simplified by normalizing $P_0(z)$ by $z^k$ to center it. Substituting $P(z)$ by $z^kP_0(z)$ and $P(-z)$ by $-z^kP_0(-z)$ produces:
 
 
  \begin{equation}\label{eqn:piern} 
- {P(z) + P(-z) =  2}
+ {P(z) + P(-z) =  m}
  \end{equation}
  
- Equation \ref{eqn:piern} implies that $P(Z)$ is a half-band filter, in which all even powers of $z$ in $P(z)$ are zero except for the one at origin. Furthermore, all the odd powers cancel out when $P(z)$ and $P(-z)$ are added. 
+ Equation \ref{eqn:piern} implies that $P(Z)$ is a half-band filter, in which all even powers of $z$ in $P(z)$ are zero except for the constant term (coefficient of the term $z^0$). Furthermore, all the odd powers cancel out when $P(z)$ and $P(-z)$ are added. 
  
  
  One possibility to design the low-pass filter $P_0(z)$ is to use the Daubechies construction:
@@ -327,11 +325,12 @@ Equation \ref{eqn:updated_no_dist} can further be simplified by substituting $P(
  {P_0(z) = (1 + z^{-1})^{2p}Q(z)}
  \end{equation}
  
-where $p$ can be any integer and have $2p$ coefficients, i.e., the length of the filter, and $Q(z)$ be a polynomial of degree $(2p-2)$ is chosen such that $P_0(z)$ satisfy  the half-band filter property. Moreover, the order of $P_0(z)$ is always an even number. $p$ defines the number of zeros to be placed at $\pi$ in a unit circle. The filter bank is orthogonal and the product filters $P_0(z)$ and $P_1(z)$ have a length of $4p-2$. 
+$P_0(z)$ is called ``maxflat filter'' where $p$ can be any integer and has $2p$ coefficients, i.e., the length of the filter. $(1 + z^{-1})^{2p}$ is called \textit{binomial filter} and it is a spline filter, and $Q(z)$ be a polynomial of degree $(2p-2)$ is chosen such that $P_0(z)$ satisfy  the half-band filter property. Moreover, the order of $P_0(z)$ is always an even number. $p$ defines the number of zeros to be placed at $\pi$ in a unit circle. 
+%The filter bank is orthogonal and the product filters $P_0(z)$ and %$P_1(z)$ have a length of $4p-2$. 
 
-Any value of $p$ can be chosen and the polynomial $Q(z)$ depends on the value of $p$, i.e., $Q(z)$ should be chosen in such a way that the odd powers are 0, except for the center one, whose coefficient will be 1. If $p=1$ is chosen, then this represent the Haar case and it has 2 coefficients.
+Any value of $p$ can be chosen and the polynomial $Q(z)$ depends on the value of $p$, i.e., $Q(z)$ should be chosen in such a way that it satisfies the half-band filter property. If $p=1$, then this represent the Haar case and it has 2 coefficients.
 
-In this case, $p=2$ is chosen, therefore, the number of coefficients are 4 and degree of $Q(z)$ be 2. Then Equation \ref{eqn:daubechies} becomes:
+In this case, $p=2$ is chosen. Therefore, the number of coefficients are 4 and degree of $Q(z)$ be 2. Then Equation \ref{eqn:daubechies} becomes:
 
  \begin{equation}\label{eqn:daubechies_upd} 
 {P_0(z) = (1 + z^{-1})^{4}Q(z)}
@@ -350,7 +349,7 @@ Substituting Equation \ref{eqn:qz} in \ref{eqn:daubechies_upd} produces:
 {P_0(z) = a + (4a+b)z^{-1} + (7a + 4b)z^{-2} + (8a+6b)z^{-3} + (7a+4b)z^{-4} + (4a+b)z^{-5} + az^{-6}}
 \end{equation}
 
-To satisfy the condition on $P_0(z)$, equating all the coefficients of odd power of $z$ to 0, except for the center one, i.e., $z^{-3}$ which equates to 1, produces:
+To satisfy the condition on $P_0(z)$, equating all the coefficients of odd power of $z$ to 0, except for the center term, i.e., term at $z^{-3}$ which equates to 1, produces:
 
  \begin{equation}\label{eqn:yiedl} 
 {4a + b = 0}
@@ -389,7 +388,7 @@ and
 
 \begin{equation} \label{eq1}
 \begin{split}
-G_0(z) & = \frac{(1 + z^{-1})(-1 + 4z^{-1} + z^{-2})}{4} \\
+G_0(z) & = \frac{(1 + z^{-1})(-1 + 4z^{-1} - z^{-2})}{4} \\
 & = \frac{(-1 + 3z^{-1} + 3z^{-2} - z^{-3})}{4}
 \end{split}
 \end{equation}
@@ -551,7 +550,7 @@ From Equation \ref{eqn:approx} and \ref{eqn:detail}, we get the Biorthogonal Spl
 	
 \end{table}
 
-Most of the QRS complex energy lies between 3 Hz and 40 Hz, and it corresponds to the $3^{rd}$ scale as shown in Table \ref{tab:qrsenergy}. The R peaks correspond to the zero-crossing point of the modulus maxima pair, with a little delay, therefore, first all the positive and negative extrema on scale 3 can be identified. The extrema are shown in Figure \ref{fig:maximas_on_level_3}.  To reduce the influence of noise and other interference in locating the R peaks, the scale 3 signal is divided into four parts, lets say, $A1, A2, A3$ and $A4$. To find the average maximum and minimum values, the maximum and minimum values from each part is identified.
+Most of the QRS complex energy lies between 3 Hz and 40 Hz, and it corresponds to the $3^{rd}$ scale as shown in Table \ref{tab:qrsenergy}. The R peaks correspond to the zero-crossing point of the modulus maxima pair, with a little delay, therefore, first all the positive and negative extrema on scale 3 be identified. The extrema are shown in Figure \ref{fig:maximas_on_level_3}.  To reduce the influence of noise and other interference in locating the R peaks, the scale 3 signal is divided into four parts, lets say, $A1, A2, A3$ and $A4$. To find the average maximum and minimum values, the maximum and minimum values from each part is identified.
 
 
 \begin{equation} 
@@ -565,7 +564,7 @@ Most of the QRS complex energy lies between 3 Hz and 40 Hz, and it corresponds t
 
 
 Not all the extrema are important, therefore, only modulus maxima pair in certain scope can be focused and the rest can be ignored. The threshold are calculated as:
-\begin{equation} 
+\begin{equation}  \label{eqn:thresholds}
 { Th_1 = \frac{MAX}{2}} , { Th_2 = \frac{MIN}{2}} 
 \end{equation}
 
@@ -589,7 +588,15 @@ The threshold values can be adjusted. If they are too big, then the missing prob
 	\label{fig:max_pair}
 \end{figure}
 
-The value of R wave lies at the zero-crossing point of modulus maxima pair. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point. The detected R-peaks can be seen in Figure \ref{fig:r_peaks}. The flow chart for finding the R peaks is shown in Figure \ref{fig:r_peaks_flow_chart}.
+
+The best modulus maxima pair corresponds to the R peaks and the value of R peaks lie at the zero-crossing point of modulus maxima pair with a little delay. For compensating the delay, a maximum value can be searched in the window of 20 points to the zero-crossing point to determine the accurate position of R peaks. 
+
+To compensate the false R peak detection or misdetection, the distance between the adjacent R peaks is calculated. If the distance is less than 40\% of the average RR interval, then one of the peak is misdetected. Therefore, the larger one is kept as R peak and the smaller one is eliminated.
+
+If the distance between adjacent R peaks is greater than 160\% of the average RR interval, it is considered as misdetection. Therefore, the threshold values defined in Equation \ref{eqn:thresholds}, are further reduced and R peak is searched again in the adjacent R peaks window or interval.
+
+
+The detected R-peaks are shown in Figure \ref{fig:r_peaks}. The flowchart for finding the R peaks is shown in Figure \ref{fig:r_peaks_flow_chart}.
 
 \begin{figure}[htpb]
 	\centering
@@ -605,13 +612,24 @@ The value of R wave lies at the zero-crossing point of modulus maxima pair. For 
 	\centering
 	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/qrs.pdf}
 	\caption{
-		R peak flow chart.
+		Flowchart for locating R peaks.
 	}
 	\label{fig:r_peaks_flow_chart}
 \end{figure}
 
 
-Q and S peaks generally are of high frequency. Therefore, their energies are mainly lies on the $1{st}$ scale. For finding the Q wave, the algorithm starts by looking on the left side of the R wave and finds the first non-zero value i.e. the Q wave. And because of the delay, the minimum value is searched in the window of 10 points to the detected Q wave. The same process is executed for the S wave, but in this case, the direction was on the right side of the R wave. The detected QRS complex can be seen in Figure \ref{fig:qrs_peaks}.
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/q-and-s.pdf}
+	\caption{
+		Flowchart for locating Q and S peaks.
+	}
+	\label{fig:qs}
+\end{figure}
+
+\bigskip
+
+Q and S peaks generally are of high frequency. Therefore, their energies are mainly lies on the $1^{st}$ scale. For finding the Q wave, the algorithm starts by looking on the left side of the R wave and finds the first non-zero value i.e. the Q wave. And because of the delay, the minimum value is searched in the window of 10 points to the detected Q wave. The same process is executed for the S wave, but in this case, the direction was on the right side of the R wave. The detected QRS complex can be seen in Figure \ref{fig:qrs_peaks}.
 
 \begin{figure}[htpb]
 	\centering
@@ -621,6 +639,23 @@ Q and S peaks generally are of high frequency. Therefore, their energies are mai
 	}
 	\label{fig:qrs_peaks}
 \end{figure}
+
+
+
+
+
+
+
+After detecting the QRS complex, P and T waves are required to be detected as they are important for the identification of the arrhythmia. P wave occurred before the QRS complex and T wave after the QRS complex. Therefore, they can be detected based on the QRS location.
+
+\section{P and T Wave Detection}
+
+After the detection of QRS complex, the P and T waves are also detected. According to power spectra of ECG signal \cite{4121752} and Table \ref{tab:qrsenergy}, most of the P and T waves energy lies at scale 4. Therefore, the scale 4 is selected to detect P and T waves. 
+
+The corresponding modulus maxima pair of P and T waves can be seen in Figure \ref{fig:detail_coefficients} at scale 4 before and after the the QRS complex. Therefore, P and T waves can be search in a window before and after the QRS complex.
+A window size of 100 is used for detecting the P wave and T waves. The P wave is searched within the 33\% of the average RR interval to the left of QRS complex and T wave is searched within the 67\% to the right of QRS complex. The P and T waves lies at the zero-crossing point of the identified modulus maxima pair in their respective windows. Because of the delay, a maximum value is searched in the window of 20 points to the zero-crossing point to determine the accurate position of P and T waves.
+
+All detected waves are shown in Figure \ref{fig:pqrst}. The Flowchart for finding the P and T waves are shown in Figures \ref{fig:p_peaks_flow_chart} and \ref{fig:t_peaks_flow_chart} respectively.
 
 
 \begin{figure}[htpb]
@@ -633,36 +668,11 @@ Q and S peaks generally are of high frequency. Therefore, their energies are mai
 \end{figure}
 
 
-
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/q-and-s.pdf}
-	\caption{
-		Q and S peak flow chart.
-	}
-	\label{fig:qs}
-\end{figure}
-
-
-
-After detecting the QRS complex, P and T waves are required to be detected as they are important for the identification of the arrhythmia. P wave occurred before the QRS complex and T wave after the QRS complex. Therefore, they can be detected based on the QRS location.
-
-\section{P and T Wave Detection}
-
-After the detection of QRS complex, the P and T waves are also detected. According to power spectra of ECG signal \cite{4121752} and Table \ref{tab:qrsenergy}, most of the P and T waves energy lies at scale 4. Therefore, the scale 4 is selected to detect P and T waves. 
-
-A window size of 100 is used for detecting the P wave. The starting point of the window is one sample less than from Q wave position and if the window size is added to this position, we get the beginning of the window. RR interval is also calculated between the 2 consecutive R peaks. 1/3 of the RR interval is used for detecting the P wave and 2/3 of the RR interval is used for detecting the T wave. Once the window is identified on the scale 4, the max and min values are identified in that window as P wave lies on the zero-crossing point of min and max pair. The average is taken to calculate the P wave position of scale 4. Once the P wave position is calculated, the P wave is identified relatively on the original signal. One point to note here is that the scale 4 data is shifted because of filtering, therefore, it is required to shift the detected position few samples back to get the appropriate value.
-
-The same approach is used for detecting the T wave, but instead of looking the window before the QRS complex, here the window is searched after the QRS complex for detecting the T wave.
-
-All detected waves can be seen in Figure \ref{fig:pqrst}. The flow chart for finding the P wave and T wave is shown in Figures \ref{fig:p_peaks_flow_chart} and \ref{fig:t_peaks_flow_chart} respectively.
-
-
 \begin{figure}[htpb]
 	\centering
 	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/p_Wave.pdf}
 	\caption{
-		P wave flow chart.
+		Flowchart for locating P wave.
 	}
 	\label{fig:p_peaks_flow_chart}
 \end{figure}
@@ -671,18 +681,23 @@ All detected waves can be seen in Figure \ref{fig:pqrst}. The flow chart for fin
 	\centering
 	\includegraphics[width=25cm,height=22cm,keepaspectratio=true]{images/T_Wave.pdf}
 	\caption{
-		T wave flow chart.
+		Flowchart for locating T wave.
 	}
 	\label{fig:t_peaks_flow_chart}
 \end{figure}
 
 
 \section{Heart Rate Calculation}
-The heart rate is calculated by first counting the number of R peaks in a 10 seconds window and then multiply the count by 6 to get the heart rate.
+The heart rate is calculated by using the RR interval. The formula to calculate the heart rate is:
 
-\begin{center}
-	$HeartRate = number\_of\_R\_peaks \times 6$
-\end{center}
+
+\begin{equation}\label{eqn:heart_rate} 
+HeartRate = sample\_rate \times \frac{60}{RR interval}
+\end{equation}
+
+where $sample\_rate$ is the sample rate of the ECG signal and 60 is multiplied to convert the heart rate into beats per minute.
+
+\pagebreak
 
 \section{Algorithm Execution on ECG Chair Data}
 The data used in the development of ECG feature extraction algorithm is taken from MIT-BIH dataset and the algorithm works great with that dataset. The original ECG signal from the chair is shown in Figure \ref{fig:device_ecg_orignal} and the extracted features are shown in Figure \ref{fig:device_ecg_feature_extraction}.

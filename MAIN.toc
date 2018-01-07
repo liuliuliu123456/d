@@ -53,9 +53,9 @@
 \contentsline {subsection}{\numberline {3.7.1}Wavelet Transform Method}{29}{subsection.3.7.1}
 \contentsline {subsection}{\numberline {3.7.2}Band-pass Filter Method}{30}{subsection.3.7.2}
 \contentsline {section}{\numberline {3.8}QRS Detection}{31}{section.3.8}
-\contentsline {section}{\numberline {3.9}P and T Wave Detection}{37}{section.3.9}
+\contentsline {section}{\numberline {3.9}P and T Wave Detection}{36}{section.3.9}
 \contentsline {section}{\numberline {3.10}Heart Rate Calculation}{37}{section.3.10}
-\contentsline {section}{\numberline {3.11}Algorithm Execution on ECG Chair Data}{37}{section.3.11}
+\contentsline {section}{\numberline {3.11}Algorithm Execution on ECG Chair Data}{40}{section.3.11}
 \contentsline {chapter}{\numberline {4}Deep Learning}{41}{chapter.4}
 \contentsline {section}{\numberline {4.1}Machine Learning}{41}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Supervised Learning}{41}{subsection.4.1.1}
