@@ -1,49 +1,67 @@
 \chapter{Introduction}
 
-According to one of the report of US, around one billion people travel on airlines each year.
-
-It is important to realize the on board medical resources are limited.
-
-Environmental changes such as when moving from sea level to high altitude, the level of oxygen gradually decreases as the air thins out, including the reduction of atmospheric pressure, temperature and humidity. As a result, the heart rate increases as it tries to deliver more oxygen to the muscles.
-
-Increases in high altitude increases the frequency of  
-
-Flying at high altitude can create serious heart problems. As the altitude increases, the level of oxygen in blood falls down which can lead to fainting or even heart attacks among some passenger.
+According to one of the reports of US, around one billion people travel on airlines each year \cite{PMC2577402},\cite{aerospace2003medical}. It has also been predicted that the number will be double in the coming two decades. During a flight, emergencies occur at a rate of 20 to 100 million per million passengers. Out of which 0.1 to 1 million people died \cite{lyznicki2000inflight}. Many of the cases are not even on the record as there is no proper reporting system. The most common in-flight complaints are related to respiration, cardiac, traumatic and gastrointestinal. Out of these, cardiac and respiration related complaints are more serious. During inflight, a doctor is present only 30 to 60 percent \cite{PMC2577402},\cite{PMC1119071}. These number may have changed as the article was published in 2008.
 
 
+\section{Motivation}
 
-An arrhythmia can be harmless or a life threating Therefore, for pilot's a thorough medical evaluation is necessary to assess the severity of an arrhythmia for the safety of both pilot and the passengers.
+Environmental changes such as when moving from sea level to high altitude, the level of oxygen gradually decreases as the air thins out, including the reduction of atmospheric pressure, temperature, and humidity. As a result, the heart rate increases as it tries to deliver more oxygen to the muscles, which can lead to fainting or even heart attacks among some passenger.
 
+It is important to realize the onboard medical resources are limited. Therefore, a technology advancement is required, which can reduce the workload of doctors during a flight. Healthcare is one of the hottest research areas in the current era. Monitoring of vital signs, parameter like respiration, ECG, EEG, temperature, and heart rate, getting more and more important in every field of life.
 
+A variety of technologies are already in used to measure the vital signs \cite{naturectlesshcs}. They include traditional stethoscopes, electrodes for measuring ECG, and different types of gauges, but they have their drawbacks in terms of comfort and convenience. For example, to measure the ECG, the electrodes are required to be directly attached to the skin of the patient, which is very inconvenient and limits the patient's movement. Strain gauges use the belts to measure the blood pressure and respiration which again limits the daily activities. Even though these technologies are reliable and provide better results, but they are inadequate for long-term everyday activities.
 
-
-
-Health care is one of the hottest research areas in the current era. Monitoring of vital signs parameter like respiration, ECG, EEG, temperature, heart rate, etc,. getting more and more important in every field of life. The most focus is towards the wearable and wireless sensor as they do the minimal obstruction in day to day life.
-
-A variety of technologies are already in used to measure the vital signs. They include traditional stethoscopes, electrodes for measuring ECG and different types of gauges, but they have their drawbacks in terms on comfort and convenience. For example, to measure the ECG, the electrodes are required to be directly attached to the skin of the patient, which is very inconvenient and limits the patient's movement. Strain gauges uses the belts to measure the blood pressure and respiration which again limits the daily activities. Even though these technologies are reliable and provide better results, but they inadequate for long term everyday activities.
-
-Contact-less sensors are the next big thing in the health care. They are designed in such a way that they can disappear in the daily surroundings without any disruption. Different techniques has been used to integrate contact-less sensors into clothes, chairs, smart watches, smart phones, shoes, beds, etc ot measure different vital signs.
+Contact-less sensors are the next big thing in the healthcare. They are designed in such a way that they can disappear in the daily surroundings without any disruption. Different techniques have been used to integrate contact-less sensors into clothes, chairs, smartwatches, smartphones, shoes, and beds to measure different vital signs.
 
 
-As mentioned earlier, most of the work done in the health care technologies have uses the sensors which are required to be placed on the body, therefore, a trends need to be shift towards contact-less sensors as they are much more convenient to use. Moreover, not much work has been carried out to use the deep learning technologies along with contact-less sensor to identify the cardiac arrhythmias in real-time environment. 
+As mentioned earlier, most of the work done in the healthcare technologies have used the sensors which are required to be placed on the body, therefore, trends need to be shifted towards contact-less sensors as they are much more convenient to use. Moreover, not much work has been carried out to use the deep learning technologies along with a contact-less sensor to identify the cardiac arrhythmias in a real-time environment. 
 
-The aim of this thesis, is to build a system that provides a health care solution which would be able to track the pilot's vital signs including heart rate, temperature, ECG, etc, as well as can detect the cardiac arrhythmias in real-time. The early identification of disease can help to provide quick treatment to the pilot.
+
+The distributed computing, streaming analytics and machine learning has become more powerful and cheaper than ever enabling the analysis of many different kinds of data much faster \cite{maprmliotmed}. Some examples of machine learning and big data working together for the analysis are:
+
+\begin{itemize}
+	\item Health care
+	\item Transportation
+	\item Automobile
+	\item Manufacturing
+	\item Retail
+\end{itemize}
+
+
+The combination of streaming data, big data analysis, and machine learning can benefit health care as well in identifying chronic diseases such as cardiac disease. Vital signs of the patient can be analyzed in real-time while keeping the false alarm as low as possible.
+
+\section{Aim}
+
+The aim of this thesis is to build a system that provides a healthcare solution which would be able to track the pilot's vital signs such as heart rate, temperature, and ECG. Moreover, it can detect the cardiac arrhythmias in real-time.
 
 Multiple contact-less sensors are used in the development of the system to measure the various vital signs of pilots. These sensors include:
 
 \begin{enumerate}
-	\item Capactive ECG sensor
+	\item Capacitive ECG sensor
 	\item Photoplethysmogram sensor
 	\item Magnetic impedance sensor
 	\item Ballistocardiogram sensor
 	\item Thermal camera
 \end{enumerate}
 
-These sensors will be installed in the pilot seat so they can continuously track the health status of pilot during a course of flight, and in case of any irregularity, immediate actions can be taken for the safety of the pilot and of course for the passengers as well.
+These sensors will be installed in the pilot seat so they can continuously track the health status of the pilot during a course of the flight. The early identification of the disease can help to provide quick treatment to the pilot, as well as can stop from reaching any dangerous situation.
 
-A deep learning model has been trained using convolutional neural network.  Various cardiac arrhythmias dataset were taken from already existed dataset to train the model. The advantage of using CNN is that unlike other machine learning algorithms, it does not require a feature extraction phase.
-
-Multiple platforms have been used along with tablets to visualize the results and vital signs of the passengers. A cloud has been setup to store all the sensors data and vital signs so, the data can be accessed from anywhere in the world.
-The same data later can also be used for different purpose such as, for the training of deep learning model.
+An arrhythmia can be harmless or a life threating, therefore, for pilot's, a thorough medical evaluation is necessary to assess the severity of an arrhythmia for the safety of both pilot and the passengers.
 
 
+A deep learning model has been trained using a convolutional neural network to detect the cardiac arrhythmias. Various cardiac arrhythmias dataset have taken from already existed dataset to train the model. The advantage of using CNN is that unlike other machine learning algorithms, it does not require a feature extraction phase.
+
+Multiple platforms have been used along with tablets to visualize the results and vital signs of the passengers. A cloud has been set up to store all the sensors data and vital signs so, the data can be accessed from anywhere in the world.
+The sensor's data later can also be used for a different purpose such as for the re-training of the deep learning model.
+
+
+
+\section{Objective}
+The objective of this thesis are:
+
+\begin{itemize}
+	\item Programming of a software visualization (cECG, MI, BKG, and PPG) for a PC along with the tablet notification and visualization.
+	\item Construction of the data bank on the cloud.
+	\item Deep learning of the cardiac conditions.
+	\item Evaluation of the algorithm with real-time data from the sensors.
+\end{itemize}

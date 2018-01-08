@@ -25,6 +25,16 @@ Repeated entry---line 468 of file literatur.bib
  : @misc{cablesandsensors
  :                       ,
 I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Mantziari L, Styliadis C, Kourtidou-Papadeli C, Styliadis I" for entry PMC2577402
+while executing---line 2132 of file alphadin.bst
+Too many commas in name 1 of "Mantziari L, Styliadis C, Kourtidou-Papadeli C, Styliadis I" for entry PMC2577402
+while executing---line 2132 of file alphadin.bst
 Warning--empty year in TUON:six_leads
 Warning--there's no year in limaye2016ecg
-(There were 3 error messages)
+Too many commas in name 1 of "Mantziari L, Styliadis C, Kourtidou-Papadeli C, Styliadis I" for entry PMC2577402
+while executing---line 2205 of file alphadin.bst
+Too many commas in name 1 of "Mantziari L, Styliadis C, Kourtidou-Papadeli C, Styliadis I" for entry PMC2577402
+while executing---line 2205 of file alphadin.bst
+Too many commas in name 1 of "Mantziari L, Styliadis C, Kourtidou-Papadeli C, Styliadis I" for entry PMC2577402
+while executing---line 2205 of file alphadin.bst
+(There were 8 error messages)
