@@ -1,5 +1,5 @@
 %\ihead{\headmark}
-\chapter{Visualization}
+\chapter{Visualization and System Architecture}
 
 
 \makeatletter
@@ -13,17 +13,17 @@
 \makeatother
 
 \begin{center}
-\begin{chapquote}{}
-	``A picture is worth a thousands words.''
-\end{chapquote}
+	\begin{chapquote}{}
+		``A picture is worth a thousands words.''
+	\end{chapquote}
 \end{center}
 
-Raw numbers to the users do not make sense and therefore, require necessary tools to display the results. Visualization allows us to see the broader aspects of complex data by showing the data in graphical formats. It really helps in capturing the user's attention and engage him through out the process. Complex data that could easily be ignored, can still be recognized and captured the attention of the user in a graphical reports \cite{quora:Sulakshana}.
+Raw numbers to the users do not make sense and therefore, require necessary tools to display the results. Visualization allows us to see the broader aspects of complex data by showing the data in graphical formats. It really helps in capturing the user's attention and engage him throughout the process. Complex data that could easily be ignored, can still be recognized and captured the attention of the user in a graphical reports \cite{quora:Sulakshana}.
 
-The visualization tool Grafana has been set up for displaying the real-time data received from the sensors. All devices send the data in real-time which first get stored in Influxdb and then Grafana tool loads the data from there and display it on the graph. 
+The visualization tool Grafana has been set up for displaying the real-time data received from the sensors. All devices send the data in real-time, which first get stored in Influxdb and then Grafana tool loads the data from there and display it on the graph. 
 
 \section{Grafana}
-Grafana is an open source real-time visualization tool for analytics and monitoring. It is one of the best tools for time series analytics, therefore, it has been used for visualizing the real-time data from sensor devices. It can be used for any kind of application analytics, for example, industrial sensors, home automation, hospitals, weather reports etc. It can connect to many data sources and pull data from it to do the analytics or the visualization. The most commonly used data sources these days are:
+Grafana is an open source real-time visualization tool for analytics and monitoring. It is one of the best tools for time series analytics, therefore, it has been used for visualizing the real-time data from sensor devices. It can be used for any kind of application analytics, for example, industrial sensors, home automation, hospitals, and weather reports. It can connect to many data sources and pull data from there to do the analytics and the visualization. The most commonly used data sources these days are:
 
 \begin{itemize}
 	\item Elasticsearch
@@ -32,41 +32,41 @@ Grafana is an open source real-time visualization tool for analytics and monitor
 	\item Prometheus  
 \end{itemize}
 
-It allows us to connect to these data sources on just few click which makes it very convenient. Multiple dashboards can be created in Grafana to view different dimensions of the data. It also provides multiple tools for creating graphs in different fashion and styles which can be added to dashboards.
+It allows us to connect to these data sources on just few click, which makes it very convenient. Multiple dashboards can be created in Grafana to view different dimensions of the data. It also provides multiple tools for creating graphs in different fashion and styles, which can be added to dashboards.
 
 \section{InfluxDB}
- Since the sensor data is always time critical, therefore, a time series database is required for storing the data. InfluxDB is one of the best time series database available, therefore, it has been chosen for storing the sensors data. 
- 
- It is very easy install and manage, and does not require other dependencies to run. It also provides an HTTP/HTPPS interface to read and write data from the database. The retention policy can be set on the database to manage space conveniently. The basic terms in InfluxDB are:
- 
- \begin{itemize}
- 	\item Database name
- 	\item Measurement (same as table name in traditional databases)
- 	\item Tags (to filter data)
- 	\item Fields (actual data values)
- \end{itemize}
- 
- The fields are generally used as a key value pair, with a timestamp field. Only one point can be stored at any specific timestamp. The precision of a single field can be in s, ms, $\mu$s, ns. If the field does not contains a timestamp field, then the InfluxDB will generate a timestamp automatically.
- 
- 
- \section{Setting up Grafana with InfluxDB}
- Another reason for choosing the InfluxDB is that, it is really easy to configure Grafana for using InfluxDB as a data source. It is so simple that, the setup can be done in just 5 minutes. First, a user needs to create a database in the InfluxDB. Once the database is ready, starts the Grafana server. Generally, it runs on port 3000 but because of ports conflict, it is recommended to change the port to some other address by editing the \textit{conf\textbackslash sample.ini} file.
- 
- 
- Once the server is started, go to \textit{localhost:3000} address to open the Grafana web interface. Select an option to add a new data source. Lets say the database name is ``medit'', then configure the InfluxDB data source as shown in Figure \ref{fig:gr_db_setup}.
- 
- \begin{figure}[htpb]
- 	\centering
- 	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/gr_db_setup}
- 	\caption{
- 		InfluxDB data source setup in Grafana.
- 	}
- 	\label{fig:gr_db_setup}
- \end{figure}
+Since the sensor data is always time critical, therefore, a time series database is required for storing the data. InfluxDB is one of the best time series database available. Therefore, it has been chosen for storing the sensors data.
+
+It is very easy to install and manage and does not require other dependencies to run. It also provides an HTTP/HTPPS interface to read and write data from the database. The retention policy can be set on the database to manage space conveniently. The basic terms in InfluxDB are:
+
+\begin{itemize}
+	\item Database name
+	\item Measurement (same as table name in traditional databases)
+	\item Tags (to filter data)
+	\item Fields (actual data values)
+\end{itemize}
+
+The fields are generally used as a key-value pair, with a timestamp field. Only one point can be stored at any specific timestamp. The precision of a single field can be in second, millisecond and nanosecond. If the field does not contains a timestamp field, then the InfluxDB will generate a timestamp automatically.
+
+
+\section{Setting up Grafana with InfluxDB}
+Another reason for choosing the InfluxDB is that it is really easy to configure Grafana for using InfluxDB as a data source. The setup can be done in just a few minutes. Before starting, a database should be set up on InfluxDB. Once the database is ready, starts the Grafana server. Generally, it runs on port 3000 but because of ports conflict, it is recommended to change the port to some other address by editing the \textit{$conf/sample.ini$} file.
+
+
+Once the server is started, browse \textit{localhost:3000} to open the Grafana web interface. Select an option to add a new data source and configure the InfluxDB data source as shown in Figure \ref{fig:gr_db_setup}. A database name, an IP address where the database is running, a username and a password are required to set it up.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/gr_db_setup}
+	\caption{
+		InfluxDB data source setup in Grafana.
+	}
+	\label{fig:gr_db_setup}
+\end{figure}
 
 
 
- \begin{figure}[htpb]
+\begin{figure}[htpb]
 	\centering
 	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/dashboard}
 	\caption{
@@ -75,12 +75,12 @@ It allows us to connect to these data sources on just few click which makes it v
 	\label{fig:dashboard}
 \end{figure}
 
-Once the data source is setup, a dashboard is created to add the graphs and panels where the data is visualized. Multiple types of panels are available by default such as table, graphs, text, single stat, alert list, etc.
+Once the data source is set up, a dashboard is created to add the graphs and panels where the data is visualized. Multiple types of panels are available by default such as table, graphs, text, single stat and alert list.
 
-Lets say a graph is added to the dashboard. Now, a data source is need to be defined for the graph. That can be done by selecting the graph and edit it. The interface for setting up the data source for graph can be seen in Figure \ref{fig:gr_query}. A very user-friendly interface is available where one can define a query for the panel. A query can be build just by selecting the option from drop down. It will contains all the information from the database that is setted up in the data source, that shown in Figure \ref{fig:gr_db_setup}. So user simply needs to select the data source, then from the measurements select the specific measurement that wants to be chosen. One measurement can have multiple fields therefore, select a specific field which needs to be displayed on graph. Once all the steps are done, the panel is ready to display the information from the InfluxDB.
+When a graph is added to a dashboard, a data source is needed to be defined for the graph. That can be done by selecting the graph and edit it. The interface for setting up the data source for the graph can be seen in Figure \ref{fig:gr_query}. A very user-friendly interface is available where one can define a query for the graph. A query can be build just by selecting the option from drop down. It will contain all the information from the database that is set up in the data source, that shown in Figure \ref{fig:gr_db_setup}. A user simply needs to select the data source, then from the measurements select the specific measurement that wants to be chosen. One measurement can have multiple fields, therefore, select a specific field, which needs to be displayed on a graph. Once all the steps are done, the panel is ready to display the information from the InfluxDB.
 
 
- \begin{figure}[htpb]
+\begin{figure}[htpb]
 	\centering
 	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/gr_query}
 	\caption{
@@ -91,19 +91,10 @@ Lets say a graph is added to the dashboard. Now, a data source is need to be def
 
 
 \section{Lambda Architecture for Big Data Processing} \label{sec:lmb_arc}
-The amount of data being processed nowadays is enormous, and this is often coined as Big Data. Big data is everywhere in the form of web logs, events, social networks, sensors data,etc, and these all are generating around petabytes of data each day. And because of this humongous amount of data, the traditional tools and storage technologies are unable to handle and cope with it. Therefore, this has led to a technology phase shift how we keep and manage our data, and to the development of Advance Analytics solutions.
+The amount of data being processed nowadays is enormous, and this is often coined as Big Data. Big data is everywhere in the form of weblogs, events, social networks, and sensors data, and these all are generating around petabytes of data each day. And because of this humongous amount of data, the traditional tools and storage technologies are unable to handle and cope with it. Therefore, this has led to a technology phase shift how we keep and manage our data, and to the development of Advance Analytics solutions.
 
-Lambda Architecture \cite{UBDLAH} \cite{oreillyla} \cite{7364082} \cite{maprla} is getting involved in machine learning and data science applications day by day by enabling the real-time data processing and analytics without using the traditional ETL approach. It is designed to address the fault-tolerance, scalability and robustness issues of big data systems. Moreover, Lambda Architecture also ensure the low-latency and accuracy of the result. It combines the power of stream processing with batch processing to provide such kind of system.
+Lambda Architecture \cite{UBDLAH} \cite{oreillyla} \cite{7364082} \cite{maprla} is getting involved in machine learning and data science applications day by day by enabling the real-time data processing and analytics without using the traditional ETL approach. It is designed to address the fault-tolerance, scalability and robustness issues of big data systems. Moreover, Lambda Architecture also ensures the low-latency and accuracy of the result. It combines the power of stream processing with batch processing to provide such kind of system.
 Lambda architecture, as shown in Figure \ref{fig:lambda_arc}, consists of 3 main components:
-
-
-\begin{enumerate}
-	\item Speed Layer
-	\item Batch Layer
-	\item Serving Layer
-	
-\end{enumerate}
-
 
 \begin{figure}[htpb]
 	\centering
@@ -117,15 +108,15 @@ Lambda architecture, as shown in Figure \ref{fig:lambda_arc}, consists of 3 main
 
 
 \subsection{Batch Layer}
-The Batch layer will hold all of the master data which will be stored in Apache Hadoop. This data will be kept in its original state, untouched and in an immutable manner. This data will be processed and generate the batch views which then will be served in the serving layer. This is the place which will provide the most accurate results from the data using any of the available distributed platform tools.
+The Batch layer holds all of the master data, which is stored in Apache Hadoop. This data is kept in its original state, untouched and in an immutable manner. This data is processed and generate the batch views, which are served in the serving layer. The batch view provides the most accurate results from the data using any of the available distributed platform tools.
 
 \subsection{Speed Layer}
-Typically, it is known that a Hadoop processing frameworks are slow and take a lot of time. To cope up with this problem, Lambda Architecture introduces the speed layer. Speed layer process the real-time stream and generate the real-time views of a short time frame, which are then serve in a serving layer along with batch views. The main point to notice here is that the speed layer data is temporal in nature, i.e. it can only store that much amount of data that could be kept in the memory. And it is deleted as soon as one batch process is completed.
+Typically, it is known that a Hadoop processing frameworks are slow and take a lot of time. To cope up with this problem, Lambda Architecture introduces a speed layer. Speed layer processes the real-time stream and generates the real-time views of a short time frame, which are then served in a serving layer along with batch views. The main point to notice here is that the speed layer data is temporal in nature, i.e. it can only store that much amount of data that could be kept in the memory. And it is deleted as soon as one batch process is completed.
 
 \subsection{Serving Layer}
-This is a place where the final results and data are visualized. Serving layer provides an interface which integrates real-time views with batch views and unified them together. An accurate view of data will be presented by the batch layer, whereas the fresh view of the data will be presented by the speed layer. It also supports ad-hoc queries which are optimized for low-latency. Technologies which can be used in this layers are Cassandra, HBase, etc.
+This is a place where the final results and data are visualized. Serving layer provides an interface, which integrates real-time views with batch views and unified them together. An accurate view of data will be presented by the batch layer, whereas the fresh view of the data will be presented by the speed layer. It also supports ad-hoc queries, which are optimized for low-latency. Technologies that can be used in this layers are Cassandra and HBase.
 
-The data source will provide the data which will be streamed in the stream layer and at the same time to the batch layer. Batch layer will hold the data for a long time and stream layer will process the stream in a window of short time and then provide the calculated result. The serving layer will combine the data received from the batch layer, more specifically the batch views, and the data received from the speed layer and allow them to query from a single interface. The advantage of the Lambda Architecture is that if one layer is down, the other layer can be used to make system available. For example, in Figure \ref{lambda_arc_1}, if a speed layer is down, which of course can happen in the production environment, The batch layer can be used to compensate the failure.
+The data source provides the data, which is streamed in the stream layer and at the same time to the batch layer. A batch layer holds the data for a long time and stream layer processes the stream in a window of short time and then provide the calculated result. The serving layer combines the data received from the batch layer, more specifically the batch views, and the data received from the speed layer, and allow them to query from a single interface. The advantage of the Lambda Architecture is that if one layer is down, the other layer can be used to make the system available. For example, in Figure \ref{lambda_arc_1}, if a speed layer is down, which of course can happen in the production environment, The batch layer can be used to compensate the failure.
 
 
 \begin{figure}[htpb]
@@ -137,7 +128,7 @@ The data source will provide the data which will be streamed in the stream layer
 	\label{fig:lambda_arc_1}
 \end{figure}
 
-The reason why it is called lambda architecture is because the lambda symbol splits into two parts which in case of this architecture represents the batch layer and the speed layer. 
+The reason why it is called lambda architecture is that the lambda symbol splits into two parts, which in case of this architecture represents the batch layer and the speed layer. 
 
 \begin{figure}[htpb]
 	\centering
@@ -148,7 +139,7 @@ The reason why it is called lambda architecture is because the lambda symbol spl
 	\label{fig:lambda}
 \end{figure}
 
-Typically, the data stream is implemented using a publish-subscribe messaging system such as Kafka, which can easily scale for high velocity data ingestion. It can be thought of as a place where publishers publish their data and the consumers read data from it. This is different from the traditional queue as it keeps the data until we let it to hold. In contrast, the data will be removed from the queue, once it is delivered to the appropriate consumer of the data. It uses topics to publish and to subscribe for the data. Every Kafka server is known as broker and since it is a distributed system, therefore, there can be more than one broker. The more the number of brokers are, the higher the availability is. The advantage of having Kafka is that it can handle many different forms of data, such as sensors data, application events, server logs, social network events etc. Kafka is very fast despite of having heavy load.
+Typically, the data stream is implemented using a publish-subscribe messaging system such as Kafka, which can easily scale for high-velocity data ingestion. It can be thought of as a place where publishers publish their data and the consumers read data from it. This is different from the traditional queue as it keeps the data until we let it hold. In contrast, the data is removed from the queue, once it is delivered to the appropriate consumer of the data. It uses topics to publish and to subscribe to the data. Every Kafka server is known as a broker and since it is a distributed system, therefore, there can be more than one broker. The more the number of brokers is, the higher the availability of the system is. The advantage of having Kafka is that it can handle many different forms of data, such as sensors data, application events, server logs, and social network events. Kafka is very fast despite having a heavy load.
 
 \begin{figure}[htpb]
 	\centering
@@ -160,22 +151,12 @@ Typically, the data stream is implemented using a publish-subscribe messaging sy
 \end{figure}
 
 
-The implementation of lambda architecture has been shown in Figure \ref{fig:impl_lambda_arc}. The data will directly be published from data source to Kafka based on some topic. Data from multiple data sources can be collected via Kafka based on different topic names. Once the data is fed into the Kafka, the corresponding consumers will read the data from Kafka using the topic name where the data publish to. In this architecture, Apache Spark can be used in both the batch layer and the speed layer. 
+The implementation of lambda architecture is shown in Figure \ref{fig:impl_lambda_arc}. The data is directly published from the data source to Kafka based on some topic. Data from multiple data sources can be collected via Kafka based on different topic names. Once the data is fed into the Kafka, the corresponding consumers will read the data from Kafka using the topic name. In this architecture, Apache Spark can be used in both the batch layer and the speed layer. 
 
-Apache Spark is a large-scale data processing tool, which runs 100 times faster than the Hadoop MapReduce by caching the data objects in the memory. Thus, it is a strong candidate to replace the MapReduce. It also creates a lineage graph. So, in case of failure, it can do the computations again and go back to the last state of the data. These are two of the fundamental things that Resilient Distributed Data Set (RDD) is all about. It is specially designed to schedule and execute a large amount of data. Apache Spark does not only provide the batch processing, but it also comes with real-time stream processing, machine learning tools, graph processing, Spark SQL, Spark R and complex analytics. It is designed to run everywhere, such as it can run on Hadoop YARN, apache Mesos or standalone as well. Apache Spark offers interface for several languages to write the applications. The available languages are Java, Scala, Python and R.
-
-
-\section{System Architecture}
-A system has been implemented to collect, process and visualize the data for all the sensors based on the lambda architecture defined in Section \ref{sec:lmb_arc}. But the system has been modified according to the requirements and because of the lack of enough resources to run all the big data tools. The system architecture can be seen in Figure \ref{fig:sys_arc} .
-
-An architecture has been implemented in \textit{pytho} language, which first collects the data from all sensors based on their protocol. The data is then immediately stored in InfluxDB in order to have the original state of the data, as shown in Figure \ref{fig:using_ann}. The data is then cleaned and processed to do the further operations on it, such as for the ECG signal, the feature extraction. 
-
-The main focus of this thesis is on cardiac, therefore, most of the implementation is based on ECG sensor. The NI USB-6259 is used for the signal acquisition. The sample rate of 360 Hz has been used as the deep learning model was trained on 360 Hz frequency data. The same feature extraction algorithm is used that is defined in Section \ref{sec:ecg_det}. Once the R wave is detected, 100 points to the left and 150 points to the right of the R peaks are selected to make a single ECG signal of 250 sample points, which was then passed to the deep learning model to predict the arrhythmia. The window of 10 seconds is used for calculating the heart rate. The complete process is shown in Figure \ref{fig:using_ann}. Once the features are extracted, the cleaned signal and the extracted features are saved in InfluxDB immediately to save the state of the signal.
-
-Once all the information is stored in the InfluxDB, then the Grafana takes the job. It retrieves the desired data from InfluxDB and display it on the dashboard. Grafana provides many other options as well, such as, the refresh time, i.e, how much time retrieves the new data from InfluxDB. If the data is coming from other machine and the clock time is not same, Grafana gives an option to shift the time to adjust the panels and many other helpful functions.
+Apache Spark is a large-scale data processing tool, which runs 100 times faster than the Hadoop's MapReduce by caching the data objects in the memory. Thus, it is a strong candidate to replace the MapReduce. It also creates a lineage graph. So, in case of failure, it can do the computations again and go back to the last state of the data. These are two of the fundamental things that Resilient Distributed Data Set (RDD) is all about. It is specially designed to schedule and execute a large amount of data. Apache Spark does not only provide the batch processing, but it also comes with real-time stream processing, machine learning tools, graph processing, Spark SQL, Spark R and complex analytics. It is designed to run everywhere, such as it can run on Hadoop YARN, Apache Mesos or standalone as well. Apache Spark offers an interface for several languages to write the applications. The available languages are Java, Scala, Python, and R.
 
 
-\begin{figure}[htpb]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/sys_arc}
 	\caption{
@@ -184,16 +165,32 @@ Once all the information is stored in the InfluxDB, then the Grafana takes the j
 	\label{fig:sys_arc}
 \end{figure}
 
+\section{System Architecture}
+A system has been implemented to collect, process and visualize the data of all the sensors based on the lambda architecture defined in Section \ref{sec:lmb_arc}. But the architecture has been modified because of the lack of enough resources to run all the big data tools. The modified system architecture can be seen in Figure \ref{fig:sys_arc}. The python language has been used for the system implementation. Moreover, big data tools such as Kafka and Apache Spark have been removed from the architecture.
+
+The architecture contains 3 main layers:
+
+\subsection{Data Layer}
+The data layer contains all the sensors, which generate data in real-time. The data is collected via data pipeline based on their protocol and submit to the speed layer. The data is also immediately stored in InfluxDB in order to have the original state of the data.
 
 \begin{figure}[htpb]
 	\centering
-	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/using_ann}
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/ann_usage_speed_layer.png}
 	\caption{
 		Using the deep learning model in real-time environment.
 	}
 	\label{fig:using_ann}
 \end{figure}
 
+
+The NI USB-6259 is used for the ECG and BCG signal acquisition. The sample rate of 360 Hz has been used for ECG signal as the deep learning model is trained on 360 Hz frequency data. The PPG and MI sensors data is collected via serial COM ports.
+
+\subsection{Speed Layer}
+The speed layer is the heart of the architecture where all the data is processed and classified by the CNN model. The ECG sensor data is first cleaned and the features are extracted from it.
+To extract the ECG signal features, the algorithm is used that is defined in Section \ref{sec:ecg_det}. Once the R peaks are detected, the single ECG signal corresponding to that R peak consisting of P, Q, R, S and T peaks is extracted one by one, which is then passed to the deep learning model for the arrhythmia classification. The other vital signs are also calculated such as heart rate and temperature. The processed signals and the vital signs are also stored in the InfluxDB. The detail view of speed layer is shown in Figure \ref{fig:using_ann}.
+
+\subsection{Serving Layer}
+The serving layer allows the sensor signals and vital signs to be visualized. Grafana and android tablets are used for the visualization. Grafana retrieves the desired data from InfluxDB and displays it on the dashboard. Grafana provides many other options as well such as the refresh time. It specifies after how much time query for the new data. 
 
 The Grafana dashboards for ECG, MI and PPG sensors can be seen in Figure \ref{fig:ecg_dsh}, \ref{fig:mi_dsh} and \ref{fig:ppg_dsh} respectively.
 
@@ -225,8 +222,23 @@ The Grafana dashboards for ECG, MI and PPG sensors can be seen in Figure \ref{fi
 	\label{fig:ppg_dsh}
 \end{figure}
 
+
+\subsubsection{Android Application}
+An android application has been written so the sensors data can be visualized directly on your mobile devices as well. The advantage of the Android application is that it is very lightweight and does not require any dependency to visualize the data. The screenshot of an Android application can be seen in Figure \ref{fig:ecg_and}.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/ecg_and}
+	\caption{
+		Real-time ECG signal visualization on android application.
+	}
+	\label{fig:ecg_and}
+\end{figure}
+
+
+
 \section{Device Management Interface}
-Starting the system via console is not a very convenient way to interact with the devices. Therefore, a simple web view interface has also been made to operate the sensor devices. The devices can be start, stop and in case of error, the logs can be viewed directly in the same interface. The interface pictures can be seen in Figure \ref{fig:web_int_dev}.
+Starting the system via console is not a very convenient way to interact with the devices. Therefore, a simple web view interface has also been made to operate the sensor devices. The devices can be started, stopped and in case of error, the logs can be viewed directly in the same interface. The designed interface is shown in Figure \ref{fig:web_int_dev}.
 
 
 \begin{figure}%
@@ -244,17 +256,3 @@ Starting the system via console is not a very convenient way to interact with th
 		\subref{fig:ex3-d} the log view to know the state of each device.}%
 	\label{fig:web_int_dev}%
 \end{figure}
-
-
-\section{Android Application}
-The purpose of this thesis is to implement a system which allows to visualize the data from anywhere. Sometimes, it is not very convenient to visualize the data on laptop, therefore, an android application has been written so the sensors data can be visualized directly on your mobile device as well. The advantage of android application is that it is very light weight and does not require any dependency to visualize the data. The screen shot of android application can be seen in Figure \ref{fig:ecg_and}.
-
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[width=16cm,height=15cm,keepaspectratio=true]{images/ecg_and}
-	\caption{
-		Real-time ECG signal visualization on android application.
-	}
-	\label{fig:ecg_and}
-\end{figure}
- 

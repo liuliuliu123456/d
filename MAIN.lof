@@ -36,11 +36,11 @@
 \contentsline {figure}{\numberline {\relax 3.18}{\ignorespaces The denoised PPG signal using band-pass filter. }}{43}{figure.3.18}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Basic supervised machine learning workflow. }}{46}{figure.4.1}
-\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces An artificial neural network with its 3 basic layers\cite {wiki:ann}. }}{47}{figure.4.2}
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces An artificial neural network with its 3 basic layers \cite {wiki:ann}. }}{47}{figure.4.2}
 \contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces A single artificial neuron. }}{48}{figure.4.3}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Activation functions\cite {ujjwalkarn}. }}{49}{figure.4.4}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Activation functions \cite {ujjwalkarn}. }}{49}{figure.4.4}
 \contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Convolutional neural network example. }}{50}{figure.4.5}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Max pooling layer example. }}{51}{figure.4.6}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Max pooling layer example. }}{50}{figure.4.6}
 \contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces A 6-layer Convolutional Neural Network model for the identification of cardiac arrhythmia. }}{52}{figure.4.7}
 \contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Layers used in the model and number of parameters to be optimized. }}{53}{figure.4.8}
 \contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces A set of four subfigures.}}{54}{figure.4.9}
@@ -51,12 +51,12 @@
 \contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Lambda architecture. }}{61}{figure.5.4}
 \contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Using more data from serving layer in case of speed layer having a problem. }}{62}{figure.5.5}
 \contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Lambda symbol representing the lambda architecture. }}{63}{figure.5.6}
-\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Implementation of lambda architecture. }}{64}{figure.5.7}
-\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces System architecture for the sensors. }}{65}{figure.5.8}
-\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Using the deep learning model in real-time environment. }}{66}{figure.5.9}
-\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Real-time ECG signal visualization. }}{67}{figure.5.10}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Implementation of lambda architecture. }}{63}{figure.5.7}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces System architecture for the sensors. }}{64}{figure.5.8}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Using the deep learning model in real-time environment. }}{65}{figure.5.9}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Real-time ECG signal visualization. }}{66}{figure.5.10}
 \contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Real-time MI signal visualization. }}{67}{figure.5.11}
-\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Real-time PPG signal visualization. }}{68}{figure.5.12}
-\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces The device management interface.}}{69}{figure.5.13}
-\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Real-time ECG signal visualization on android application. }}{70}{figure.5.14}
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Real-time PPG signal visualization. }}{67}{figure.5.12}
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Real-time ECG signal visualization on android application. }}{68}{figure.5.13}
+\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces The device management interface.}}{69}{figure.5.14}
 \addvspace {10\p@ }

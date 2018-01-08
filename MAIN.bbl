@@ -17,6 +17,12 @@
   --
 \newblock ISBN 9781482251333
 
+\bibitem[AL07]{aleksandrowicz2007wireless}
+\textsc{Aleksandrowicz}, Adrian ; \textsc{Leonhardt}, Steffen:
+\newblock Wireless and Non-contact ECG Measurement System--the "Aachen
+  SmartChair".
+\newblock {In: }\emph{Acta Polytechnica} 47 (2007), Nr. 4-5
+
 \bibitem[bil17]{bilagi}
 \textsc{bilagi}:
 \newblock \emph{arrhythmia}.
@@ -160,6 +166,14 @@
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 29-December-2017]
 
+\bibitem[KLP04]{kim2004electrically}
+\textsc{Kim}, Ko~K. ; \textsc{Lim}, Yong~K.  ; \textsc{Park}, Kwang~S.:
+\newblock The electrically noncontacting ECG measurement on the toilet seat
+  using the capacitively-coupled insulated electrodes.
+\newblock {In: }\emph{Engineering in Medicine and Biology Society, 2004.
+  IEMBS'04. 26th Annual International Conference of the IEEE} Bd.~1 IEEE, 2004,
+  S. 2375--2378
+
 \bibitem[KMM{\etalchar{+}}15]{7364082}
 \textsc{Kiran}, M. ; \textsc{Murphy}, P. ; \textsc{Monga}, I. ; \textsc{Dugan},
   J.  ; \textsc{Baveja}, S.~S.:
@@ -180,6 +194,13 @@
 \textsc{Limaye}, Mr~H. ; \textsc{Deshmukh}, Mrs~V.:
 \newblock ECG Noise Sources and Various Noise Removal Techniques: A Survey.
 \newblock
+
+\bibitem[LKP04]{lim2004ecg}
+\textsc{Lim}, Yong~K. ; \textsc{Kim}, Ko~K.  ; \textsc{Park}, Kwang~S.:
+\newblock The ECG measurement in the bathtub using the insulated electrodes.
+\newblock {In: }\emph{Engineering in Medicine and Biology Society, 2004.
+  IEMBS'04. 26th Annual International Conference of the IEEE} Bd.~1 IEEE, 2004,
+  S. 2383--2385
 
 \bibitem[LU17]{naturectlesshcs}
 \textsc{Leena~Ukkonen}, Lauri~S.:
@@ -258,6 +279,12 @@
   012085.
 \newblock \url{http://stacks.iop.org/1742-6596/434/i=1/a=012085}
 
+\bibitem[Neu98]{neuman1998biopotential}
+\textsc{Neuman}, Michael~R.:
+\newblock Biopotential amplifiers.
+\newblock {In: }\emph{Medical instrumentation: application and design}  (1998),
+  S. 292--296
+
 \bibitem[Pie91]{PIETKA1991139}
 \textsc{Pietka}, Ewa:
 \newblock Feature extraction in computerized approach to the ecg analysis.
@@ -333,6 +360,15 @@
   \url{https://books.google.de/books?id=Z76N\_Ab5pp8C}. --
 \newblock ISBN 9780961408879
 
+\bibitem[SSLO07]{shen2007detection}
+\textsc{Shen}, Tsu-Wang ; \textsc{Shen}, Hsiao-Ping ; \textsc{Lin}, Ching-Heng
+  ; \textsc{Ou}, Yi-Ling:
+\newblock Detection and prediction of sudden cardiac death (SCD) for personal
+  healthcare.
+\newblock {In: }\emph{Engineering in Medicine and Biology Society, 2007. EMBS
+  2007. 29th Annual International Conference of the IEEE} IEEE, 2007, S.
+  2575--2578
+
 \bibitem[sum17]{sumdu}
 \textsc{sumdu}:
 \newblock \emph{arrhythmia}.
@@ -370,6 +406,13 @@
   reconstruction.
 \newblock {In: }\emph{Beijing Biomedical Engineering} 20 (2001), Nr. 1, S.
   25--28
+
+\bibitem[WZ08]{wu2008contactless}
+\textsc{Wu}, Kin-fai ; \textsc{Zhang}, Yuan-ting:
+\newblock Contactless and continuous monitoring of heart electric activities
+  through clothes on a sleeping bed.
+\newblock {In: }\emph{Information Technology and Applications in Biomedicine,
+  2008. ITAB 2008. International Conference on} IEEE, 2008, S. 282--285
 
 \bibitem[XHT92]{126604}
 \textsc{Xue}, Q. ; \textsc{Hu}, Y.~H.  ; \textsc{Tompkins}, W.~J.:
