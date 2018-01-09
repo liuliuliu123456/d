@@ -1,17 +1,17 @@
 \chapter{Introduction}
 
-Around one billion people travel on airlines annually \cite{PMC2577402}, \cite{aerospace2003medical}. It has also been predicted that the number will be doubled in two decades. During a flight, emergencies occur at a rate of 20 to 100 per million passengers. Many of the cases are not even on the record as there is no proper reporting system. The most common in-flight complaints are related to respiration, cardiac, traumatic or gastrointestinal related cases. Out of these, cardiac and respiration related complaints are the most serious. During in-flight medical emergencies, a doctor is present only 30 to 60 percent of the time \cite{PMC2577402}, \cite{PMC1119071}. This number may have changed as the article was published in 2008.
+Around one billion people travel on airlines annually \cite{PMC2577402}, \cite{aerospace2003medical}. It has also been predicted that the number will be doubled in two decades. During a flight, emergencies occur at a rate of 20 to 100 per million passengers. Many of the cases are not even on the record as there is no proper reporting system. The most common in-flight complaints relate to respiratory, cardiac, traumatic or gastrointestinal related cases. Out of these, cardiac and respiration related complaints are the most serious. During in-flight medical emergencies, a doctor is present only 30 to 60 percent of the time \cite{PMC2577402}, \cite{PMC1119071}. This number may have changed as the article was published in 2008.
 
 
 \section{Motivation}
 
 Environmental changes such as the rising of altitude, the level of oxygen gradually decreases as the air weakens, including the reduction of atmospheric pressure, temperature, and humidity. As a result, the heart rate increases as it tries to deliver more oxygen to the muscles, which can lead to fainting or even heart attacks among some passenger.
 
-It is important to realize that the onboard medical resources are limited. Therefore, a technological advancement is required, which can reduce the workload of doctors during a flight. Healthcare is one of the hottest research areas in this era. Monitoring of vital signs, parameter, like respiration, ECG, EEG, temperature, and heart rate are of great importance.
+It is important to realize that the on-board medical resources are limited. Therefore, a technological advancement is required, which can reduce the workload of doctors during a flight. Healthcare is one of the hottest research areas in this era. Monitoring of vital signs, parameter, like respiration, ECG, EEG, temperature, and heart rate are of great importance.
 
 A variety of technologies are already available for measuring the vital signs \cite{naturectlesshcs}. They include traditional stethoscopes, electrodes for measuring ECG, and different types of gauges, but they have their drawbacks in terms of comfort and convenience. For example, to measure the ECG, the electrodes are required to be directly attached to the skin of a patient, which is very inconvenient and limits the patient's movement. Blood pressure measurement using Sphygmomanometer that uses belts or cuffs to measure the blood pressure, which again limits the daily activities. Even though these technologies are reliable and provide better results, but they are inadequate for long-term everyday activities.
 
-Contactless sensors are the next big topic in the healthcare. Multiple vital signs can be measured with these sensors without any need of  direct contact to the body. They are designed in such a way that they can be integrated in the daily surroundings without any disruption. Different techniques have been used to integrate contact-less sensors into bathtubs \cite{lim2004ecg}, chairs \cite{aleksandrowicz2007wireless}, smartwatches, smartphones, toilet seats \cite{kim2004electrically}, and beds \cite{wu2008contactless} to measure different vital signs. 
+Contactless sensors are the next big topic in the healthcare. Multiple vital signs can be measured with these sensors without any need of direct contact with the body. They are designed in such a way that they can be integrated into the daily surroundings without any disruption. Different techniques have been used to integrate contact-less sensors into bathtubs \cite{lim2004ecg}, chairs \cite{aleksandrowicz2007wireless}, smartwatches, smartphones, toilet seats \cite{kim2004electrically}, and beds \cite{wu2008contactless} to measure different vital signs. 
 
 The distributed computing, streaming analytics, and machine learning have become more powerful, cheaper, and faster \cite{maprmliotmed}, and they can be applied in various industries:
 
@@ -28,19 +28,28 @@ The combination of streaming data, big data analysis, and machine learning can b
 
 \section{Literature Review}
 
-Variety of methods and devices are available to measure vital signs. The majority of these contributions are based on direct contact with the skin. Jeong et al. \cite{jeong2005continuous} measures the blood pressure. They measures the pulse wave using a PPG sensor, which was attached to the earlobe, and a ECG monitoring device with electrodes. Usually electrodes are used to measure the signals from the human body \cite{shen2007detection}, \cite{neuman1998biopotential}.
+Variety of methods and devices are available to measure vital signs. The majority of these contributions based on direct contact with the skin. Jeong et al. \cite{jeong2005continuous} measures the blood pressure. They measure the pulse wave using a PPG sensor, which was attached to the earlobe, and an ECG monitoring device with electrodes. Usually electrodes are used to measure the signals from the human body \cite{shen2007detection}, \cite{neuman1998biopotential}.
 
-Many attempts have been made to use sensors that do not require direct contact with the body, but still they depends on dry electrode which do not require gel. Jin-Chern Chiou et al. in their study \cite{4600301} showed that how they used the fabricated dry electrodes to measure the EEG signal. There resuts showed that dry electrodes perform comparably to the conventional electrodes, but the problem with these approach is that they are limited to only specific areas of the body with no hair where the contact is good.
+Many attempts have been made to use sensors that do not require direct contact with the body, but still, they depend on dry electrodes which do not require gel. Jin-Chern Chiou et al. in their study \cite{4600301} showed that how they used the fabricated dry electrodes to measure the EEG signal. Their results showed that dry electrodes perform comparably to the conventional electrodes, but the problem with this approach is that they are limited to only specific areas of the body with no hair where the contact is good.
 
-In last few years, contactless sensors have gain popularity and have been conspired to measure the signals. Thomas et al. \cite{sullivan2007low} presented a gel-free, non-contact ECG/EEG sensor that capacitively coupled to the skin and can operate up to 3mm distance to the skin. Professor S. Leonhardt \cite{aleksandrowicz2007wireless} described in his paper, how the ECG signal was measured using capacitative coupled electrodes that was integrated in an office chair. The signal was measured through a shirt without any direct contact to the skin. Kin-fai Wu et al. \cite{wu2008contactless} in their work proposed a heart rate monitoring system based on a bed, which used contactless electrodes to measured the ECG signal. The design was based on a bedsheet which is made up of highly conductive material, together with a separate measuring device, which can measure the ECG signal of a lying subject through clothes. Yong Kyu Lim et al. \cite{lim2004ecg} measured the ECG signal using insulated electrodes. the electrodes were attached on bathtub at both sides of the chest. The recorded signal in their study was noisier as compared to the conventional electrodes signal. But the R peaks were large enough to be detected, which can helps to get various vital signs. Yong Kyu Lim et al. in their another study \cite{kim2004electrically} measured the ECG signal on a the toilet seat. The capactive coupled electrodes were used that was insulated on a toilet seat.
+In the last few years, contactless sensors have gained popularity and have been conspired to measure the signals. Thomas et al. \cite{sullivan2007low} presented a gel-free, non-contact ECG/EEG sensor that capacitively coupled to the skin and can operate up to 3mm distance to the skin. Professor S. Leonhardt \cite{aleksandrowicz2007wireless} described a technique to measure the ECG signal using capacitive coupled electrodes, integrated into an office chair. The signal was measured through a shirt without any direct contact with the skin. Kin-fai Wu et al. \cite{wu2008contactless} in their work proposed a heart rate monitoring system based on a bed, which used contactless electrodes to measure the ECG signal. The design is based on a bedsheet, which is made up of highly conductive material, together with a separate measuring device, which can measure the ECG signal of a lying subject through clothes. 
 
+Electronics company muRata have created under-the-bed sensor  \cite{muratabcg bed}. The sensor uses BCG principle and uses an accelerometer to capture the micro movements caused by respiration and heart. The sensor can measure heart rate, respiration rate, heart rate variability and stroke volume.
 
+Yong Kyu Lim et al. \cite{lim2004ecg} measured the ECG signal using insulated electrodes. The electrodes were attached to the bathtub on both sides of the chest. The recorded signal in their study was noisier as compared to the conventional electrodes signal. But the R peaks were large enough to be detected, which can help to get various vital signs. Yong Kyu Lim et al. in their another study \cite{kim2004electrically} measured the ECG signal on a toilet seat. The capacitive coupled electrodes were used that was insulated on a toilet seat.
+
+Many researchers have used previously traditional machine learning techniques to classify the ECG signals, but the problem with that approach is that the model depends on the researcher's understanding of the data, which is a huge burden. Recent advancement in deep learning techniques has attracted the researchers to implement these techniques in the healthcare.
+
+In 2016 Jun et al. \cite{7838258} proposed a deep neural network to recognize premature ventricular contraction (PVC) beats in an ECG signal. A deep neural network with 6 hidden layers was trained using the TensorFlow library to classify PVC and normal ECG signals. Pourbabaee et al. \cite{7727866} trained a deep convolutional neural network to classify the normal ECG signals with paroxysmal atrial fibrillation (PAF).
+
+In the above both studies, the deep neural network can only classify two different ECG signals. Isin et al. \cite{Isin2017268} used a transferred deep convolutional neural network to classify three different types of ECG signals. In their study, they have used a deep learning framework AlexNet (Krizhevsky et al., 2012) that was previously trained on the general image dataset to carry out the classification of ECG signals. 
 
 \section{Aim}
 
-The aim of this thesis is to build a software system that provides a healthcare solution, which would be able to track the pilot's vital signs such as heart rate, temperature, and ECG. Moreover, it should be able detect the cardiac arrhythmias in real-time with a deep learning model.
+The aim of this thesis is to build a software system that provides a healthcare solution, which would be able to track various vital signs such as heart rate, temperature, and ECG. Moreover, it should be able to detect the cardiac arrhythmias in real-time with a deep learning model.
 
-Multiple contactless sensors are used in the development of the system to measure various vital signs of pilots. These sensors include:
+The non-contact multi-sensors system consists of the following sensors:
+
 
 \begin{enumerate}
 	\item Capacitive ECG sensor
@@ -50,26 +59,29 @@ Multiple contactless sensors are used in the development of the system to measur
 	\item Thermal camera
 \end{enumerate}
 
-These sensors will be installed in the pilot seat so they can continuously track the health status of the pilot during a course of the flight. The early identification of the disease can help to provide a proper treatment to the pilot, as well as can stop from reaching any dangerous situation.
 
-An arrhythmia can be harmless or life threating. Therefore, for pilot, a thorough medical evaluation is necessary to assess the severity of arrhythmia for the safety of both pilot and the passengers.
+There can be many use cases where this system can be implemented such as trains, buses, and cars. The use case which is focused in this thesis is the aircraft where the vital parameters of the pilot can be measured.
 
+This system is integrated with non-contact multi-sensors in order to monitor the vital parameters and cardiac related conditions of a pilot during the course of a flight. The early identification of the disease can help to provide a proper treatment to the pilot, as well as can stop from reaching any dangerous situation.
 
-A deep learning model has been designed based on a convolutional neural network in order to detect the cardiac arrhythmias. Various cardiac arrhythmia dataset have taken from the existing dataset. The advantage of using CNN is that, unlike other machine learning algorithms, it does not require a feature extraction phase.
+An arrhythmia can be harmless or life threatening. Therefore, for a pilot, a thorough medical evaluation is necessary to assess the severity of arrhythmia for the safety of both pilots and the passengers.
 
-Multiple platforms have been used along with tablets to visualize the results in hand in real-time. A cloud has been set up to store all the sensors data and vital signs so the data can be accessed from anywhere in the world.
-The sensor's data can also be used for different purposes such as for the re-training of the deep learning model.
+A deep learning model has been designed based on a convolutional neural network in order to detect the cardiac conditions in real-time. The model can detect 4 different types of ECG signals. Various cardiac arrhythmia datasets have taken from the existing dataset. The advantage of using CNN is that, unlike other machine learning algorithms, it does not require a feature extraction phase.
 
+Multiple platforms have been used along with tablets to visualize the results in hand in real-time. A cloud has been set up to store all the sensors data and vital parameters so the data can be accessed from anywhere in the world. The sensor's data can also be used for different purposes such as for the re-training of the deep learning model.
 
 
 \section{Objective}
-The objective of this thesis are as follow:
+
+The objectives of this thesis are as follow:
 
 \begin{itemize}
 	\item Programming of a software visualization (cECG, MI, BKG, and PPG) for a PC along with the tablet notification and visualization
 	\item Construction of the data bank on the cloud
 	\item Preprocessing of the signals and feature extraction
-	\item Arrhytmia data collection
+	\item Arrhythmia data collection
 	\item Deep learning of the cardiac conditions
-	\item Evaluation of the algorithm with real-time data from the sensors
+	\item Evaluation of the algorithm with real-time data from the non-contact multi-sensors system
 \end{itemize}
+
+

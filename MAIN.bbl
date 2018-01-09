@@ -168,12 +168,32 @@
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 31-December-2017]
 
+\bibitem[IO17]{Isin2017268}
+\textsc{Isin}, Ali ; \textsc{Ozdalili}, Selen:
+\newblock Cardiac arrhythmia detection using deep learning.
+\newblock {In: }\emph{Procedia Computer Science} 120 (2017), 268 - 275.
+\newblock \url{http://dx.doi.org/https://doi.org/10.1016/j.procs.2017.11.238}.
+  --
+\newblock DOI https://doi.org/10.1016/j.procs.2017.11.238. --
+\newblock ISSN 1877--0509. --
+\newblock 9th International Conference on Theory and Application of Soft
+  Computing, Computing with Words and Perception, \{ICSCCW\} 2017, 22-23 August
+  2017, Budapest, Hungary
+
 \bibitem[Iye17]{quora:Sulakshana}
 \textsc{Iyer}, Sulakshana:
 \newblock \emph{Why is data visualization important}.
 \newblock \url{https://www.quora.com/Why-is-data-visualization-important}.
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 29-December-2017]
+
+\bibitem[JPM{\etalchar{+}}16]{7838258}
+\textsc{Jun}, T.~J. ; \textsc{Park}, H.~J. ; \textsc{Minh}, N.~H. ;
+  \textsc{Kim}, D.  ; \textsc{Kim}, Y.~H.:
+\newblock Premature Ventricular Contraction Beat Detection with Deep Neural
+  Networks.
+\newblock {In: }\emph{2016 15th IEEE International Conference on Machine
+  Learning and Applications (ICMLA)}, 2016, S. 859--864
 
 \bibitem[JYK05]{jeong2005continuous}
 \textsc{Jeong}, Gu-Young ; \textsc{Yu}, Kee-Ho  ; \textsc{Kim}, Nam-Gyun:
@@ -216,12 +236,12 @@
   IEMBS'04. 26th Annual International Conference of the IEEE} Bd.~1 IEEE, 2004,
   S. 2383--2385
 
-\bibitem[LU17]{naturectlesshcs}
+\bibitem[LU18]{naturectlesshcs}
 \textsc{Leena~Ukkonen}, Lauri~S.:
 \newblock \emph{Contactless health-care sensing}.
 \newblock \url{https://www.nature.com/articles/d41586-017-07434-y}.
-\newblock \,Version:\,2017. --
-\newblock [Online; accessed 7-January-2017]
+\newblock \,Version:\,2018. --
+\newblock [Online; accessed 7-January-2018]
 
 \bibitem[mau17]{ecg_artifacts}
 \textsc{mauvila}:
@@ -230,13 +250,13 @@
 \newblock \,Version:\,2017. --
 \newblock [Online; accessed 12-November-2017]
 
-\bibitem[McD17]{maprmliotmed}
+\bibitem[McD18]{maprmliotmed}
 \textsc{McDonald}, Carol:
 \newblock \emph{Applying Machine Learning to Streaming IoT for Connected
   Medical Devices}.
 \newblock \url{https://mapr.com/blog/ml-iot-connected-medical-devices/}.
-\newblock \,Version:\,2017. --
-\newblock [Online; accessed 7-January-2017]
+\newblock \,Version:\,2018. --
+\newblock [Online; accessed 7-January-2018]
 
 \bibitem[med17]{medicinenet}
 \textsc{medicinenet}:
@@ -300,6 +320,13 @@
   --
 \newblock DOI https://doi.org/10.1016/0031--3203(91)90083--H. --
 \newblock ISSN 0031--3203
+
+\bibitem[PRK16]{7727866}
+\textsc{Pourbabaee}, B. ; \textsc{Roshtkhari}, M.~J.  ; \textsc{Khorasani}, K.:
+\newblock Feature leaning with deep Convolutional Neural Networks for screening
+  patients with paroxysmal atrial fibrillation.
+\newblock {In: }\emph{2016 International Joint Conference on Neural Networks
+  (IJCNN)}, 2016, S. 5057--5064
 
 \bibitem[PT85]{4122029}
 \textsc{Pan}, J. ; \textsc{Tompkins}, W.~J.:
