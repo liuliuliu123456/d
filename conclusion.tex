@@ -1,15 +1,26 @@
 \chapter{Conclusion}
 
-In conclusion, a software system has been developed, which can measure various vital parameters of pilot, including the accurate detection of QRS complex, and can detect cardiac conditions using CNN in real-time. The CNN model achieved an accuracy of 99.2\%, whereas, in real-time the model has an accuracy of 88\%. The CNN model has been trained to classify four different types of arrhythmia. Moreover, our system can classify ECG signals in a real-time environment.
-
-A dashboard has been setup where the type of ECG signal classified by CNN, sensors signals and vital parameters of the pilot can be monitored. 
+In conclusion, a software system has been developed, that can measure various vital parameters of the pilot, including the accurate detection of QRS complex, and can detect cardiac conditions using CNN in real-time. The CNN model achieved an accuracy of 99.2\%, whereas, in real-time, the model has an accuracy of 88\%. The CNN model has been trained to classify four different types of arrhythmia. Moreover, our system can classify ECG signals in a real-time environment.
 
 Main results and achievements of the work reported in this thesis can be summarized in the following points
 
 
-A number of techniques, including digital filters and Wavelet transform have been applied in order to process raw sensors signals and remove noise and artifacts from them.
+In chapter 3, a detailed view of all the non-contact sensors has been explained, including their data protocol. A number of techniques, including digital filters and Wavelet transform, have been applied in order to process raw sensors signals, and remove noise and artifacts from them. An algorithm has been implemented based on Wavelet transform to extract the ECG features and important waves such P, QRS complex and T waves. The MIT-BIH arrhythmia dataset has been used for the development of the algorithm. The wavelet transform method has shown a high accuracy in the detection of QRS complexes and other waves, which is an essential step for ECG arrhythmias detection, classification, and extraction of vital parameters. The algorithm also evaluated on the chair's ECG signal, which gives an accurate location of all the waves in ECG signal.
 
 
-An algorithm has been implemented based on Wavelet transform to extract the ECG features and important waves such P, QRS complex and T waves. The wavelet transform method has shown an high accuracy in the detection of QRS complexes and other waves, which is an essential step for ECG arrhythmias detection, classification and extraction of vital parameters.
+In a sequel, a deep learning model has been proposed to identify the various cardiac conditions in chapter 4. CNN has been used for training the model, as it reduces the burden of extracting features from the signal, whereas, in traditional machine learning approaches, the programmers have to define which features should be considered while training the model. It mostly relies on the understanding of the programmers. Keras library has been used for training the CNN model, as it makes it very easy to define the layers for CNN model. It is very convenient to use, as it allows to choose a different type of backend for training the CNN such as Tensorflow or Theano. The arrhythmia dataset is extracted from the MIT-BIH dataset and used for the training of the model. The detail view of the model accuracy and its results have been presented, how many records are classified wrong and which records were classified as the other.
 
-Various datasets are collected, processed and cleaned in order to trained a CNN model.
+
+In chapter 5, different visualization tools and techniques have been described to visualize the vital parameters. Moreover, the system data architecture, which is based on big data lambda architecture, has been presented. Multiple sensors work together and gather various signals from the pilot and transferred them to the speed layer via data pipeline. The speed layer is the heart of the system architecture, where it processed and cleaned the signal. This layer is also responsible for extracting the features from the ECG signal. Once the signal is cleaned and processed, the CNN model classifies the ECG signal in real-time. The sensors signals, calculated parameters, and ECG signal classification is visualized on Grafana, which is used for analytics and monitoring. It is one of the best tools for time series analytics and visualization. The sensors signal and vital parameters are also stored in the InfluxDB time series database. 
+
+A dashboard has been set up where the type of ECG signal classified by CNN model, sensors signals and vital parameters of the pilot can be monitored. 
+
+
+\section{Future Work}
+
+There is still a potential to improve the overall software system. As mentioned in chapter 5, because of lack of resources, the big data tools have not used for the implementation of the system. But if the resources are available and the system is developed based on the big data tools such as Apache Kafka for handling the data from all the sensors, and Apache Spark to process all the sensors data in real-time, it will drastically improve the overall performance of the system. Big data can be organized in a much better way. The separation of the layers with their own responsibility makes the system much more efficient.
+
+For now, the CNN model can detect four different types of arrhythmias, but the CNN model can be trained and extended for other cardiac conditions as well.
+
+Another area for the improvement is to make the CNN model mode accurate in a real-time environment. In this thesis, the arrhythmia dataset has been used from the other source, but if the arrhythmia data is also collected from the chair, and then train the model using that data, will give much higher accuracy in the identification of the arrhythmia.
+On another note, the sensors are not much stable as they are very sensitive to use. For example, if MI sensor uses for quite a long time, it heats up and sometimes even provide wrong values. PPG sensor sometimes does not work for some different skin. One possible reason could be the temperature of the body. If the temperature is low, then it does not provide an accurate result. For the ECG measurement, if clothes are thick, it does not provide a correct signal, or the received signal has a lot of noise. There is still room for improvement in the sensors.
