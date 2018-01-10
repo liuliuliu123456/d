@@ -9,7 +9,7 @@ These sensors can monitor some vital signs such as body temperature, respiration
 
 \section{Devices}
 
-Multiple contact-less sensors are used to implement a system for this thesis, which collects data of the user and processes them in real-time. The following devices are used in this work:
+Multiple non-contact sensors are used to implement a system for this thesis, which collects data of the user and processes them in real-time. The following devices are used in this work:
 
 \subsection{Magnetic Induction Sensor}
 
@@ -49,7 +49,7 @@ The magnetic induction (MI) sensor uses the magnetic fields to measures the smal
 The MI sensor provides a data packet of 42 bytes, which splits into the attributes shown in Table \ref{tab:att_mi} and the byte identifier is shown in Table \ref{tab:bi_mi}.
 
 
-As mentioned in Table \ref{tab:bi_mi}, 0x81 and 0x82 represents the byte identifier, but in some cases, it also presents in the data as they are simply the hexadecimal number. The sensor algorithm replaces the 0x81 by 0x8101 and 0x82 by 0x8102 in order to differentiate the values from the byte identifiers. Therefore, to do the correct processing of the sensor data, the hexadecimal value 0x8101 should be replaced by 0x81 and 0x8102 by 0x82.
+As mentioned in Table \ref{tab:bi_mi}, 0x81 and 0x82 represents the byte identifier, but in some cases, it also presents in the data as they are simply the hexadecimal number. The sensor algorithm replaces the data value 0x81 by 0x8101 and 0x82 by 0x8102 in order to differentiate the data values from the byte identifiers. Therefore, to process sensor data correctly, the hexadecimal value 0x8101 should be replaced by 0x81 and 0x8102 by 0x82.
 
 \renewcommand{\arraystretch}{2}
 \begin{table}
@@ -83,7 +83,7 @@ As mentioned in Table \ref{tab:bi_mi}, 0x81 and 0x82 represents the byte identif
 	\caption{Byte identifiers for the MI sensor.} \label{tab:bi_mi}
 	
 	\begin{center}
-		\begin{tabular}{ | l | r | }
+		\begin{tabular}{ | l | l | }
 			\hline
 			\textbf{2-Byte Identifier} & \textbf{Description} \\ \hline
 			0x81  & Header \\ \hline
@@ -104,7 +104,7 @@ The sensor provides PPG signals with 4 different channels, a temperature, and ac
 	\centering
 	\caption{Attributes of PPG sensor.}
 	\label{tab:att_ppg}
-	\begin{tabular}{|l|l|l|l|}
+	\begin{tabular}{|l|l|r|l|}
 		\hline
 		\textbf{2-Byte Identifier} & \textbf{Attributes} & \textbf{Size (Bytes)} & \textbf{Data} \\ \hline
 		\multirow{4}{*}{} 0x0050 & \multirow{4}{*}{} ppg (8 Bytes) & 2 & Channel 1 \\ \cline{3-4} 

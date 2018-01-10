@@ -40,7 +40,7 @@
 \contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces A single artificial neuron. }}{50}{figure.4.3}
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Activation functions \cite {ujjwalkarn}. }}{51}{figure.4.4}
 \contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Convolutional neural network example. }}{52}{figure.4.5}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Max pooling layer example. }}{52}{figure.4.6}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Max pooling layer example. }}{53}{figure.4.6}
 \contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces A 6-layer Convolutional Neural Network model for the identification of cardiac arrhythmia. }}{54}{figure.4.7}
 \contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Layers used in the model and number of parameters to be optimized. }}{55}{figure.4.8}
 \contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces A set of four subfigures.}}{56}{figure.4.9}

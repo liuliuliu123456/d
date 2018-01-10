@@ -115,7 +115,7 @@ It stands for Rectified Linear Unit. It is the most used activation function wit
 
 The graph of all the activation functions defined above can be seen in Figure \ref{fig:funcs}.
 
-\subsection{Convolutional Neural Network}
+\section{Convolutional Neural Network}
 Convolutional neural network (CNN) is a class of deep neural network which uses multilayer perceptrons. It consists of an input layer, an output layer, and multiple hidden layers. The hidden layers can be convolutional, pooling or fully connected layer. An example of CNN is shown is Figure \ref{fig:cnn_1d}. 
 
 \begin{figure}[htpb]
@@ -127,10 +127,10 @@ Convolutional neural network (CNN) is a class of deep neural network which uses 
 	\label{fig:cnn_1d}
 \end{figure}
 
-\subsubsection{Convolutional Layer}
+\subsection{Convolutional Layer}
 In CNN, the first layer is always the convolutional layer. This layer applies a convolutional operation to the input and passes the output to the next layer. A filter (or sometimes referred as a kernel) is used which slides over all the area of the input and extract the features from it. The region where the filter is being applied at any instant of time is called as a receptive field. As the filter slides or convolves over the input signal, it multiples the filter with the original signal values (which can also be referred as element-wise multiplication) which results in a single value. The important point to note here is that this single result is just from a single receptive field. Therefore, the same operation will be carried out on other receptive fields by sliding the filter over the different areas of the input signal. The filter can slide for any unit and this sliding unit is known as stride. Every unique area of the input signal will produce an output and the combined output together is called as feature map or an activation map.  If we assume that, the input size is 32x32, the filter size is 5x5 and the stride is 1 unit, then the size of the activation map will be 28x28. In a 2D array, the filter can be moved in both directions.
 
-\subsubsection{Pooling Layer}
+\subsection{Pooling Layer}
 Pooling layer is used to downsampled the convolutional layer output. There are several pooling options, for example, average pooling and L2-norm pooling, but max pooling is the most popular. This layer basically takes a filter of size 2x2 with the same stride size. It then applies the filter to the part of input and output the maximum number in that region. The same process is applied to the different sub-region by sliding the filter all over the input. By convolving the filter around the input, it drastically reduces the spatial size of the input. The example of how pooling layer work is shown in Figure \ref{fig:maxpool}.
 
 \begin{figure}[htpb]
@@ -142,10 +142,10 @@ Pooling layer is used to downsampled the convolutional layer output. There are s
 	\label{fig:maxpool}
 \end{figure}
 
-\subsubsection{Fully Connected Layer}
+\subsection{Fully Connected Layer}
 In a fully connected layer, the neurons of one layer are connected to all the neurons of the second layer, as shown in Figure \ref{fig:cnn_1d}. This layer can be seen in the regular neural network as well. The softmax function is applied to the output of the second layer to produce the probabilities for the classification of the input. 
 
-\subsection{Keras}
+\section{Keras}
 
 Keras is an open source artificial neural network library written in python. It is very powerful and easy to use library to develop neural networks. It has a capability to run on top of TensorFlow, Microsoft Cognitive Toolkit (CNTK), or Theano, can run on both CPU and GPU. Before Keras, it was really time-consuming to develop a network on TensorFlow or Theano and the aim to develop Keras is to make it easy and fast to develop neural networks. Keras supports both convolutional neural networks and recurrent neural network, as well as a combination of both.
 
@@ -172,7 +172,7 @@ Keras has been used for training the CNN to identify cardiac arrhythmias.
 \end{figure}
 
 
-\subsection{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}
+\section{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}
 A 6-layer Convolutional Neural Network (CNN) has been trained for the identification of an arrhythmia in an ECG signal. The trained model can detect 3 different kinds of arrhythmia namely:
 
 \begin{enumerate}
@@ -214,7 +214,7 @@ The CNN layers are shown in Figure \ref{fig:cnn_model}.
 
 
 
-\subsubsection{Layers Explanation}
+\subsection{Layers Explanation}
 The 1st convolutional layer (Conv\_1D\_1) consists of 64 filters, whereas, the 2nd convolutional layer (Conv\_1D\_2) consists of 32 filters with a kernel of size 3. The model need to optimize total of 16,036 params to find an optimal CNN, as shown in Figure \ref{fig:model_def_var_opt}. For both convolutional layers, Relu has been used as an activation function each followed by a max-pooling layer. The batch size of 1,000 was used for the training, along with the Adam algorithm to optimize the CNN. Since the model is trained for performing the classification of an ECG signal, therefore, categorical cross-entropy loss function is used for calculating the loss of training and validation. After performing the convolutions, the flattening and dense layer has been used, followed by a softmax activation function to produce the final probabilities with 4 different classes.
 
 
@@ -222,7 +222,7 @@ The model is trained and tested for the several numbers of iterations ranging fr
 
 
 
-\subsubsection{Results}
+\subsection{Results}
 The CNN model has achieved an accuracy of 99.2\% on MIT-BIH dataset. Total 16,415 ECG signals were extracted from the MIT-BIH dataset, out of which 10,998 (67\% of the total signals) were used for the training, and the remaining 5,417 (33\% of the total signals) were used for the testing of the model. The types count for training and testing data can be seen in Tables \ref{tab:train_count} and \ref{tab:test_count} respectively. 
 
 \renewcommand{\arraystretch}{2}

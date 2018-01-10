@@ -58,22 +58,27 @@
 \BOOKMARK [1][-]{section.4.2}{Artificial Neural Networks}{chapter.4}% 58
 \BOOKMARK [2][-]{subsection.4.2.1}{Artificial Neuron}{section.4.2}% 59
 \BOOKMARK [2][-]{subsection.4.2.2}{Activation Function}{section.4.2}% 60
-\BOOKMARK [2][-]{subsection.4.2.3}{Convolutional Neural Network}{section.4.2}% 61
-\BOOKMARK [2][-]{subsection.4.2.4}{Keras}{section.4.2}% 62
-\BOOKMARK [2][-]{subsection.4.2.5}{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{section.4.2}% 63
-\BOOKMARK [0][-]{chapter.5}{Visualization and System Architecture}{}% 64
-\BOOKMARK [1][-]{section.5.1}{Grafana}{chapter.5}% 65
-\BOOKMARK [1][-]{section.5.2}{InfluxDB}{chapter.5}% 66
-\BOOKMARK [1][-]{section.5.3}{Setting up Grafana with InfluxDB}{chapter.5}% 67
-\BOOKMARK [1][-]{section.5.4}{Lambda Architecture for Big Data Processing}{chapter.5}% 68
-\BOOKMARK [2][-]{subsection.5.4.1}{Batch Layer}{section.5.4}% 69
-\BOOKMARK [2][-]{subsection.5.4.2}{Speed Layer}{section.5.4}% 70
-\BOOKMARK [2][-]{subsection.5.4.3}{Serving Layer}{section.5.4}% 71
-\BOOKMARK [1][-]{section.5.5}{System Architecture}{chapter.5}% 72
-\BOOKMARK [2][-]{subsection.5.5.1}{Data Layer}{section.5.5}% 73
-\BOOKMARK [2][-]{subsection.5.5.2}{Speed Layer}{section.5.5}% 74
-\BOOKMARK [2][-]{subsection.5.5.3}{Serving Layer}{section.5.5}% 75
-\BOOKMARK [1][-]{section.5.6}{Device Management Interface}{chapter.5}% 76
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 77
-\BOOKMARK [1][-]{section.6.1}{Future Work}{chapter.6}% 78
-\BOOKMARK [0][-]{chapter*.25}{References}{}% 79
+\BOOKMARK [1][-]{section.4.3}{Convolutional Neural Network}{chapter.4}% 61
+\BOOKMARK [2][-]{subsection.4.3.1}{Convolutional Layer}{section.4.3}% 62
+\BOOKMARK [2][-]{subsection.4.3.2}{Pooling Layer}{section.4.3}% 63
+\BOOKMARK [2][-]{subsection.4.3.3}{Fully Connected Layer}{section.4.3}% 64
+\BOOKMARK [1][-]{section.4.4}{Keras}{chapter.4}% 65
+\BOOKMARK [1][-]{section.4.5}{Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{chapter.4}% 66
+\BOOKMARK [2][-]{subsection.4.5.1}{Layers Explanation}{section.4.5}% 67
+\BOOKMARK [2][-]{subsection.4.5.2}{Results}{section.4.5}% 68
+\BOOKMARK [0][-]{chapter.5}{Visualization and System Architecture}{}% 69
+\BOOKMARK [1][-]{section.5.1}{Grafana}{chapter.5}% 70
+\BOOKMARK [1][-]{section.5.2}{InfluxDB}{chapter.5}% 71
+\BOOKMARK [1][-]{section.5.3}{Setting up Grafana with InfluxDB}{chapter.5}% 72
+\BOOKMARK [1][-]{section.5.4}{Lambda Architecture for Big Data Processing}{chapter.5}% 73
+\BOOKMARK [2][-]{subsection.5.4.1}{Batch Layer}{section.5.4}% 74
+\BOOKMARK [2][-]{subsection.5.4.2}{Speed Layer}{section.5.4}% 75
+\BOOKMARK [2][-]{subsection.5.4.3}{Serving Layer}{section.5.4}% 76
+\BOOKMARK [1][-]{section.5.5}{System Architecture}{chapter.5}% 77
+\BOOKMARK [2][-]{subsection.5.5.1}{Data Layer}{section.5.5}% 78
+\BOOKMARK [2][-]{subsection.5.5.2}{Speed Layer}{section.5.5}% 79
+\BOOKMARK [2][-]{subsection.5.5.3}{Serving Layer}{section.5.5}% 80
+\BOOKMARK [1][-]{section.5.6}{Device Management Interface}{chapter.5}% 81
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 82
+\BOOKMARK [1][-]{section.6.1}{Future Work}{chapter.6}% 83
+\BOOKMARK [0][-]{chapter*.20}{References}{}% 84
