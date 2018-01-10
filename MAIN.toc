@@ -7,92 +7,92 @@
 \contentsline {chapter}{Symbolverzeichnis}{xvii}{chapter*.6}
 \contentsline {section}{\numberline {1}Abbreviations}{xvii}{section.0.1}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Literature Review}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Aim}{3}{section.1.3}
+\contentsline {section}{\numberline {1.1}Aim}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivation}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Literature Review}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Objective}{4}{section.1.4}
-\contentsline {chapter}{\numberline {2}Background}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Anatomy of Heart}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}The Electrocardiogram}{8}{section.2.2}
-\contentsline {subsubsection}{\nonumberline Chest Electrodes}{9}{section*.7}
-\contentsline {subsubsection}{\nonumberline Limb Electrodes}{10}{section*.8}
-\contentsline {section}{\numberline {2.3}ECG Complex}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}P Wave}{11}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}QRS Complex}{11}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}T Wave}{12}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}PR Interval}{12}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}ST Segment}{12}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}QT Interval}{13}{subsection.2.3.6}
-\contentsline {section}{\numberline {2.4}Disadvantages of Attached Electrodes}{13}{section.2.4}
-\contentsline {section}{\numberline {2.5}Noise in ECG Signal}{13}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Power Line Interference}{13}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Baseline wander}{14}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Muscle Noise}{14}{subsection.2.5.3}
-\contentsline {section}{\numberline {2.6}Arrhythmias}{15}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Causes of Arrhythmia}{15}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Types of Arrhythmias}{15}{subsection.2.6.2}
-\contentsline {subsubsection}{\nonumberline Premature Ventricular Contraction}{16}{section*.9}
-\contentsline {subsubsection}{\nonumberline Atrial Fibrillation}{16}{section*.10}
-\contentsline {subsubsection}{\nonumberline Atrial Flutter}{16}{section*.11}
-\contentsline {subsubsection}{\nonumberline Bradycardia}{17}{section*.12}
-\contentsline {subsubsection}{\nonumberline Tachycardia}{17}{section*.13}
-\contentsline {subsubsection}{\nonumberline Heart Block}{17}{section*.14}
-\contentsline {subsubsection}{\nonumberline Bundle Branch Block}{18}{section*.15}
-\contentsline {chapter}{\numberline {3}Signal Processing and Feature Extraction}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Devices}{19}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Magnetic Induction Sensor}{19}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Photoplethysmogram Sensor}{22}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}ECG Sensor}{22}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Ballistocardiogram Sensor}{23}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Thermal Camera}{23}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}ECG Signal Processing}{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Filter Method}{24}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Artificial Intelligence Method}{24}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Wavelet Transform Method}{24}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Wavelet Transform}{24}{section.3.3}
-\contentsline {section}{\numberline {3.4}Mallat's Algorithm}{25}{section.3.4}
-\contentsline {section}{\numberline {3.5}Filter Bank Construction}{26}{section.3.5}
-\contentsline {section}{\numberline {3.6}Dataset}{32}{section.3.6}
-\contentsline {section}{\numberline {3.7}Preprocessing}{33}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Wavelet Transform Method}{33}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Band-pass Filter Method}{34}{subsection.3.7.2}
-\contentsline {section}{\numberline {3.8}QRS Detection}{35}{section.3.8}
-\contentsline {section}{\numberline {3.9}P and T Wave Detection}{40}{section.3.9}
-\contentsline {section}{\numberline {3.10}Heart Rate Calculation}{41}{section.3.10}
-\contentsline {section}{\numberline {3.11}Algorithm Execution on ECG Chair Data}{44}{section.3.11}
-\contentsline {section}{\numberline {3.12}PPG Signal Processing}{45}{section.3.12}
-\contentsline {chapter}{\numberline {4}Deep Learning}{47}{chapter.4}
-\contentsline {section}{\numberline {4.1}Machine Learning}{47}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Supervised Learning}{47}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Unsupervised Learning}{47}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Artificial Neural Networks}{49}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Artificial Neuron}{49}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Activation Function}{50}{subsection.4.2.2}
-\contentsline {subsubsection}{\nonumberline Sigmoid}{50}{section*.16}
-\contentsline {subsubsection}{\nonumberline Tanh}{50}{section*.17}
-\contentsline {subsubsection}{\nonumberline ReLU}{51}{section*.18}
-\contentsline {section}{\numberline {4.3}Convolutional Neural Network}{51}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Convolutional Layer}{51}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Pooling Layer}{52}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Fully Connected Layer}{52}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Keras}{53}{section.4.4}
-\contentsline {section}{\numberline {4.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{55}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Layers Explanation}{55}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Results}{57}{subsection.4.5.2}
-\contentsline {chapter}{\numberline {5}Visualization and System Architecture}{59}{chapter.5}
-\contentsline {section}{\numberline {5.1}Grafana}{59}{section.5.1}
-\contentsline {section}{\numberline {5.2}InfluxDB}{60}{section.5.2}
-\contentsline {section}{\numberline {5.3}Setting up Grafana with InfluxDB}{60}{section.5.3}
-\contentsline {section}{\numberline {5.4}Lambda Architecture for Big Data Processing}{62}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Batch Layer}{63}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Speed Layer}{63}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Serving Layer}{64}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}System Architecture}{66}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Data Layer}{67}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Speed Layer}{68}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}Serving Layer}{68}{subsection.5.5.3}
-\contentsline {subsubsection}{\nonumberline Android Application}{70}{section*.19}
-\contentsline {section}{\numberline {5.6}Device Management Interface}{70}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclusion}{73}{chapter.6}
-\contentsline {section}{\numberline {6.1}Future Work}{74}{section.6.1}
-\contentsline {chapter}{\nonumberline References}{75}{chapter*.20}
+\contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Anatomy of Heart}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}The Electrocardiogram}{6}{section.2.2}
+\contentsline {subsubsection}{\nonumberline Chest Electrodes}{7}{section*.7}
+\contentsline {subsubsection}{\nonumberline Limb Electrodes}{8}{section*.8}
+\contentsline {section}{\numberline {2.3}ECG Complex}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}P Wave}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}QRS Complex}{9}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}T Wave}{10}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}PR Interval}{10}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}ST Segment}{10}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}QT Interval}{11}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Disadvantages of Attached Electrodes}{11}{section.2.4}
+\contentsline {section}{\numberline {2.5}Noise in ECG Signal}{11}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Power Line Interference}{11}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Baseline wander}{12}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Muscle Noise}{12}{subsection.2.5.3}
+\contentsline {section}{\numberline {2.6}Arrhythmias}{13}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Causes of Arrhythmia}{13}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Types of Arrhythmias}{13}{subsection.2.6.2}
+\contentsline {subsubsection}{\nonumberline Premature Ventricular Contraction}{14}{section*.9}
+\contentsline {subsubsection}{\nonumberline Atrial Fibrillation}{14}{section*.10}
+\contentsline {subsubsection}{\nonumberline Atrial Flutter}{14}{section*.11}
+\contentsline {subsubsection}{\nonumberline Bradycardia}{15}{section*.12}
+\contentsline {subsubsection}{\nonumberline Tachycardia}{15}{section*.13}
+\contentsline {subsubsection}{\nonumberline Heart Block}{15}{section*.14}
+\contentsline {subsubsection}{\nonumberline Bundle Branch Block}{16}{section*.15}
+\contentsline {chapter}{\numberline {3}Signal Processing and Feature Extraction}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Devices}{17}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Magnetic Induction Sensor}{17}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Photoplethysmogram Sensor}{20}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}ECG Sensor}{20}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Ballistocardiogram Sensor}{21}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Thermal Camera}{21}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}ECG Signal Processing}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Filter Method}{22}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Artificial Intelligence Method}{22}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Wavelet Transform Method}{22}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Wavelet Transform}{22}{section.3.3}
+\contentsline {section}{\numberline {3.4}Mallat's Algorithm}{23}{section.3.4}
+\contentsline {section}{\numberline {3.5}Filter Bank Construction}{24}{section.3.5}
+\contentsline {section}{\numberline {3.6}Dataset}{30}{section.3.6}
+\contentsline {section}{\numberline {3.7}Preprocessing}{31}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Wavelet Transform Method}{31}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Band-pass Filter Method}{32}{subsection.3.7.2}
+\contentsline {section}{\numberline {3.8}QRS Detection}{33}{section.3.8}
+\contentsline {section}{\numberline {3.9}P and T Wave Detection}{38}{section.3.9}
+\contentsline {section}{\numberline {3.10}Heart Rate Calculation}{39}{section.3.10}
+\contentsline {section}{\numberline {3.11}Algorithm Execution on ECG Chair Data}{42}{section.3.11}
+\contentsline {section}{\numberline {3.12}PPG Signal Processing}{43}{section.3.12}
+\contentsline {chapter}{\numberline {4}Deep Learning}{45}{chapter.4}
+\contentsline {section}{\numberline {4.1}Machine Learning}{45}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Supervised Learning}{45}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Unsupervised Learning}{46}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Artificial Neural Networks}{47}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Artificial Neuron}{47}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Activation Function}{48}{subsection.4.2.2}
+\contentsline {subsubsection}{\nonumberline Sigmoid}{48}{section*.16}
+\contentsline {subsubsection}{\nonumberline Hyperbolic Tangent (Tanh)}{48}{section*.17}
+\contentsline {subsubsection}{\nonumberline Rectified Linear Unit (ReLU)}{48}{section*.18}
+\contentsline {section}{\numberline {4.3}Convolutional Neural Network}{49}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Convolutional Layer}{49}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Pooling Layer}{50}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Fully Connected Layer}{50}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Keras}{51}{section.4.4}
+\contentsline {section}{\numberline {4.5}Convolutional Neural Network for the Identification of Cardiac Arrhythmia}{51}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Layers Explanation}{53}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Results}{55}{subsection.4.5.2}
+\contentsline {chapter}{\numberline {5}Visualization and System Architecture}{57}{chapter.5}
+\contentsline {section}{\numberline {5.1}Grafana}{57}{section.5.1}
+\contentsline {section}{\numberline {5.2}InfluxDB}{57}{section.5.2}
+\contentsline {section}{\numberline {5.3}Setting up Grafana with InfluxDB}{58}{section.5.3}
+\contentsline {section}{\numberline {5.4}Lambda Architecture for Big Data Processing}{60}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Batch Layer}{61}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Speed Layer}{61}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Serving Layer}{61}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}System Architecture}{63}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Data Layer}{64}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Speed Layer}{65}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Serving Layer}{65}{subsection.5.5.3}
+\contentsline {subsubsection}{\nonumberline Android Application}{66}{section*.19}
+\contentsline {section}{\numberline {5.6}Device Management Interface}{66}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusion}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future Work}{72}{section.6.1}
+\contentsline {chapter}{\nonumberline References}{73}{chapter*.20}
